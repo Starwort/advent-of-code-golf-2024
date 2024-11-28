@@ -205,7 +205,7 @@ class Runner(commands.Cog):
                 )
             )
             return
-        language = ato_lang["name"]
+        language = ato_lang["internal_name"]
         solution_authors: SolutionAuthors = json.loads(
             solution_authors_file.read_text()
         )
@@ -218,12 +218,12 @@ class Runner(commands.Cog):
         author = solution_authors[str(day)][language]
         solution = (solutions_dir / f"{day}" / language).read_text()
         solution_len = len(solution.encode())
-        sha = git.Repo('.').head.object.hexsha[:6]
+        sha = git.Repo(".").head.object.hexsha[:6]
         await ctx.reply(
             LOOKUP_TEMPLATE.format(
                 day=day,
-                lang=quote(language),
-                lang_pretty=language,
+                lang=language,
+                lang_pretty=ato_lang["name"],
                 author=author,
                 score=solution_len,
                 sha=sha,
@@ -261,7 +261,9 @@ class Runner(commands.Cog):
 
                     traceback.print_exception(e)
 
-                    await ctx.reply(f"Something went wrong in the ATO bridge, sorry\n\n-# Technical details: {e}")
+                    await ctx.reply(
+                        f"Something went wrong in the ATO bridge, sorry\n\n-# Technical details: {e}"
+                    )
                     break
                 match msg:
                     case {"Stdout": data}:
@@ -396,7 +398,7 @@ class Runner(commands.Cog):
                         return
 
         await ctx.last_message.append_line("That's the right answer!")
-        await self.update_solutions(ctx, day, language, code.content)
+        await self.update_solutions(ctx, day, ato_lang, code.content)
 
     def row_to_bools(self, row: str) -> list[bool]:
         return [c == "#" for c in row]
@@ -446,8 +448,10 @@ class Runner(commands.Cog):
             )
             return False
 
-    async def update_solutions(self, ctx: Context, day: int, language: str, code: str):
-        solution_path = solutions_dir / f"{day}" / language
+    async def update_solutions(
+        self, ctx: Context, day: int, language: LanguageMeta, code: str
+    ):
+        solution_path = solutions_dir / f"{day}" / language["internal_name"]
         solution_path.parent.mkdir(parents=True, exist_ok=True)
         if solution_path.exists():
             current_solution = solution_path.read_bytes()
@@ -461,14 +465,18 @@ class Runner(commands.Cog):
                     solution_authors_file.read_text()
                 )
                 if str(day) in solution_authors:
-                    solution_authors[str(day)][language] = ctx.author.name
+                    solution_authors[str(day)][
+                        language["internal_name"]
+                    ] = ctx.author.name
                 else:
-                    solution_authors[str(day)] = {language: ctx.author.name}
+                    solution_authors[str(day)] = {
+                        language["internal_name"]: ctx.author.name
+                    }
                 solution_authors_file.write_text(json.dumps(solution_authors))
                 self.update_leaderboard()
                 subprocess = await asyncio.create_subprocess_shell(
                     f'git add .. && git commit -m "({ctx.author.name}) Day'
-                    f' {day} {language} {len(current_solution)} -> {len(code_bytes)}"'
+                    f" {day} {language['name']} {len(current_solution)} -> {len(code_bytes)}\""
                     " && git push"
                 )
                 await subprocess.wait()
@@ -483,14 +491,16 @@ class Runner(commands.Cog):
                 solution_authors_file.read_text()
             )
             if str(day) in solution_authors:
-                solution_authors[str(day)][language] = ctx.author.name
+                solution_authors[str(day)][language["internal_name"]] = ctx.author.name
             else:
-                solution_authors[str(day)] = {language: ctx.author.name}
+                solution_authors[str(day)] = {
+                    language["internal_name"]: ctx.author.name
+                }
             solution_authors_file.write_text(json.dumps(solution_authors))
             self.update_leaderboard()
             subprocess = await asyncio.create_subprocess_shell(
                 f'git add .. && git commit -m "({ctx.author.name})'
-                f' Day {day} {language} -> {len(code.encode())}" && git push'
+                f" Day {day} {language['name']} -> {len(code.encode())}\" && git push"
             )
             await subprocess.wait()
             await ctx.last_message.append_line("Done!")
