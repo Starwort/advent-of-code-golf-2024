@@ -1,1 +1,1 @@
-exec("from\tnumpy\timport*;X,Y=sort(loadtxt(open(0),int).T);print(sum(abs(X-Y)),sum((X==c_[Y])*X))")
+exec("from\tnumpy\timport*;A,B=sort(loadtxt(open(0),int).T);print(sum(abs(A-B)),sum(isin(B,A)*B))")
