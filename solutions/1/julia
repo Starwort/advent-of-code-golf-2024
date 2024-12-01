@@ -1,3 +1,4 @@
 using DelimitedFiles
 a,b=sort.(eachcol(readdlm(stdin,Int)))
-print(sum(abs,a-b)," ",sum((a'.==b)a))
+~=sum
+print(abs~a-b," ",~((a'.==b)a))

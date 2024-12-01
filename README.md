@@ -29,4 +29,4 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 Day | Julia | Python | Python (No Whitespace) | Ruby
 --: | --- | --- | --- | ---
-1 | [98 - okras](./solutions/1/julia) | [90 - okras](./solutions/1/python) | [100 - _tessaract](./solutions/1/python-no-ws) | [104 - .___uho](./solutions/1/ruby)
+1 | [97 - okras](./solutions/1/julia) | [90 - okras](./solutions/1/python) | [100 - _tessaract](./solutions/1/python-no-ws) | [104 - .___uho](./solutions/1/ruby)
