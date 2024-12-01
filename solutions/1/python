@@ -1,0 +1,2 @@
+a,b=map(sorted,zip(*[map(int,i.split())for i in open(0)]))
+print(sum(abs(x-y)for x,y in zip(a,b)),sum(x*b.count(x)for x in a))

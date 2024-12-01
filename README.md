@@ -27,4 +27,6 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 ## Leaderboard
 
-None yet
+Day | python
+--: | ---
+1 | [126 - starwort](./solutions/1/python)
