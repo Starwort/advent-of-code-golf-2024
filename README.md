@@ -27,6 +27,6 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 ## Leaderboard
 
-Day | Julia | Python | Python (No Whitespace) | Python (Orthoplex) | Ruby
---: | --- | --- | --- | --- | ---
-1 | [97 - okras](./solutions/1/julia) | [89 - _tessaract](./solutions/1/python) | [98 - .___uho](./solutions/1/python-no-ws) | [778 - orthoplex](./solutions/1/python-orthoplex) | [101 - the.unnamed](./solutions/1/ruby)
+Day | C++ (GCC) | Julia | Python | Python (No Whitespace) | Python (Orthoplex) | Ruby
+--: | --- | --- | --- | --- | --- | ---
+1 | [256 - livingboxy](./solutions/1/cplusplus_gcc) | [97 - okras](./solutions/1/julia) | [89 - _tessaract](./solutions/1/python) | [98 - .___uho](./solutions/1/python-no-ws) | [778 - orthoplex](./solutions/1/python-orthoplex) | [101 - the.unnamed](./solutions/1/ruby)

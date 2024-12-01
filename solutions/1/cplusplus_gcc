@@ -1,0 +1,5 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+#define A lower_bound(b,b+k,
+int a[9999],b[9999],k,s,t,o,m;int main(){for(;cin>>a[k];cin>>b[k++]){}sort(a,a+k);sort(b,b+k);for(;m<k;m++){o=a[m];s+=abs(o-b[m]);t+=o*(A o+1)-A o));}cout<<s<<" "<<t;}
