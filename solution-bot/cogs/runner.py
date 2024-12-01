@@ -19,11 +19,13 @@ from jishaku.codeblocks import Codeblock, codeblock_converter
 from thefuzz import fuzz, process
 from websockets.version import version as ws_version
 
-README_TEMPLATE = """# Advent of Code Golf 2024
+YEAR = 2024
+
+README_TEMPLATE = f"""# Advent of Code Golf {YEAR}
 
 ![Advent of Code Golf icon](./advent-of-code-golf.png)
 
-This is a community project for Advent of Code Golf 2024 - anyone can submit a
+This is a community project for Advent of Code Golf {YEAR} - anyone can submit a
 solution to any day, in any language (supported by [Attempt This
 Online](https://ato.pxeger.com)), and the shortest one for each language wins.
 This file will be maintained by the `solution-bot` and will contain the current
@@ -48,17 +50,17 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 ## Leaderboard
 
-{}
+{{}}
 """
 
 LOOKUP_TEMPLATE = """\
-[Solution for day {day} in {lang_pretty} by {user} ({score})](
-https://github.com/Starwort/advent-of-code-golf-2024/blob/{sha}/solutions/{day}/{lang}
+[Solution for day {day} in {lang_pretty} by {author} ({score})](
+https://github.com/Starwort/advent-of-code-golf-%s/blob/{sha}/solutions/{day}/{lang}
 ):
 ```
 {solution}
 ```
-"""
+""" % YEAR
 
 
 class LanguageMeta(TypedDict):
@@ -306,7 +308,7 @@ class Runner(commands.Cog):
         gives the answer to both parts of the puzzle on stdout. The solution
         must be runnable on [ATO](https://ato.pxeger.com).
         """
-        puzzle_unlock = datetime(2024, 12, day, 5)
+        puzzle_unlock = datetime(YEAR, 12, day, 5)
         if datetime.utcnow() < puzzle_unlock:
             await ctx.reply(
                 f"Day {day} is not yet unlocked. It will be unlocked"
@@ -341,7 +343,7 @@ class Runner(commands.Cog):
                     f" contains disallowed text `{match[0]}`"
                 )
                 return
-        real_answer_path = aoc_data_dir / "2024" / f"{day}"
+        real_answer_path = aoc_data_dir / str(YEAR) / str(day)
         try:
             real_answers = ((real_answer_path / "1.solution").read_text(),)
             if day != 25:
@@ -374,7 +376,7 @@ class Runner(commands.Cog):
                 ctx,
                 code.content,
                 language=ato_lang["ato_name"],
-                input=aoc_helper.fetch(day, year=2024),
+                input=aoc_helper.fetch(day, year=YEAR),
             )
 
             if not await self.grade_solution(ctx, answers, real_answers):
