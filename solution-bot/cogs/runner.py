@@ -374,7 +374,7 @@ class Runner(commands.Cog):
                 ctx,
                 code.content,
                 language=ato_lang["ato_name"],
-                input=aoc_helper.fetch(day, year=2023),
+                input=aoc_helper.fetch(day, year=2024),
             )
 
             if not await self.grade_solution(ctx, answers, real_answers):
