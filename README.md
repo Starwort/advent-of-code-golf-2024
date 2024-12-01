@@ -27,6 +27,6 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 ## Leaderboard
 
-Day | python | ruby
---: | --- | ---
-1 | [90 - okras](./solutions/1/python) | [104 - .___uho](./solutions/1/ruby)
+Day | python | python-no-ws | ruby
+--: | --- | --- | ---
+1 | [90 - okras](./solutions/1/python) | [129 - starwort](./solutions/1/python-no-ws) | [104 - .___uho](./solutions/1/ruby)
