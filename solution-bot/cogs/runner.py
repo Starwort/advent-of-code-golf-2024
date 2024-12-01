@@ -55,7 +55,7 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 LOOKUP_TEMPLATE = """\
 [Solution for day {day} in {lang_pretty} by {author} ({score})](
-https://github.com/Starwort/advent-of-code-golf-%s/blob/{sha}/solutions/{day}/{lang}
+<https://github.com/Starwort/advent-of-code-golf-%s/blob/{sha}/solutions/{day}/{lang}>
 ):
 ```
 {solution}
