@@ -27,6 +27,6 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 ## Leaderboard
 
-Day | Python | Python (No Whitespace) | Ruby
---: | --- | --- | ---
-1 | [90 - okras](./solutions/1/python) | [100 - _tessaract](./solutions/1/python-no-ws) | [104 - .___uho](./solutions/1/ruby)
+Day | Julia | Python | Python (No Whitespace) | Ruby
+--: | --- | --- | --- | ---
+1 | [120 - .___uho](./solutions/1/julia) | [90 - okras](./solutions/1/python) | [100 - _tessaract](./solutions/1/python-no-ws) | [104 - .___uho](./solutions/1/ruby)
