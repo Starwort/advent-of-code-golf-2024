@@ -29,4 +29,4 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 Day | python | ruby
 --: | --- | ---
-1 | [123 - biz314](./solutions/1/python) | [112 - _justconfused](./solutions/1/ruby)
+1 | [123 - biz314](./solutions/1/python) | [104 - .___uho](./solutions/1/ruby)

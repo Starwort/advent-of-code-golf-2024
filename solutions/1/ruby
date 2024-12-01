@@ -1,2 +1,2 @@
-a,b=$<.map(&:split).transpose.map{_1.map(&:to_i).sort}
-p a.zip(b).map{(_1-_2).abs}.sum,a.map{_1*b.count(_1)}.sum
+a,b=$<.map{_1.split.map(&:to_i)}.transpose.map(&:sort)
+p a.zip(b).sum{(_1-_2).abs},a.sum{_1*b.count(_1)}
