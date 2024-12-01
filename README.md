@@ -29,4 +29,4 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 Day | python
 --: | ---
-1 | [126 - starwort](./solutions/1/python)
+1 | [123 - biz314](./solutions/1/python)
