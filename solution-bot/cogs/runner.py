@@ -513,7 +513,8 @@ class Runner(commands.Cog):
             solution_authors_file.read_text()
         )
         max_day = max(int(day) for day in solution_authors)
-        langs = sorted({self.languages[lang] for day in solution_authors.values() for lang in day})
+        langs = {lang for day in solution_authors.values() for lang in day}
+        langs = sorted(self.languages[lang] for lang in langs, key=lambda i: i['name'])
         leaderboard = (
             "Day | "
             + " | ".join(lang['name'] for lang in langs)
