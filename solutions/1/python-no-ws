@@ -1,1 +1,1 @@
-exec("from\tnumpy\timport*;A,B=sort(loadtxt(open(0),int).T);print(sum(abs(A-B)),sum(isin(B,A)*B))")
+n=__import__("numpy");X,Y=n.sort(n.loadtxt(open(0),int).T);print(sum(abs(X-Y)),sum(n.isin(Y,X)*Y))
