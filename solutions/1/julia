@@ -1,4 +1,3 @@
 using DelimitedFiles
-v=readdlm(stdin,Int)
-a,b=sort.([v[:,1],v[:,2]])
-println.([sum(abs,a-b),sum(a->a*count(==(a),b),a)])
+a,b=sort.(eachcol(readdlm(stdin,Int)))
+print(sum(abs,a-b)," ",sum((a'.==b)a))
