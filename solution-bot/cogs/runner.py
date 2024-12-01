@@ -306,7 +306,7 @@ class Runner(commands.Cog):
         gives the answer to both parts of the puzzle on stdout. The solution
         must be runnable on [ATO](https://ato.pxeger.com).
         """
-        puzzle_unlock = datetime(2023, 12, day, 5)
+        puzzle_unlock = datetime(2024, 12, day, 5)
         if datetime.utcnow() < puzzle_unlock:
             await ctx.reply(
                 f"Day {day} is not yet unlocked. It will be unlocked"
@@ -341,7 +341,7 @@ class Runner(commands.Cog):
                     f" contains disallowed text `{match[0]}`"
                 )
                 return
-        real_answer_path = aoc_data_dir / "2023" / f"{day}"
+        real_answer_path = aoc_data_dir / "2024" / f"{day}"
         try:
             real_answers = ((real_answer_path / "1.solution").read_text(),)
             if day != 25:
