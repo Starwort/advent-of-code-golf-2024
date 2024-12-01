@@ -1,4 +1,3 @@
-a,b=map(sorted,zip(*[map(int,i.split())for i in open(0)]))
-c=d=0
-for x,y in zip(a,b):c+=abs(x-y);d+=x*b.count(x)
-print(c,d)
+from numpy import*
+X,Y=sort(loadtxt(open(0),int).T)
+print(sum(abs(X-Y)),sum((X==c_[Y])*X))
