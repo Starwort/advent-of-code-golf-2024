@@ -228,6 +228,7 @@ class Runner(commands.Cog):
                 lang_pretty=ato_lang["name"],
                 author=author,
                 score=solution_len,
+                solution=solution,
                 sha=sha,
             )
         )
