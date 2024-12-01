@@ -513,10 +513,10 @@ class Runner(commands.Cog):
             solution_authors_file.read_text()
         )
         max_day = max(int(day) for day in solution_authors)
-        langs = sorted({lang for day in solution_authors.values() for lang in day})
+        langs = sorted({self.languages[lang] for day in solution_authors.values() for lang in day})
         leaderboard = (
             "Day | "
-            + " | ".join(langs)
+            + " | ".join(lang['name'] for lang in langs)
             + "\n"
             + "--: | "
             + " | ".join("---" for _ in langs)
@@ -528,12 +528,12 @@ class Runner(commands.Cog):
                 if author := day_solutions.get(lang):
                     solution_len = len((solutions_dir / f"{day}" / lang).read_bytes())
                     return (
-                        f"[{solution_len} - {author}](./solutions/{day}/{quote(lang)})"
+                        f"[{solution_len} - {author}](./solutions/{day}/{lang})"
                     )
                 else:
                     return "-"
 
-            leaderboard += f"\n{day} | " + " | ".join(get_entry(lang) for lang in langs)
+            leaderboard += f"\n{day} | " + " | ".join(get_entry(lang['internal_name']) for lang in langs)
         readme_file.write_text(README_TEMPLATE.format(leaderboard))
 
     @commands.command(name="add-test-case")
