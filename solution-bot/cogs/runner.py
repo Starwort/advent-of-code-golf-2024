@@ -218,7 +218,7 @@ class Runner(commands.Cog):
         author = solution_authors[str(day)][language]
         solution = (solutions_dir / f"{day}" / language).read_text()
         solution_len = len(solution.encode())
-        sha = git.Repo(".").head.object.hexsha[:6]
+        sha = git.Repo("..").head.object.hexsha[:6]
         await ctx.reply(
             LOOKUP_TEMPLATE.format(
                 day=day,
