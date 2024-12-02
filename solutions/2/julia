@@ -1,4 +1,4 @@
 L=readlines(stdin).|>l->parse.(Int,split(l))
 ~,!,s=sum,length,issorted
-C(l)=(s(l)||s(l,rev=1<2))&&all(0 .<extrema(abs,diff(l)).<4)
+C(l)=(s(l)||s(l,rev=1<2))*all(0 .<extrema(abs,diff(l)).<4)
 println.([C~L,(l->C(l)||any(1:!l.|>i->C([l[j] for j=1:!l if j!=i])))~L])
