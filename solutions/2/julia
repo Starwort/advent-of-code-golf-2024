@@ -1,4 +1,4 @@
-L=readlines(stdin).|>l->parse.(Int,split(l))
-~,!,s=sum,length,issorted
-C(l)=(s(l)||s(l,rev=1<2))all(0 .<abs.(diff(l)).<4)
-print(C~L," ",(l->C(l)||any(1:!l.|>i->C([l[j] for j=1:!l if j!=i])))~L)
+l\~=Int.~split(l)
+L=eachline(stdin).\parse
+!n=sum(l->any(all(0 .<diff(l[i.!=eachindex(l)]s).<4) for i=n:9,s=-1:1),L)
+print(!9," ",!1)
