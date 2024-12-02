@@ -1,2 +1,2 @@
 int C(int*a,int*b){return*a-*b;}
-char*s="%d %d ";int t,i,j,q,p,a[1000],b[1000],qsort(),abs();int main(){for(;~__builtin_scanf(s,a+t,b+t);t++);qsort(b,t,4,C);qsort(a,t,4,C);for(;i<t;i++){q+=abs(a[i]-b[i]);for(j=0;j<t;)p+=a[i]*(a[i]==b[j++]);}__builtin_printf(s,q,p);}
+char*s="%d %d ";int t,i,j,q,p,a[1000],b[1000],qsort(),abs(),scanf(),printf();int main(){for(;~scanf(s,a+t,b+t);t++);qsort(b,t,4,C);qsort(a,t,4,C);for(;i<t;i++){q+=abs(a[i]-b[i]);for(j=0;j<t;)p+=a[i]-b[j++]?0:a[i];}printf(s,q,p);}
