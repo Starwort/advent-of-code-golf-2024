@@ -27,7 +27,7 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 
 ## Leaderboard
 
-Day | C (GCC) | C++ (GCC) | Julia | Python | Python (No Whitespace) | Python (Orthoplex) | Ruby
---: | --- | --- | --- | --- | --- | --- | ---
-1 | [262 - krowten024nabru](./solutions/1/c_gcc) | [253 - livingboxy](./solutions/1/cplusplus_gcc) | [97 - okras](./solutions/1/julia) | [89 - _tessaract](./solutions/1/python) | [98 - .___uho](./solutions/1/python-no-ws) | [778 - orthoplex](./solutions/1/python-orthoplex) | [101 - the.unnamed](./solutions/1/ruby)
-2 | - | - | - | [164 - krowten024nabru](./solutions/2/python) | - | - | -
+Day | Bash | C (GCC) | C++ (GCC) | Julia | Python | Python (No Whitespace) | Python (Orthoplex) | Ruby
+--: | --- | --- | --- | --- | --- | --- | --- | ---
+1 | - | [262 - krowten024nabru](./solutions/1/c_gcc) | [253 - livingboxy](./solutions/1/cplusplus_gcc) | [97 - okras](./solutions/1/julia) | [89 - _tessaract](./solutions/1/python) | [98 - .___uho](./solutions/1/python-no-ws) | [778 - orthoplex](./solutions/1/python-orthoplex) | [101 - the.unnamed](./solutions/1/ruby)
+2 | [160 - .___uho](./solutions/2/bash) | - | - | - | [164 - krowten024nabru](./solutions/2/python) | - | - | -
