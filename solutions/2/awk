@@ -1,3 +1,1 @@
-func S(a,f,e){d=$++a-$++f;y=$a?d~/^-?[123]$/&&
-d*e>=0&&!S(a,f,d)*y:1}o=$0S(1){A+=y;for(p=0;$++p&&
-!y;){$p=z;$0=$0;S(1);$0=o}}y{B++}END{print A"\n"B}
+func S(a,f,e){d=$++a-$++f;y=$a?d~/^-?[123]$/&&d*e>=0&&S(a,f,d)+y:1}o=$0S(1){A+=y;for(p=0;$++p*!y;$0=S(1)o){$p=z;$0=$0}B+=y}END{print A,B}
