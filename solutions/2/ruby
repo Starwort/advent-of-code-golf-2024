@@ -1,0 +1,4 @@
+a=*$<
+2.times{|k|p a.count{|s|r=s.split.map &:to_i
+r.combination(r.size-k).any?{|c|q=c.each_cons 2
+!q.uniq{_1<=>_2}[1]&q.all?{(_1-_2).abs<4}}}}
