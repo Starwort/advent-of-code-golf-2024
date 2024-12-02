@@ -1,1 +1,1 @@
-s=[*open(0)];print(*[sum(any(all(0<int(a)-int(b)+r<4for a,b in zip(l,l[1:]))for i in range(9)[-c:]if(o:=n.split(),l:=o[:i]+o[i+1:])for r in[0,4])for n in s)for c in[1,0]])
+s=*open(0),;print(*[sum(any(all(0<int(a)-int(b)+r<4for a,b in zip(l,l[1:]))for i in range(9)[-c:]if(o:=n.split(),l:=o[:i]+o[i+1:])for r in[0,4])for n in s)for c in[1,0]])
