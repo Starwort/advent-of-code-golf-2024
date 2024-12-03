@@ -1,7 +1,7 @@
 import re
 a=b=0
 e=1
-for f,g in re.findall(r"do(n't)?\(\)|mul\((\d+,\d+)\)",open(0).read()):
+for f,g in re.findall("do(n't)?\(\)|mul\((\d+,\d+)\)",open(0).read()):
  if g:x,y=eval(g);a+=x*y;b+=x*y*e
- else:e=not f
+ else:e=f==g
 print(a,b)
