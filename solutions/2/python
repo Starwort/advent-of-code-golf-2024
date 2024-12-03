@@ -1,1 +1,2 @@
-*z,=open(0);[print(sum(max({i:=1,p:=2,3}>={*[p-(p:=int(z))for z in l.split()[::a]if(i:=i-1)+d][1:]}for d in range(x,9)for a in[1,-1])for l in z))for x in[8,0]]
+*z,=open(0)
+for x in 8,0:print(sum(max({i:=1,p:=2,3}>={*[p-(p:=int(z))for z in l.split()[::a]if(i:=i-1)+d][1:]}for d in range(x,9)for a in[1,-1])for l in z))
