@@ -3,5 +3,4 @@ r=R=0
 for(l of(require("fs").readFileSync(0)+"").split`
 `){r+=f(w=l.split` `.map(x=>+x)),s=0
 for(i in w)W=[...w],W.splice(i,1),s|=f(W)
-R+=s}
-console.log(r,R)
+R+=s}console.log(r,R)
