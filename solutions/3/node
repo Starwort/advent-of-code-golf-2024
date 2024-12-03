@@ -1,0 +1,2 @@
+`${require(a="fs").readFileSync(g=t=0)}`.replace(/do(n't)?|mul\((\d+),(\d+)\)/g,(_,n,x=0,y=0)=>(t+=!!(a=_[6]?a:!n)*(n=x*y),g+=n))
+console.log(g,t)
