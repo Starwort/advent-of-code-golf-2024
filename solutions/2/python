@@ -1,1 +1,1 @@
-*s,=open(0);print(*[sum(any(all(0<int(a)-int(b)+r<4for a,b in zip(o,o[1:]))for i in range(c,9)for o,*o[i:i+1]in[[n.split()]]for r in[0,4])for n in s)for c in[8,0]])
+*z,=open(0);[print(sum(max({i:=1,p:=2,3}>={*[p-(p:=int(z))for z in l.split()[::a]if(i:=i-1)+d][1:]}for d in range(x,9)for a in[1,-1])for l in z))for x in[8,0]]
