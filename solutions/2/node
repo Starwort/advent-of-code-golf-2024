@@ -1,4 +1,4 @@
-f=([p,...w])=>w.map(n=>s&=+n<p==d&+n!=p&Math.abs(p-(p=+n))<4,d=+w[i=s=1]<p)|s
+f=([p,...w])=>w.map(n=>s&=+n<p==d&n!=p&Math.abs(p-(p=n))<4,d=+w[i=s=1]<p)|s
 r=R=0
 for(l of(require("fs").readFileSync(0)+"").split`
 `){r+=f(w=l.split` `)
