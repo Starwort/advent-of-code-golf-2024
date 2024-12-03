@@ -1,5 +1,5 @@
-f=w=>eval('for(p=w[0],d=w[i=s=1]<p;n=w[i++];p=n)s&=n<p==d&n!=p&Math.abs(n-p)<4;s')
+f=w=>eval('for(p=+w[0],d=+w[i=s=1]<p;n=+w[i++];p=n)s&=n<p==d&n!=p&Math.abs(n-p)<4;s')
 r=R=0
 for(l of(require("fs").readFileSync(0)+"").split`
-`){r+=f(w=l.split` `.map(x=>+x))
+`){r+=f(w=l.split` `)
 R+=w.some((_,i)=>f((W=[...w],W.splice(i,1),W)))}console.log(r,R)
