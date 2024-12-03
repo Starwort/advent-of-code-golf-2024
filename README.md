@@ -31,4 +31,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | JavaScript (Node.js) | Julia | K (ngn/k
 --: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 1 | - | - | [252 - .___uho](./solutions/1/c_gcc) | [253 - livingboxy](./solutions/1/cplusplus_gcc) | [201 - jeff.hykin](./solutions/1/node) | [97 - okras](./solutions/1/julia) | [33 - okras](./solutions/1/k_ngn) | [89 - _tessaract](./solutions/1/python) | [98 - .___uho](./solutions/1/python-no-ws) | [481 - orthoplex](./solutions/1/python-orthoplex) | [101 - the.unnamed](./solutions/1/ruby) | [202 - jeff.hykin](./solutions/1/deno)
 2 | [137 - .___uho](./solutions/2/awk) | [143 - .___uho](./solutions/2/bash) | - | - | - | [105 - okras](./solutions/2/julia) | [41 - okras](./solutions/2/k_ngn) | [145 - biz314](./solutions/2/python) | [155 - _tessaract](./solutions/2/python-no-ws) | - | [143 - the.unnamed](./solutions/2/ruby) | -
-3 | - | - | - | - | - | - | - | [166 - duckyluuk](./solutions/3/python) | - | - | - | -
+3 | - | - | - | - | - | - | - | [154 - starwort](./solutions/3/python) | - | - | - | -
