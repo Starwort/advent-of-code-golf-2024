@@ -1,2 +1,2 @@
 s=`tr , '*'`
-loop{p s.gsub(/l.(\d+.\d+)\)/).sum{eval$1};+s.gsub!(/on.*?(do\(|\z)/m,'')}
++s.gsub!(/on((?!do).)*/m){}while p s.gsub(/l.(\d+.\d+)\)/).sum{eval$1}
