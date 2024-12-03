@@ -1,0 +1,7 @@
+import re
+a=b=0
+e=1
+for f,x,y in re.findall(r"(do\(\)|don't\(\)|mul\((\d+),(\d+)\))",open(0).read()):
+ if f>"m":n=int(x)*int(y);a+=n;b+=n*e
+ else:e=f<"don"
+print(a,b)
