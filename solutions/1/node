@@ -1,7 +1,3 @@
-a=[]
-b=[]
-for(l of(require("fs").readFileSync(s=m=i=0)+"").split`
-`)w=l.split` `,a[i]=w[0],b[i++]=w[3]
-a.sort()
-for(b.sort();i--;b.map(x=>m+=x-A?0:+A))A=a[i],s+=Math.abs(A-b[i])
-console.log(s,m)
+i=`${require("fs").readFileSync(c=s=0)}`.split(/\s/g).map((e,j)=>(p=j)&1? -e:e).sort()
+i.slice(++p/2).map((e,j,k)=>s+=Math.abs((j= -i[j])-e)+!k.map(h=>c+=j*(h==j)))
+console.log(s,c)
