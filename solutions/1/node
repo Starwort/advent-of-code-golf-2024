@@ -3,5 +3,5 @@ b=[]
 for(l of(require("fs").readFileSync(s=m=i=0)+"").split`
 `)w=l.split` `,a[i]=w[0],b[i++]=w[3]
 a.sort()
-for(b.sort();i--;b.map(x=>m+=x-A?0:+A))A=a[i],d=A-b[i],s+=d<0?-d:d
+for(b.sort();i--;b.map(x=>m+=x-A?0:+A))A=a[i],s+=Math.abs(A-b[i])
 console.log(s,m)
