@@ -1,1 +1,1 @@
-int x,y,p,q,a[100000],b[100000],i,j,scanf(),printf();int main(){for(;~scanf("%d%d",&x,&y);p+=a[y]*y)a[x]++,p+=b[x]*x,b[y]++;for(;i<1e5;)a[i]?b[j]?a[i]--,b[j]--,q+=i<j?j-i:i-j:j++:i++;printf("%d %d",q,p);}
+int x,y,p,q,a[100000],b[100000],i,j,scanf(),printf();int main(){for(;~scanf("%d %d",&x,&y);p+=a[y]*y)a[x]++,p+=b[x]*x,b[y]++;for(;i<1e5;)a[i]?b[j]?a[i]--,b[j]--,q+=i<j?j-i:i-j:j++:i++;printf(""-6,q,p);}
