@@ -1,0 +1,1 @@
+new Response(Deno.stdin.readable).text().then((a,t=0,g=0,f=a.replace(/(do)(n't)?|mul\((\d+),(\d+)\)/g,(_,d,n,x=0,y=0)=>(t+=!!(a=d?!n:a)*(n=-x*-y),g+=n)))=>console.log(g,t))
