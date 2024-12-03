@@ -1,5 +1,3 @@
-#include<iostream>
+#include<stdio.h>
 #include<algorithm>
-using namespace std;
-#define A lower_bound(b,b+k
-int a[9999],b[9999],k,s,t,o,m;int main(){while(cin>>a[k]>>b[k++]){}sort(a,a+k);sort(b,b+k);for(;m<k;m++){o=a[m];s+=abs(o-b[m]);t+=o*(A,o+1)-A,o));}cout<<s<<" "<<t;}
+int x,t,i,j,q,p,a[1001],b[1000];int main(){for(;~scanf("%d %d",a+t,b+t);)t++;std::sort(b,b+t);for(std::sort(a,a+t);x=a[i];i++){q+=abs(x-b[i]);for(j=0;j<t;)p+=x-b[j++]?0:x;}printf("%d %d",q,p);}
