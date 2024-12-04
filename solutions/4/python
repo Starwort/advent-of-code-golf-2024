@@ -1,4 +1,4 @@
 g=open(0).read()
 s='SAMX'
 n=140,142
-for f,l,r in(sum,4,n+(1,141)),(all,3,n):print(sum(f(g[i-x::x][:l]in(s[:l],s[:l][::-1])for x in r)for i in range(len(g))))
+for f,l,r in(sum,4,n+(1,141)),(all,3,n):print(sum(f(g[i-x::x][:l]in(s[:l],s[:l][::-1])for x in r)for i in range(19739)))
