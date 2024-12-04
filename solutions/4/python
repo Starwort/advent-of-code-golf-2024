@@ -1,5 +1,4 @@
-a=b=i=0
 g=open(0).read()
-n=142,140
-for c in g:a+=sum(g[i::x][:4]in["XMAS","SAMX"]for x in(1,141)+n);b+=all(g[i-x:i-~x:x]in["MAS","SAM"]for x in n);i+=1
-print(a,b)
+s='SAMX'
+n=140,142
+for f,l,r in(sum,4,n+(1,141)),(all,3,n):print(sum(f(g[i-x::x][:l]in(s[:l],s[:l][::-1])for x in r)for i in range(len(g))))
