@@ -2,6 +2,6 @@ a=b=0
 g=open(0).read()
 w=141
 for i,c in enumerate(g):
- if c>"W":a+=sum(g[i::x][:4]=="XMAS"for x in[1,-1,w,-w,w-1,w+1,-w+1,-w-1])
+ if"W"<c:a+=sum(g[i::x][:4]=="XMAS"for x in[1,-1,w,-w,w-1,w+1,-w+1,-w-1])
  if w<(c=="A")*i<len(g)-w-1:b+=all(g[i-x]+g[i+x]in"SMS"for x in[w+1,w-1])
 print(a,b)
