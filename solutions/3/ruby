@@ -1,2 +1,2 @@
 s=`tr , '*'`
-+s.gsub!(/on((?!do).)*/m){}while p s.gsub(/l.(\d+.\d+)\)/).sum{eval$1}
++s.gsub!(/on((?!do).)*/m){}while p s.gsub(/l.([\d*]+)\)/).sum{eval$1}
