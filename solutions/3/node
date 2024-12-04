@@ -1,2 +1,2 @@
-(require("fs").readFileSync(s=c=d=0)+"").replace(/mul\((\d+),(\d+)\)|do(n?)/g,(_,a,b,e)=>a?(s+=t=a*b,c+=t*!d):d=e)
+(require("fs").readFileSync(s=c=d=0)+"").replace(/ul\((\d+),(\d+)\)|do(n?)/g,(_,a,b,e)=>a?(s+=t=a*b,c+=t*!d):d=e)
 console.log(s,c)
