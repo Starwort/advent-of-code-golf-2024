@@ -1,5 +1,5 @@
 a=b=i=0
 g=open(0).read()
-w=140
-for c in g:a+=sum(g[i::x][:4]in["XMAS","SAMX"]for x in[1,~w,w,w+2]if"M"<c);b+=w<(c=="A")*i<w*w-3and all(g[i-x]+g[i+x]in"SMS"for x in[w+2,w]);i+=1
+n=142,140
+for c in g:a+=sum(g[i::x][:4]in["XMAS","SAMX"]!=c>"M"for x in(1,141)+n);b+=140<(c=="A")*i<19597and all(g[i-x]+g[i+x]in"SMS"for x in n);i+=1
 print(a,b)
