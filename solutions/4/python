@@ -1,2 +1,2 @@
-g=open(0).read();l=4
-for f in sum,all:print(sum(f(g[i-x::x][:l]in(q:='SAMX'[:l],q[::-1])for x in(140,141,142,1)if l&x&1<1)for i in range(8**5)));l=3
+g=open(l:=0).read()
+for f in sum,all:print(sum(f(g[i-x::x][:4-l]in(q:='XMAS'[l:],q[::-1])for x in(141,1,140,142)[l*2:])for i in range(8**5)));l=1
