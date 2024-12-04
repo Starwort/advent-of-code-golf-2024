@@ -1,5 +1,4 @@
 f=([p,...w])=>w.map(n=>s&=+n<p==d&n!=p&Math.abs(p-(p=n))<4,d=+w[i=s=1]<p)|s
-r=R=0
-for(l of(require("fs").readFileSync(0)+"").split`
+for(l of(require("fs").readFileSync(r=R=0)+"").split`
 `){r+=f(w=l.split` `)
 R+=w.some((_,i)=>f((W=[...w],W.splice(i,1),W)))}console.log(r,R)
