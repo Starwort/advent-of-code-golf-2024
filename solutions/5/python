@@ -1,5 +1,5 @@
 from functools import*
-l,*o=open(0),0,0
-e=*iter(l.__next__,'\n'),
-for x in l:v=*sorted(u:=eval(x),key=cmp_to_key(lambda*a:-('%s|%s\n'%a in e))),;o[v!=u]+=v[len(v)//2]
+*l,=open(0)
+o=[0,0]
+for x in l[1177:]:v=*sorted(u:=eval(x),key=cmp_to_key(lambda*a:-('%s|%s'%a in'%s'%l))),;o[v!=u]+=v[len(v)//2]
 print(*o)
