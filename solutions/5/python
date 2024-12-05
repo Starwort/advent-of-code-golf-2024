@@ -1,7 +1,7 @@
-from functools import*
-*b,=open(0)
-a=[]
-while i:=b.pop(0)[:-1]:a+=(*map(int,i.split('|')),),
-b=[[*map(int,i.split(','))]for i in b]
-c=[i for i in b if all(not{*j}<{*i}or i.index(j[0])<i.index(j[1])for j in a)]
-print(*[sum(i[len(i)//2]for i in l)for l in[c,[sorted(i,key=cmp_to_key(lambda*j:sum({r:-1,r[::-1]:1}.get(j,0)for r in a)))for i in b if i not in c]]])
+from functools import cmp_to_key
+l=[*open(0)]
+e=[]
+while x:=l.pop(0)[:-1]:e+=(*map(int,x.split('|')),),
+a=b=0
+for x in l:v=sorted(u:=[*eval(x)],key=cmp_to_key(lambda*a:(a[::-1]in e)-(a in e)));z=len(v)//2;a+=(v==u)*v[z];b+=(v!=u)*v[z]
+print(a,b)
