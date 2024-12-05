@@ -1,3 +1,4 @@
 f=(c,l,o)=>a[c]&&a[c]=="XMAS"[l]?f(c+o,l+1,o):l>3
-for(i in a=(require("fs").readFileSync(e=d=0)+""))[-142,-141,-140,-1,1,140,141,142].map(o=>e+=f(+i,0,o)),a[i]=="A"&&(w=a[i-142],x=a[i-140],y=a[+i+140],z=a[+i+142],s=w=="M"?z=="S":w=="S"&z=="M",d+=s&=x=="M"?y=="S":x=="S"&y=="M")
+g=(c,l,o)=>a[c]&&a[c]=="MAS"[l]?g(c+o,l+1,o):l>2
+for(i in a=(require("fs").readFileSync(e=d=0)+""))[-142,-141,-140,-1,1,140,141,142].map(o=>e+=f(+i,0,o)),D=0,a[i]=="A"&&([-142,-140,140,142].map(o=>D+=g(+i+o,0,-o))),d+=D==2
 console.log(e,d)
