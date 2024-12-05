@@ -2,6 +2,6 @@ from functools import*
 x,*l=open(0)
 e=[]
 while x[:-1]:e+=(*map(int,x.split('|')),),;x,*l=l
-a=b=0
-for x in l:*u,=eval(x);v=sorted(u,key=cmp_to_key(lambda*a:(a[::-1]in e)-(a in e)));exec('ab'[v!=u]+'+=v[len(v)//2]')
-print(a,b)
+r=[0,0]
+for x in l:*u,=eval(x);v=sorted(u,key=cmp_to_key(lambda*a:(a[::-1]in e)-(a in e)));r[v!=u]+=v[len(v)//2]
+print(*r)
