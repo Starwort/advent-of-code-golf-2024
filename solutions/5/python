@@ -1,8 +1,8 @@
 from functools import*
 x,*l=open(0)
 e=''
-while x[1:]:e+=x;x,*l=l
-a=b=0
-o=[0,0]
-for x in l:v=sorted(u:=[*eval(x)],key=cmp_to_key(lambda x,y:(f'{y}|{x}'in e)-(f'{x}|{y}'in e)));o[v!=u]+=v[len(v)//2]
-print(*o)
+while x[:-1]:e+=x;x,*l=l
+s='%s|%s'
+r=[0,0]
+for x in l:*u,=eval(x);v=sorted(u,key=cmp_to_key(lambda*a:(s%a[::-1]in e)-(s%a in e)));r[v!=u]+=v[len(v)//2]
+print(*r)
