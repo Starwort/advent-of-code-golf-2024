@@ -1,5 +1,4 @@
-from functools import*
 *l,=open(0)
 o=[0,0]
-for*u,in map(eval,l[1177:]):v=sorted(u,key=cmp_to_key(lambda*a:-('%s|%s\n'%a in l)));o[v!=u]+=v[len(v)//2]
+for*u,in map(eval,l[1177:]):v=sorted(u,key=lambda x:sum(f"{n}|{x}\n"in l for n in u));o[v!=u]+=v[len(v)//2]
 print(*o)
