@@ -2,6 +2,5 @@ S=split;R,U=S.(S(readchomp(stdin),"
 
 "))
 U=S.(U,",").|>u->parse.(Int,u)
-T=(a,b)->"$a|$b"∈R
-!u=issorted(u,lt=T)
-print(sum(u->u[end÷2+1]*!u,U)," ",sum(u->(~!u)*(sort!(u,lt=T);u[end÷2+1]),U))
+a/b="$a|$b"∈R;!n=issorted(n,lt=/)
+print(sum(u->u[end÷2+1]*!u,U)," ",sum(u->~!u*(sort!(u,lt=/);u[end÷2+1]),U))
