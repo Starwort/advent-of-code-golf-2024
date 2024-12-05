@@ -1,7 +1,6 @@
 from functools import*
-x,*l=open(0)
-e=''
-while x[:-1]:e+=x;x,*l=l
-s,*r='%s|%s',0,0
-for x in l:*u,=eval(x);v=sorted(u,key=cmp_to_key(lambda*a:(s%a[::-1]in e)-(s%a in e)));r[v!=u]+=v[len(v)//2]
-print(*r)
+l=open(0)
+e=*iter(l.__next__,'\n'),
+s,*o='%s|%s\n',0,0
+for x in l:v=sorted(u:=[*eval(x)],key=cmp_to_key(lambda*a:(s%a[::-1]in e)-(s%a in e)));o[v!=u]+=v[len(v)//2]
+print(*o)
