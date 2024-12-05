@@ -1,4 +1,6 @@
-S=split;r,U=S.(S(readchomp(stdin),"\n\n"));e=enumerate;r/s=S.(r,s).|>r->
+S=split;r,U=S.(S(readchomp(stdin),"
+
+"));e=enumerate;r/s=S.(r,s).|>r->
 parse.(Int,r);r=r/"|";L=first.(r);R=last.(r);U=U/",";O=Dict();for(i,l)=e(L)
 l∉keys(O) ? (O[l]=Set(R[i])) : push!(O[l],R[i])end;v(u,o)=~any(u[i+1:end]⊈o[e]
 for(i,e)=e(u[1:end-1]));c(a,b)=b∈O[a];print(sum(u[end÷2+1] for u=U if v(u,O)),
