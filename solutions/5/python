@@ -1,4 +1,4 @@
-from functools import cmp_to_key
+from functools import*
 *l,=open(0)
 e=[]
 while x:=l.pop(0)[:-1]:e+=(*map(int,x.split('|')),),
