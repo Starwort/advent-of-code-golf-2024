@@ -1,6 +1,6 @@
 U=readlines()
 a/b="$a|$b"∈U
 o=[0,0]
-for u=split.(U[1178:end],",");v=sort(u,lt=/)
-o[2-(v==u)]+=parse(Int,v[end÷2+1])end
+split.(U[1178:end],",").|>u->(v=sort(u,lt=/);
+o[2-(v==u)]+=parse(Int,v[end÷2+1]))
 println.(o)
