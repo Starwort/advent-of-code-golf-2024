@@ -1,7 +1,5 @@
-S=split;r,U=S.(S(readchomp(stdin),"
+S=split;R,U=S.(S(readchomp(stdin),"
 
-"));e=enumerate;r/s=S.(r,s).|>r->
-parse.(Int,r);r=r/"|";L=first.(r);R=last.(r);U=U/",";O=Dict();for(i,l)=e(L)
-push!(get!(O,l,Set(R[i])),R[i])end;c(a,b)=b∈O[a];v(u)=issorted(u,lt=c);print(
-sum(u[end÷2+1] for u=U if v(u))," ",sum((sort!(u,lt=c);u[end÷2+1]) for (i,u)=e(U
-)if~v(u)))
+"));U=S.(U,",").|>u->parse.(Int,u)
+lt=(a,b)->"$a|$b"∈R;!u=issorted(u,lt=lt);print(sum(u[end÷2+1] for u=U if !u)," "
+,sum((sort!(u, lt=lt);u[end÷2+1]) for u=U if~!u))
