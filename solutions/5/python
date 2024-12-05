@@ -1,0 +1,5 @@
+from functools import*
+a,b=[[[*map(int,i.split('|'))]for i in l.split('\n')]for l in open(0).read().replace(',','|').split('\n\n')]
+c=[i for i in b if all(j[0]not in i or j[1]not in i or i.index(j[0])<i.index(j[1])for j in a)]
+b=[sorted(i,key=cmp_to_key(lambda j,k:sum({(r[0],r[1]):-1,(r[1],r[0]):1}.get((j,k),0)for r in a)))for i in b if i not in c]
+print(*[sum(i[len(i)//2]for i in l)for l in[c,b]])
