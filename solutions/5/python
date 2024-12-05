@@ -3,5 +3,5 @@ from functools import cmp_to_key
 e=[]
 while x:=l.pop(0)[:-1]:e+=(*map(int,x.split('|')),),
 a=b=0
-for x in l:v=sorted(u:=[*eval(x)],key=cmp_to_key(lambda*a:(a[::-1]in e)-(a in e)));z=len(v)//2;a+=(v==u)*v[z];b+=(v!=u)*v[z]
+for x in l:v=sorted(u:=[*eval(x)],key=cmp_to_key(lambda*a:(a[::-1]in e)-(a in e)));a+=(v==u)*v[z:=len(v)//2];b+=(v!=u)*v[z]
 print(a,b)
