@@ -1,5 +1,6 @@
-\,N=sum,readlines()
-U=@.split(N[1178:end],",")|>u->parse(Int,u)
-a/b="$a|$b"∈N
-!n=sort(n,lt=/)
-print((u->u[end÷2+1]*(!u==u))\U," ",(u->(!u!=u)*(!u)[end÷2+1])\U)
+U=readlines()
+a/b="$a|$b"∈U
+o=[0,0]
+for u in split.(U[1178:end],",");v=sort(u,lt=/)
+o[2-(v==u)]+=parse(Int,v[end÷2+1])end
+println.(o)
