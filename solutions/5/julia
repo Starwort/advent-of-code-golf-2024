@@ -1,5 +1,4 @@
 N=readlines()
-S=split
-U=S.(N[1178:end],",").|>u->parse.(Int,u)
+U=@.split(N[1178:end],",")|>u->parse(Int,u)
 a/b="$a|$b"∈N;!n=issorted(n,lt=/)
 print(sum(u->u[end÷2+1]*!u,U)," ",sum(u->~!u*sort(u,lt=/)[end÷2+1],U))
