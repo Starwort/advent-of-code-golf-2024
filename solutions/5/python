@@ -1,6 +1,6 @@
 from functools import*
 l=open(0)
 e=*iter(l.__next__,'\n'),
-s,*o='%s|%s\n',0,0
-for x in l:v=sorted(u:=[*eval(x)],key=cmp_to_key(lambda*a:(s%a[::-1]in e)-(s%a in e)));o[v!=u]+=v[len(v)//2]
+o=[0,0]
+for x in l:v=sorted(u:=[*eval(x)],key=cmp_to_key(lambda*a:-('%s|%s\n'%a in e)));o[v!=u]+=v[len(v)//2]
 print(*o)
