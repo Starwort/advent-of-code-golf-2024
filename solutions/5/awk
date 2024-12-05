@@ -1,0 +1,1 @@
+END{print A[0],A[1]}s=1~gsub(/[,|]/,FS){R[$2]=$1"|"R[$2]}$3{for(k in R)sub(k".*("R[k]":)","& "k)&&s=sub(k,z);A[s]+=$(++NF/2)}
