@@ -2,8 +2,7 @@ G=open(0).read()
 D=-131,1,131,-1
 def S(c):
  s=set();p=G.find("^");d=0
- while 1:
-  if(d,p)in s:break
+ while(d,p)not in s:
   if(0<=p<len(G))-1or"#">G[p]:return s
   if".">G[p]or p==c:p-=D[d];d=-~d%4
   else:s|={(d,p)[c<0:]};p+=D[d]
