@@ -1,9 +1,8 @@
-G=open(0).read()
-D=-131,1,131,-1
-def S(c):
- s=set();p=G.find("^");d=0
- while(d,p)not in s:
-  if(0<p<17029)-1or"#">G[p]:return s
-  if".">G[p]or p==c:p-=D[d];d=-~d%4
-  else:s|={(d,p)[c<0:]};p+=D[d]
-print(len(p:=S(-1)),sum(not S(x[0])for x in p))
+G=open(0).read()+" "*999
+def S(c,d=131):
+ d,*s=131,G.find("^")
+ for p in s:
+  if"#">G[p:=p-d]or s[9998:]:return s
+  if".">G[p]or p==c:p+=d;d=1|131^2//d-d
+  s+=p,
+print(len(p:={*S(-1)}),sum(len(S(x))>9997for x in p))
