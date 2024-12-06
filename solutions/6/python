@@ -5,6 +5,6 @@ def S(c):
  while 1:
   if(d,p)in s:return[]
   if not(0<=p<len(G))or G[p]=="\n":return s
-  if"#"==G[p]or p==c:p-=D[d];d=(d+1)%4
+  if"#"==G[p]or p==c:p-=D[d];d=-~d%4
   else:s|={(d,p)[c<0:]};p+=D[d]
 print(len(p:=S(-1)),sum(not S(x[0])for x in p))
