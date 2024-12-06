@@ -11,6 +11,7 @@ import aoc_helper
 import git
 import msgpack
 import websockets
+import aiohttp
 from aoc_helper.data import DATA_DIR as aoc_data_dir
 from bot import Bot
 from context import Context
@@ -53,14 +54,21 @@ If you wish to submit solutions, please use [the bot](https://discord.com/api/oa
 {{}}
 """
 
-LOOKUP_TEMPLATE = """\
+LOOKUP_TEMPLATE = (
+    """\
 [Solution for day {day} in {lang_pretty} by {author} ({score})](
 <https://github.com/Starwort/advent-of-code-golf-%s/blob/{sha}/solutions/{day}/{lang}>
 ):
 ```
 {solution}
 ```
-""" % YEAR
+"""
+    % YEAR
+)
+
+USER_AGENT = (
+    f"Advent of Code Golf bot / websockets=={ws_version};" f" Python=={py_version}"
+)
 
 
 class LanguageMeta(TypedDict):
@@ -104,11 +112,11 @@ class Runner(commands.Cog):
 
     def __init__(self, bot: Bot):
         self.bot = bot
+        self.session = aiohttp.ClientSession(headers={"User-Agent": USER_AGENT})
 
     async def async_init(self):
-        from json import loads
-
-        self.languages: dict[str, LanguageMeta] = loads(languages.read_text())
+        async with session.get("https://ato.pxeger.com/languages.json") as resp:
+            self.languages: dict[str, LanguageMeta] = await resp.json()
         for lang, meta in self.languages.items():
             meta["ato_name"] = lang
             meta["internal_name"] = lang
@@ -240,10 +248,7 @@ class Runner(commands.Cog):
         stderr = ""
         async with websockets.connect(
             "wss://ato.pxeger.com/api/v1/ws/execute",
-            user_agent_header=(  # type: ignore
-                f"Advent of Code Golf bot / websockets=={ws_version};"
-                f" Python=={py_version}"
-            ),
+            user_agent_header=(USER_AGENT),  # type: ignore
         ) as ws:
             await ws.send(
                 msgpack.dumps(
@@ -514,10 +519,12 @@ class Runner(commands.Cog):
         )
         max_day = max(int(day) for day in solution_authors)
         langs = {lang for day in solution_authors.values() for lang in day}
-        langs = sorted((self.languages[lang] for lang in langs), key=lambda i: i['name'])
+        langs = sorted(
+            (self.languages[lang] for lang in langs), key=lambda i: i["name"]
+        )
         leaderboard = (
             "Day | "
-            + " | ".join(lang['name'] for lang in langs)
+            + " | ".join(lang["name"] for lang in langs)
             + "\n"
             + "--: | "
             + " | ".join("---" for _ in langs)
@@ -528,13 +535,13 @@ class Runner(commands.Cog):
             def get_entry(lang: str) -> str:
                 if author := day_solutions.get(lang):
                     solution_len = len((solutions_dir / f"{day}" / lang).read_bytes())
-                    return (
-                        f"[{solution_len} - {author}](./solutions/{day}/{lang})"
-                    )
+                    return f"[{solution_len} - {author}](./solutions/{day}/{lang})"
                 else:
                     return "-"
 
-            leaderboard += f"\n{day} | " + " | ".join(get_entry(lang['internal_name']) for lang in langs)
+            leaderboard += f"\n{day} | " + " | ".join(
+                get_entry(lang["internal_name"]) for lang in langs
+            )
         readme_file.write_text(README_TEMPLATE.format(leaderboard))
 
     @commands.command(name="add-test-case")
