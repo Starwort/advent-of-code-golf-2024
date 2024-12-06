@@ -1,5 +1,5 @@
 G=open(0).read()+" "*999
-def S(c,d=131):
+def S(c):
  d,*s=131,G.find("^")
  for p in s:
   if"#">G[p:=p-d]or s[9998:]:return s
