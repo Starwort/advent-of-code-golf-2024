@@ -6,4 +6,4 @@ def S(c):
   if"#">G[p:=p-d]or s[N:]:return s
   if".">G[p]*(p!=c):p+=d;d=1|131^2//d-d
   s+=p,
-print(len(p:={*S(-1)}),sum(N<len(S(x))for x in p))
+print(len(p:={*S(G)}),sum(N<len(S(x))for x in p))
