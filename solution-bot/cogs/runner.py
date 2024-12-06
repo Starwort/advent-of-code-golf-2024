@@ -59,7 +59,7 @@ LOOKUP_TEMPLATE = (
 [Solution for day {day} in {lang_pretty} by {author} ({score})](
 <https://github.com/Starwort/advent-of-code-golf-%s/blob/{sha}/solutions/{day}/{lang}>
 ):
-```
+```{lang_raw}
 {solution}
 ```
 """
@@ -234,6 +234,7 @@ class Runner(commands.Cog):
                 day=day,
                 lang=language,
                 lang_pretty=ato_lang["name"],
+                lang_raw=ato_lang["ato_name"],
                 author=author,
                 score=solution_len,
                 solution=solution,
