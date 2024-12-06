@@ -34,4 +34,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | JavaScript (Node.js) | Julia | K (ngn/k
 3 | - | - | - | - | [128 - jeff.hykin](./solutions/3/node) | [243 - alemelis](./solutions/3/julia) | [93 - okras](./solutions/3/k_ngn) | - | [140 - duckyluuk](./solutions/3/python) | - | - | [82 - the.unnamed](./solutions/3/ruby) | [160 - jeff.hykin](./solutions/3/deno)
 4 | - | - | - | - | [200 - treeeeeeeeeeeeee](./solutions/4/node) | [358 - alemelis](./solutions/4/julia) | [69 - okras](./solutions/4/k_ngn) | - | [145 - okras](./solutions/4/python) | [148 - biz314](./solutions/4/python-no-ws) | - | - | [1639 - jeff.hykin](./solutions/4/deno)
 5 | [125 - .___uho](./solutions/5/awk) | - | - | - | - | [123 - .___uho](./solutions/5/julia) | [52 - okras](./solutions/5/k_ngn) | [86 - okras](./solutions/5/perl) | [134 - biz314](./solutions/5/python) | - | [649 - orthoplex](./solutions/5/python-orthoplex) | - | -
-6 | - | - | - | - | - | - | - | - | [262 - eniraa](./solutions/6/python) | - | - | - | -
+6 | - | - | - | - | - | - | - | - | [255 - duckyluuk](./solutions/6/python) | - | - | - | -
