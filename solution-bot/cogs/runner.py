@@ -115,7 +115,7 @@ class Runner(commands.Cog):
         self.session = aiohttp.ClientSession(headers={"User-Agent": USER_AGENT})
 
     async def async_init(self):
-        async with session.get("https://ato.pxeger.com/languages.json") as resp:
+        async with self.session.get("https://ato.pxeger.com/languages.json") as resp:
             self.languages: dict[str, LanguageMeta] = await resp.json()
         for lang, meta in self.languages.items():
             meta["ato_name"] = lang
