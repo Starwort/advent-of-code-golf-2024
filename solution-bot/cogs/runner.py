@@ -10,7 +10,7 @@ from urllib.parse import quote
 import aoc_helper
 import git
 import msgpack
-import websockets.client as websockets
+import websockets
 from aoc_helper.data import DATA_DIR as aoc_data_dir
 from bot import Bot
 from context import Context
