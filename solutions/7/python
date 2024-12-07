@@ -1,5 +1,5 @@
 r=*open(0),
 for i in 1,0:
  a=0
- for l in r:x=l.split();x[0]=x[0][:-1];x,S,*Y=map(int,x);S=S,;[S:=[o for s in S for o in[int(f"{s}{y}"),s+y,s*y][i:]]for y in Y];a+=(x in S)*x
+ for l in r:x,S,*Y=map(int,l.replace(*': ').split());S=S,;[S:={o for s in S for o in[int(f"{s}{y}"),s+y,s*y][i:]}for y in Y];a+=({x}<S)*x
  print(a)
