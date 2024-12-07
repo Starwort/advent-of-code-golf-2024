@@ -1,5 +1,6 @@
+from numpy import*
 r=*open(0),
-for i in 1,0:
+for i in 0,1:
  a=0
- for l in r:x,S,*Y=map(int,l.replace(*': ').split());S=S,;[S:={o for s in S for o in[int(f"{s}{y}"),s+y,s*y][i:]}for y in Y];a+=({x}<S)*x
+ for l in r:x,S,*Y=map(int,l.replace(*': ').split());[S:=r_[S*y,S+y,S*10**len(str(y)*i)+y]for y in Y];a+=(x in S)*x
  print(a)
