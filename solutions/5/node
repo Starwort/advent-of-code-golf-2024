@@ -1,0 +1,6 @@
+let [l, o] = [require('fs').readFileSync(0, 'utf-8').split('\n'), [0, 0]];
+for(u of l.slice(1177)){u=u.split`,`
+let v = [...u].sort((a, b) => u.map(n => l.includes(`${n}|${a}`)).reduce((a, c) => a + c, 0) - u.map(n => l.includes(`${n}|${b}`)).reduce((a, c) => a + c, 0));
+  o[((v+"") != (u+""))|0] += +v[Math.floor(v.length / 2)];
+};
+console.log(o[0], o[1]);
