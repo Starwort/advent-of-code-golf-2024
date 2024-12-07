@@ -1,9 +1,9 @@
 N=9999
-G=open(0).read()+" "*N
+G=open(0).read()+""*N
 def S(c):
  d,*s=131,G.find("^")
- for p in s:
-  if"#">G[p:=p-d]or s[N:]:return s
+ while"\n"<G[p:=s[-1]-d]!=s[N:]==[]:
   if".">G[p]*(p!=c):p+=d;d=1|131^2//d-d
   s+=p,
+ return s
 print(len(p:={*S(G)}),sum(N<len(S(x))for x in p))
