@@ -1,8 +1,5 @@
-x=y=0
-$<.map{|s|g,*n=s.split.map &:to_i
-t=p
-f=proc{|a,b,*r|b ?f[a+b,*r]||f[a*b,*r]||t&&f["#{a}#{b}".to_i,*r]:g==a}
-x+=f[*n]?g:0
-t=1
-y+=f[*n]?g:0}
-p x,y
+y=0
+p$<.sum{|s,t|g,*n=s.split.map &:to_i
+f=proc{|a,b,*r|b ?f[a+b,*r]||f[a*b,*r]||!t&&f["#{a}#{b}".to_i,*r]:g==a}
+t=y+=f[*n]?g:0
+f[*n]?g:0},y
