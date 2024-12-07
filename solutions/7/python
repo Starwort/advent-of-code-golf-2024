@@ -1,10 +1,7 @@
 from operator import*
-c=lambda x,y:int(str(x)+str(y))
+c=lambda x,y:int(f'{x}'+f'{y}')
 r=*open(0),
 for i in 1,0:
  a=0
- for l in r:
-  x=l.split();x[0]=x[0][:-1];x,*Y=map(int,x);S=[Y[0]]
-  for y in Y[1:]:S=[o(s,y)for s in S for o in[c,add,mul][i:]]
-  a+=(x in S)*x
+ for l in r:x=l.split();x[0]=x[0][:-1];x,*Y=map(int,x);S=Y[0],;[S:=[o(s,y)for s in S for o in[c,add,mul][i:]]for y in Y[1:]];a+=(x in S)*x
  print(a)
