@@ -1,6 +1,5 @@
 l=(require("fs").readFileSync(0)+"").split`
 `
 o=[0,0]
-f=x=>u.map(n=>s+=l.includes(n+"|"+x),s=0)|s
-for(u of l.slice(1177))v=[...u=u.split`,`].sort((a,b)=>f(a)-f(b)),o[v>u|u>v]+=+v[v.length/2|0]
+l.slice(1177).map(u=>o[(v=[...u=u.split`,`].sort((a,b)=>(f=x=>u.map(n=>s+=l.includes(n+"|"+x),s=0)|s)(a)-f(b)))>u|u>v]+=+v[v.length/2|0])
 console.log(...o)
