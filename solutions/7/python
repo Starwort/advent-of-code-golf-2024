@@ -5,6 +5,6 @@ for i in 1,0:
  a=0
  for l in r:
   x=l.split();x[0]=x[0][:-1];x,*ys=map(int,x);S=[ys[0]]
-  for y in ys[1:]:S=[op(s,y) for s in S for op in [c,add,mul][i:]]
-  if x in S:a+=x
+  for y in ys[1:]:S=[o(s,y) for s in S for o in[c,add,mul][i:]]
+  a+=(x in S)*x
  print(a)
