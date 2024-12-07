@@ -1,7 +1,5 @@
-l=(require("fs").readFileSync(a=b=0)+"").split`
+l=(require("fs").readFileSync(0)+"").split`
 `
-for(u of l.slice(1177)){u=u.split`,`
-v=[...u].sort((a,b)=>u.map(n=>l.includes(n+"|"+a)).reduce((a,c)=>a+c)-u.map(n=>l.includes(n+"|"+b)).reduce((a,c)=>a+c))
-m=+v[v.length/2|0]
-v+0==u+0?a+=m:b+=m
-}console.log(a,b)
+o=[0,0]
+for(u of l.slice(1177))v=[...u=u.split`,`].sort((a,b)=>(f=x=>u.map(n=>s+=l.includes(n+"|"+x),s=0)|s,f(a)-f(b))),o[v>u|u>v]+=+v[v.length/2|0]
+console.log(...o)
