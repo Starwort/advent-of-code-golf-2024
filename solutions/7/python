@@ -1,14 +1,9 @@
-lines = [(int(test), list(map(int, args.split()))) for test, args in [line.split(": ") for line in open(0).read().splitlines()]]
-
-star, plus, concat = lambda x, y: x * y, lambda x, y: x + y, lambda x, y: int(f"{x}{y}")
-def solve(targ, args, operators):
- def inner(targ, args, curr):
-  if curr>targ:return False
-  match args:
-    case []:
-        return curr == targ
-    case [arg,*rest]:
-        return any(inner(targ, rest, op(curr, arg)) for op in operators)
- return inner(targ, args[1:], args[0])
-print(sum(targ for targ, args in lines if solve(targ, args, [star, plus])))
-print(sum(targ for targ, args in lines if solve(targ, args, [star, plus, concat])))
+from operator import*
+a=b=0;c=lambda x,y:int(str(x)+str(y))
+for l in open(0):
+ x=l.split();x[0]=x[0][:-1];x,*ys=map(int, x);S=T=[ys[0]]
+ for y in ys[1:]:S = [op(s,y) for s in S for op in (add,mul)]
+ for y in ys[1:]:T = [op(s,y) for s in T for op in (add,mul,c)]
+ if x in S:a+=x
+ if x in T:b+=x
+print(a,b)
