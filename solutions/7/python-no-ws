@@ -1,1 +1,1 @@
-r=*open(0),;i=0;exec("a=0\nfor(l)in(r):x,S,*Y=map(int,l.replace(*':'+chr(32)).split());[S:=__import__('numpy').r_[S*y,S+y,S*10**len(str(y)*i)+y]for(y)in(Y)];a+=((x)in(S))*x\nprint(a);i=1;"*2)
+r=*open(i:=0),;exec("a=0\nfor(l)in(r):x,S,*Y=map(int,l.replace(*':'+chr(32)).split());[S:=__import__('numpy').r_[S*y,S+y,S*10**len(str(y)*i)+y]for(y)in(Y)];a+=((x)in(S))*x\nprint(a);i=1;"*2)
