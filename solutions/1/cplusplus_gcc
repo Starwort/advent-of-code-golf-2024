@@ -1,3 +1,2 @@
 #import<regex>
-#define S(v)std::sort(&*v,&*std::end(v));
-int d,i,j,k,x[1000],y[1000];int main(){for(;~scanf("%d %d",x+i,y+i);i++);S(x)S(y)for(int n:x){d+=abs(n-y[k++]);j+=n*std::count(&*y,&*std::end(y),n);}printf("%d %d",d,j);}
+int d,i,j,k,x[1000],y[1000];int main(){for(;~scanf("%d%d",x+i,y+i);std::sort(x,x+i))std::sort(y,++i+y);for(int n:x)d+=abs(n-y[k++]),j+=n*std::count(y,y+i,n);printf("%d %d",d,j);}
