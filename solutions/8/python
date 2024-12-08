@@ -1,4 +1,4 @@
 from itertools import*
 i=-1
 G={(i:=i+1)//50+i%50*1j:c for c in open(0).read()if"\n"<c}
-for r in[1],range(50):print(len({a+n*(a-b)for f in{*G.values()}-{'.'}for a,b in permutations([k for k in G if G[k]==f],2)for n in r}&set(G)))
+for r in[1],range(50):print(len({a+n*(a-b)for f in{*G.values()}-{'.'}for a,b in permutations([k for k in G if G[k]==f],2)for n in r}&{*G}))
