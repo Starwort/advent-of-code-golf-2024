@@ -1,1 +1,1 @@
-i=0;G={i//50+(i:=i+1)*1j:(c)for(c)in(open(0).read())if(chr(32))<c};exec("for(r)in[1],range(i):print(len({a-n*(b-a)for(a)in(G)for(b)in{*G}-{a}if'.'<G[a]==G[b]for(n)in(r)}&{*G}))")
+x=range(50);G={i+j*1j:(c)for(i)in(x)for(j,c)in(zip(x,input()))};[print(len({a+n*(a-b)for(a)in(G)for(b)in{*G}-{a}if'.'<G[a]==G[b]for(n)in(r)}&{*G}))for(r)in([1],x)]
