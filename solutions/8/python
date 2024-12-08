@@ -1,3 +1,3 @@
 i=-1
 G={(i:=i+1)//50+i*1j:c for c in open(0).read()if" "<c}
-for r in[1],range(i):print(len({a+n*(a-b)for a in G if'.'!=G[a]for b in{*G}-{a}if G[a]==G[b]for n in r}&{*G}))
+for r in[1],range(i):print(len({a+n*(a-b)for a in G if'.'<G[a]for b in{*G}-{a}if G[a]==G[b]for n in r}&{*G}))
