@@ -1,3 +1,3 @@
-#include<stdio.h>
-#include<algorithm>
-int x,t,i,j,q,p,a[1001],b[1000];int main(){for(;~scanf("%d %d",a+t,b+t);)t++;std::sort(b,b+t);for(std::sort(a,a+t);x=a[i];i++){q+=abs(x-b[i]);for(j=0;j<t;)p+=x-b[j++]?0:x;}printf("%d %d",q,p);}
+#import<regex>
+#define S(v)std::sort(&*v,&*std::end(v));
+int d,i,j,k,x[1000],y[1000];int main(){for(;~scanf("%d %d",x+i,y+i);i++);S(x)S(y)for(int n:x){d+=abs(n-y[k++]);j+=n*std::count(&*y,&*std::end(y),n);}printf("%d %d",d,j);}
