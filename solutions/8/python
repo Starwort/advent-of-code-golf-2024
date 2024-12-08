@@ -1,0 +1,6 @@
+from itertools import*
+G={i+j*1j:c for i,r in enumerate(open(0))for j,c in enumerate(r.strip())}
+for r in[1],range(50):
+ a=set()
+ for f in{*G.values()}-{'.'}:a|={a+(a-b)*n for a,b in permutations([k for k in G if G[k]==f],2)for n in r if a+(a-b)*n in G}
+ print(len(a))
