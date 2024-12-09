@@ -1,10 +1,10 @@
 x=[*map(int,input()),9999]
-o=[];p=t=0
+o=[];p=t=0;f=enumerate
 for v in x:o+=t,;t+=v
 o+=t,
-F,E=[[(i,o[i*2+s]+w)for i,v in enumerate(x[s::2])for w in range(v)]for s in(0,1)]
+F,E=[[(i,o[i*2+s]+w)for i,v in f(x[s::2])for w in range(v)]for s in(0,1)]
 C=x[1::2]
-for i,q in enumerate(x[-2::-2]):
+for i,q in f(x[-2::-2]):
  I=len(x)//2-i-1;t=0
  while t<I and q>C[t]:t+=1
  p+=(~-q+o[t*2+(t<I)]*2)*q*I//2
