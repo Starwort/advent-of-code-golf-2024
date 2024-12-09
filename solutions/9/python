@@ -1,5 +1,5 @@
 from numpy import*
 w=repeat(r_[:len(x:=r_[*map(int,input()),v:=9999])],x)[:-v]
 o=r_[p:=0,cumsum(x)]
-for q in x[-2::-2]:x[t:=min((v,argmin(q>x[1::2])))*2+1]-=q;p+=(q-1+o[t-(t>v*2)]*2)*q*v//2;o[t]+=q;v-=1
+for q in x[-2::-2]:x[t:=min((v*2,1+2*argmin(q>x[1::2])))]-=q;p+=(q-1+o[t]*2)*q*v//2;o[t]+=q;v-=1
 print(sum(minimum(X:=where(~w%2)[0],r_[where(w%2)[0],X|p][argsort(-X)])*w[X]//2),p)
