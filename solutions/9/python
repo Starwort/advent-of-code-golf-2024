@@ -2,5 +2,5 @@ from numpy import*
 v=20000
 w=repeat(r_[:v],x:=r_[*map(int,input()),p:=0])
 o=r_[0,cumsum(x)]
-while v:v-=2;q=x[v];x[t:=min((v,1+2*argmin(q>x[1::2])))]-=q;o[t]+=q;p+=(o[t]*2+~q)*q*v//4
+while v:v-=2;a=+x;a[:v:2]=0;q=x[v];x[t:=argmin(q>a)]-=q;o[t]+=q;p+=(o[t]*2+~q)*q*v//4
 print(sum(minimum(X:=where(~w%2)[0],r_[where(w%2)[0],X|p][argsort(-X)])*w[X]//2),p)
