@@ -1,11 +1,10 @@
 x=[*map(int,input()),9999]
 o=[];p=t=0;f=enumerate
 for v in x:o+=t,;t+=v
-o+=t,
 F,E=[[(i,o[i*2+s]+w)for i,v in f(x[s::2])for w in range(v)]for s in(0,1)]
 C=x[1::2]
 for i,q in f(x[-2::-2]):
- I=9999-i;t=0
+ I=v-i;t=0
  while t<I and q>C[t]:t+=1
- p+=(~-q+o[t*2+(t<I)]*2)*q*I//2;o[t*2+1]+=q;C[t]-=q
+ p+=(q-1+o[t*2+(t<I)]*2)*q*I//2;o[t*2+1]+=q;C[t]-=q
 print(sum(i*min(a,b)for(i,a),(_,b)in zip(F[::-1],E)),p)
