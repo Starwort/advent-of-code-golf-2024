@@ -35,6 +35,6 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | JavaScript (Node.js) | Julia | K (ngn/k
 4 | - | - | - | - | [200 - treeeeeeeeeeeeee](./solutions/4/node) | [358 - alemelis](./solutions/4/julia) | [69 - okras](./solutions/4/k_ngn) | - | [145 - okras](./solutions/4/python) | [148 - biz314](./solutions/4/python-no-ws) | - | - | [1639 - jeff.hykin](./solutions/4/deno)
 5 | [125 - .___uho](./solutions/5/awk) | - | - | - | [209 - treeeeeeeeeeeeee](./solutions/5/node) | [123 - .___uho](./solutions/5/julia) | [52 - okras](./solutions/5/k_ngn) | [86 - okras](./solutions/5/perl) | [134 - biz314](./solutions/5/python) | [649 - orthoplex](./solutions/5/python-no-ws) | [649 - orthoplex](./solutions/5/python-orthoplex) | - | -
 6 | - | - | - | - | - | - | - | - | [206 - biz314](./solutions/6/python) | - | - | - | -
-7 | - | - | - | - | - | - | [47 - attinat](./solutions/7/k_ngn) | - | [175 - okras](./solutions/7/python) | [184 - okras](./solutions/7/python-no-ws) | - | [140 - natt.e](./solutions/7/ruby) | -
+7 | - | - | - | - | - | [574 - alemelis](./solutions/7/julia) | [47 - attinat](./solutions/7/k_ngn) | - | [175 - okras](./solutions/7/python) | [184 - okras](./solutions/7/python-no-ws) | - | [140 - natt.e](./solutions/7/ruby) | -
 8 | - | - | - | - | - | - | [72 - okras](./solutions/8/k_ngn) | - | [157 - .___uho](./solutions/8/python) | [163 - .___uho](./solutions/8/python-no-ws) | - | - | -
 9 | - | - | - | - | - | - | [151 - okras](./solutions/9/k_ngn) | - | [286 - okras](./solutions/9/python) | - | - | - | -

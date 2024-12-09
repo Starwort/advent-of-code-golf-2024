@@ -1,0 +1,27 @@
+function f(t, nums, res)
+ if length(nums)<1
+  return t==res
+ end
+ res>t&&return 2<1
+
+ n=nums[1]
+ f(t,nums[2:end],res+n)||f(t,nums[2:end],res<1 ? n : res*n)
+end
+
+function f2(t, nums, res)
+ if length(nums)<1
+  return t==res
+ end
+ res>t&&return 2<1
+
+ n=nums[1]
+ f2(t,nums[2:end],res+n)||f2(t,nums[2:end],res<1 ? n : res*n) || f2(t,nums[2:end],parse(Int,"$res$n"))
+end
+
+L=readlines(stdin)
+#L=split(L,"\n")
+L=split.(L,": ")
+targets=parse.(Int,first.(L))
+nums=split.(last.(L)).|>n->parse.(Int,n)
+sum(targets.*f.(targets,nums,0))|>println
+sum(targets.*f2.(targets,nums,0))|>println
