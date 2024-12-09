@@ -1,6 +1,6 @@
 from numpy import*
-w=repeat(r_[:len(x:=r_[*map(int,input()),0])],x)
-v=19998
+v=20000
+w=repeat(r_[:v],x:=r_[*map(int,input()),0])
 o=r_[p:=0,cumsum(x)]
-for q in x[-2::-2]:x[t:=min((v,1+2*argmin(q>x[1::2])))]-=q;p+=(q-1+o[t]*2)*q*v//4;o[t]+=q;v-=2
+while v:v-=2;q=x[v];x[t:=min((v,1+2*argmin(q>x[1::2])))]-=q;p+=(q-1+o[t]*2)*q*v//4;o[t]+=q
 print(sum(minimum(X:=where(~w%2)[0],r_[where(w%2)[0],X|p][argsort(-X)])*w[X]//2),p)
