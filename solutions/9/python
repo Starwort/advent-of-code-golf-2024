@@ -1,8 +1,6 @@
-x,p,t,f,*o=[*map(int,input()),9999],0,0,enumerate
-for v in x:o+=t,;t+=v
-F,E=[[(i,o[i*2+s]+w)for i,v in f(x[s::2])for w in range(v)]for s in(0,1)]
-for i,q in f(x[-2::-2]):
- I=v-i;t=0
- while q>x[2*t+1]and t<I:t+=1
- p+=(q-1+o[t*2+(t<I)]*2)*q*I//2;o[2*t+1]+=q;x[2*t+1]-=q
-print(sum(i*min(a,b)for(i,a),(_,b)in zip(F[::-1],E)),p)
+from numpy import*
+x=r_[*map(int,input()),v:=9999]
+w=repeat(r_[:len(x)],x)[:-v]
+o=r_[p:=0,cumsum(x)]
+for q in x[-2::-2]:t=min((v,argmin(q>x[1::2])))*2+1;p+=(q-1+o[t-(t>v*2)]*2)*q*v//2;o[t]+=q;x[t]-=q;v-=1
+print(sum(minimum(X:=where(~w%2)[0],r_[where(w%2)[0],X|p][argsort(-X)])*w[X]//2),p)
