@@ -38,4 +38,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | JavaScript (Node.js) | Julia | K (ngn/k
 7 | - | - | - | - | - | [574 - alemelis](./solutions/7/julia) | [47 - attinat](./solutions/7/k_ngn) | - | [175 - okras](./solutions/7/python) | [184 - okras](./solutions/7/python-no-ws) | - | - | [140 - natt.e](./solutions/7/ruby) | -
 8 | - | - | - | - | - | - | [72 - okras](./solutions/8/k_ngn) | - | [157 - .___uho](./solutions/8/python) | [163 - .___uho](./solutions/8/python-no-ws) | - | - | - | -
 9 | - | - | - | - | - | - | [151 - okras](./solutions/9/k_ngn) | - | [261 - okras](./solutions/9/python) | - | - | - | - | -
-10 | - | - | - | - | - | [425 - alemelis](./solutions/10/julia) | [50 - okras](./solutions/10/k_ngn) | - | [179 - okras](./solutions/10/python) | - | [1733 - orthoplex](./solutions/10/python-orthoplex) | [448 - orthoplex](./solutions/10/python2) | - | -
+10 | - | - | - | - | - | [424 - alemelis](./solutions/10/julia) | [50 - okras](./solutions/10/k_ngn) | - | [179 - okras](./solutions/10/python) | - | [1733 - orthoplex](./solutions/10/python-orthoplex) | [448 - orthoplex](./solutions/10/python2) | - | -
