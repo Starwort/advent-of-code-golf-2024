@@ -1,4 +1,4 @@
 from numpy import*
 w=argmin(m:=r_[[*open(0).read()+' '*99]]);a=b=0
-for s,_ in zip(r_,m):[s:=1+r_[t:=s[m[s]==x],t-2,t+w,t-w-2]for x in'0123456789'];a+=len({*t});b+=len(t)
+for s in c_[:~w*~w]:[s:=1+r_[t:=s[m[s]==x],t-2,t+w,t-w-2]for x in'0123456789'];a+=len({*t});b+=len(t)
 print(a,b)
