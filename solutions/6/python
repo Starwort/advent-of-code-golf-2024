@@ -1,9 +1,6 @@
-N=9999
-G=open(0).read()+""*N
-def S(c):
- d,*s=131,G.find("^")
- while"\n"<G[p:=s[-1]-d]!=s[N:]==[]:
-  if".">G[p]*(p!=c):p+=d;d=1|131^2//d-d
-  s+=p,
- return s
-print(len(p:={*S(G)}),sum(N<len(S(x))for x in p))
+*l,N=-1,5999;G=open(t:=0).read()+""*N
+for c in l:
+ d,p,*s=131,G.find("^")
+ while"\n"<G[p:=p-d]!=s[N:]==[]:".">G[p]*(p!=c)!=(p:=p+d,d:=1|131^2//d-d);s+=p,
+ l+={*s*-c};t+=s[:N]<s
+print(len(l),t)
