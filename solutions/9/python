@@ -2,5 +2,5 @@ from numpy import*
 X=input()
 for P in 0,1:
  o=r_[p:=0,cumsum(x:=r_[*map(int,X),v:=19998])]
- while v+2:a=+x;a[:v:2]=0;q=min(x[I:=[t:=argmin(x[v]**P>a),v]]);x[I]-=q;o[t]+=q;p+=(o[t]*2+~q)*q*v//4;v-=2*(x[v]<1)
+ while v+2:a=+x;a[:v:2]=0;q=min(x[I:=[t:=argmin(x[v]**P>a),v]]);x[I]-=q;o[t]+=q;p+=(o[t]*2+~q)*q*v//4;v-=2>>x[v]*2
  print(p)
