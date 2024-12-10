@@ -1,7 +1,5 @@
-e=enumerate
-a={x+y*1j:int(c)for x,r in e(open(0))for y,c in e(r)if'/'<c}
-def c(l,h,s,i):
- if 1-(l in a)|h!=a[l]:return 0
- if h>8>1-(l in s)|i>0:s|={l};return 1
- return sum(c(l+d,h+1,s,i)for d in[1,-1,1j,-1j]if l+d in a)
-for i in 0,1:print(sum(c(l,0,{l},i) for l in a if a[l]<1))
+m=open(0).read()+' '*99
+w,*a=m.find('\n')+1,0,0
+for i in range(w*~-w):
+ if'0'==m[i]:s=[i];[s:=[i+d for i in s for d in(1,-1,w,-w)if m[i+d]==x]for x in'123456789'];a[0]+=len(set(s));a[1]+=len(s)
+print(*a)
