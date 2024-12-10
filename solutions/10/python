@@ -1,5 +1,5 @@
 m=open(0).read()+' '*99
-w,*a=m.find('\n')+1,0,0
+w,a,b=m.find('\n')+1,0,0
 for i in range(w*~-w):
- if'0'==m[i]:s=[i];[s:=[i+d for i in s for d in(1,-1,w,-w)if m[i+d]==x]for x in'123456789'];a[0]+=len(set(s));a[1]+=len(s)
-print(*a)
+ if'0'==m[i]:s=[i];[s:=[i+d for i in s for d in(1,-1,w,-w)if m[i+d]==x]for x in'123456789'];a+=len(set(s));b+=len(s)
+print(a,b)
