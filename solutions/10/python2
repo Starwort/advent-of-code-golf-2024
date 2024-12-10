@@ -1,0 +1,12 @@
+grid = open(b"/dev/stdin").read().split()
+w = len(grid)
+xy = [(x,y) for x in range(w) for y in range(w)]
+for part in set,list:
+ res = 0
+ for x0,y0 in xy:
+  if grid[y0][x0] == "0":
+   lvl = [ (x1,y1) for x1,y1 in xy if grid[y1][x1] == "1" if abs(x0 - x1) + abs(y0 - y1) == 1 ]
+   for c in "23456789":
+    lvl = [ (x2,y2) for x2,y2 in xy if grid[y2][x2] == c for x1,y1 in lvl if abs(x1 - x2) + abs(y1 - y2) == 1 ]
+   res += len(part(lvl))
+ print(res)
