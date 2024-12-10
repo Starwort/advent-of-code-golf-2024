@@ -1,4 +1,4 @@
 m=open(0).read()+' '*99
-w=m.find('\n')+1;a=b=0
-for i in range(w*w):s=[i][:'0'==m[i]];[s:=[i+d for i in s for d in(1,-1,w,-w)if m[i+d]==x]for x in'123456789'];a+=len({*s});b+=len(s)
+w=m.find('\n')+1;a=b=i=0
+for v in m:s=[i][:'0'==v];[s:=[i+d for i in s for d in(1,-1,w,-w)if m[i+d]==x]for x in'123456789'];a+=len({*s});b+=len(s);i+=1
 print(a,b)
