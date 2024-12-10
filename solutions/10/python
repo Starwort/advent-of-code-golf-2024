@@ -1,20 +1,10 @@
-L=[*open(0)]
-N=len(L)
-e=enumerate 
-a,b=0,0
-for c in[(x,y)for y,l in e(L)for x, c in e(l)if c=='0']: 
- v={0}
- s=[c+([c],)]
- while s: 
-  x,y,p=s.pop() 
-  c=int(L[y][x])
-  if c>8:
-   if(x,y)in v:b+= 1
-   a+=1
-   v.add((x, y))
-  for d,e in[(0,1),(0,-1),(1,0),(-1,0)]:
-   n,m=x+d,y+e 
-   if not(0<=n<N and 0<=m<N):continue
-   if int(L[m][n])==c+1 and (n,m)not in p: 
-    s+=[(n,m,p[:]+[(n,m)])]
-print(a-b,a)
+e=enumerate
+a={x+y*1j:int(c)for x,r in e(open(0)) for y,c in e(r) if c>'\n'}
+def c(l,h,s,i):
+ if l in a and h==a[l]:
+  if h>8 and[l not in s,1][i]:
+    s.add(l)
+    return 1
+  return sum(c(l+d, h+1,s,i)for d in[1,-1,1j,-1j]if l+d in a)
+ return 0
+for i in 0,1:print(sum(c(l,0,{l},i) for l in a if a[l]<1))
