@@ -4,4 +4,4 @@ for p in 1,2:
  for v in l:s+=f"{i%2*i//2},  "[:-p]*int(v)+' ';i+=1
  for g in s.split()[::-1]:
   if'1'<g:r=" "+"0,"*g.count(",");g=f' {g} ';s=g.join(r.join(s.rsplit(g,1)).split(r,1))
- z=-1;print(sum((z:=z+1)*(k-(k>0))for k in eval(s)))
+ z=1;print(sum((z:=z-1)*((k>0)-k)for k in eval(s)))
