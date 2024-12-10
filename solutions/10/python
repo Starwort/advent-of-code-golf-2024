@@ -1,0 +1,12 @@
+aoc = {complex(x,y):-1 if c=='.' else int(c)
+    for x,r in enumerate(open(0)) for y,c in enumerate(r) if c>'\n'}
+
+def count(loc, height, seen,i):
+    if loc in aoc and height == aoc[loc]:
+        if height == 9 and[loc not in seen,1][i]:
+            seen.add(loc)
+            return 1
+        return sum(count(loc+d, height+1, seen,i) for d in [1,-1,1j,-1j] if loc+d in aoc)
+    return 0
+
+for i in 0,1:print(sum(count(loc, 0, set(),i) for loc in aoc if aoc[loc]==0))
