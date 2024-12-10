@@ -250,6 +250,7 @@ class Runner(commands.Cog):
         async with websockets.connect(
             "wss://ato.pxeger.com/api/v1/ws/execute",
             user_agent_header=(USER_AGENT),  # type: ignore
+            ping_interval=None,
         ) as ws:
             await ws.send(
                 msgpack.dumps(
@@ -257,6 +258,7 @@ class Runner(commands.Cog):
                         "language": language,
                         "code": code,
                         "input": input,
+                        "timeout": 60,
                         "options": [],
                         "arguments": [],
                     }
