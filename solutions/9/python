@@ -1,7 +1,6 @@
-l=input()
-for p in 1,2:
- s=q=" ";i=3
- for v in l:s+=f"{i%2*i//2},  "[:-p]*int(v)+q;i+=1
- for g in s.split()[::-1]:
-  if'1'<g:r=q+"0,"*g.count(",");g=q+g+q;s=g.join(r.join(s.rsplit(g,1)).split(r,1))
- z=1;print(sum((z:=z-1)*((k>0)-k)for k in eval(s)))
+from numpy import*
+X=r_[*map(int,input()),0]
+for P in 0,1:
+ v=19998;x=+X;o=r_[p:=0,cumsum(x)]
+ while v>-1:a=+x;a[:v:2]=0;q=min(x[I:=[t:=argmin(x[v]**P>a),v]]);x[I]-=q;o[t]+=q;p+=(o[t]*2+~q)*q*v//4;v-=2*(x[v]<1)
+ print(p)
