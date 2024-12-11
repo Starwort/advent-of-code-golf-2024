@@ -326,17 +326,13 @@ class Runner(commands.Cog):
             if code_content.endswith("\n") and language != "whitespace":
                 code_content = code_content[:-1]
             code = Codeblock(code.language, code_content)
-        ato_lang, top_3_matches = self.get_language(language)
+        ato_lang, top_3_meta = self.get_language(language)
         if ato_lang is None:
-            top_3_meta = [
-                (self.languages[lang], score)
-                for lang, score in top_3_matches
-                if lang['name'] in self.languages
-            ]
             await ctx.reply(
                 f"Could not find language `{language}`. Did you mean one of these?\n"
                 + "\n".join(
-                    f"`{lang['name']}` ({score}%)" for lang, score in top_3_meta
+                    f"- '{lang['name']}' `{lang['internal_name']}` ({score}%)"
+                    for lang, score in top_3_meta
                 )
             )
             return
