@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from sys import version as py_version
 from typing import Literal, TypedDict
-from urllib.parse import quote
 
 import aoc_helper
 import git
@@ -77,6 +76,7 @@ class LanguageMeta(TypedDict):
     internal_name: str  # custom
     ato_name: str  # custom
     disallowed_regex: str | None  # custom
+    se_class: str | None
     # ignoring the rest of the fields for now
 
 
@@ -229,7 +229,7 @@ class Runner(commands.Cog):
                 day=day,
                 lang=language,
                 lang_pretty=ato_lang["name"],
-                lang_raw=ato_lang["ato_name"],
+                lang_raw=ato_lang["se_class"] or '',
                 author=author,
                 score=solution_len,
                 solution=solution,
