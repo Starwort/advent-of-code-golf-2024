@@ -2,6 +2,5 @@ l={int(s):1for s in input().split()}
 for i in range(75):
  n={}
  for s in l:
-  h=len(S:=str(s))//2
-  for r in s and(len(S)%2*[s*2024]or[int(S[:h]),int(S[h:])])or[1]:n[r]=n.get(r,0)+l[s]
+  for r in s and(len(S:=str(s))%2*[s*2024]or divmod(s,10**(len(S)//2)))or[1]:n[r]=n.get(r,0)+l[s]
  l=n;i in[24,74]!=print(sum(l[s]for s in l))
