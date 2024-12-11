@@ -205,7 +205,7 @@ class Runner(commands.Cog):
             await ctx.send(
                 f"Could not find language `{language}`. Did you mean one of these?\n"
                 + "\n".join(
-                    f"'{lang['name']}' `{lang['internal_name']}` ({score}%)"
+                    f"- '{lang['name']}' `{lang['internal_name']}` ({score}%)"
                     for lang, score in top_3_meta
                 )
             )
