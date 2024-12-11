@@ -1,10 +1,7 @@
-from functools import*
-S=*map(int,input().split()),
-@cache
-def c(v,r):
- s=len(str(v));p=10**(s//2);d=r-1
- if r<1:return 1
- if v<1:return c(1,d)
- elif s%2<1:return c(v//p,d)+c(v%p,d)
- return c(v*2024,d)
-for i in 25,75:print(sum(c(v,i)for v in S))
+l={int(s):1for s in input().split()}
+for i in range(75):
+ n={}
+ for s in l:
+  S=str(s);h=len(S)//2
+  for res in s and(len(S)%2*[s*2024]or[int(S[:h]),int(S[h:])])or[1]:n[res]=n.get(res,0)+l[s]
+ l=n;i in[24,74]!=print(sum(l[s]for s in l))
