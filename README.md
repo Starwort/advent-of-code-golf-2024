@@ -39,4 +39,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | JavaScript (Node.js) | Julia | K (ngn/k
 8 | - | - | - | - | - | - | [72 - okras](./solutions/8/k_ngn) | - | [157 - .___uho](./solutions/8/python) | [163 - .___uho](./solutions/8/python-no-ws) | - | - | - | -
 9 | - | - | - | - | - | - | [151 - okras](./solutions/9/k_ngn) | - | [215 - okras](./solutions/9/python) | - | - | - | - | -
 10 | - | - | - | - | - | [350 - alemelis](./solutions/10/julia) | [50 - okras](./solutions/10/k_ngn) | - | [172 - .___uho](./solutions/10/python) | - | [626 - orthoplex](./solutions/10/python-orthoplex) | [448 - orthoplex](./solutions/10/python2) | - | -
-11 | - | - | - | - | - | - | - | - | [236 - duckyluuk](./solutions/11/python) | - | - | - | [228 - abrahamjlr](./solutions/11/ruby) | -
+11 | - | - | - | - | - | - | - | - | [230 - duckyluuk](./solutions/11/python) | - | - | - | [228 - abrahamjlr](./solutions/11/ruby) | -
