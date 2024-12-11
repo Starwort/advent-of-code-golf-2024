@@ -200,13 +200,8 @@ class Runner(commands.Cog):
     @commands.command()
     async def search(self, ctx: Context, day: int, language: str):
         """Search for a solution in a language."""
-        ato_lang, top_3_matches = self.get_language(language.lower())
+        ato_lang, top_3_meta = self.get_language(language.lower())
         if ato_lang is None:
-            top_3_meta = [
-                (self.languages[lang], score)
-                for lang, score in top_3_matches
-                if lang in self.languages
-            ]
             await ctx.send(
                 f"Could not find language `{language}`. Did you mean one of these?\n"
                 + "\n".join(
@@ -336,7 +331,7 @@ class Runner(commands.Cog):
             top_3_meta = [
                 (self.languages[lang], score)
                 for lang, score in top_3_matches
-                if lang in self.languages
+                if lang['name'] in self.languages
             ]
             await ctx.reply(
                 f"Could not find language `{language}`. Did you mean one of these?\n"
