@@ -2,8 +2,7 @@ from functools import*
 S=*map(int,input().split()),
 @cache
 def c(v,r):
- s=len(str(v));p=10**(s//2)
- d=r-1
+ s=len(str(v));p=10**(s//2);d=r-1
  if r<1:return 1
  if v<1:return c(1,d)
  elif s%2<1:return c(v//p,d)+c(v%p,d)
