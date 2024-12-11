@@ -1,11 +1,10 @@
-import functools
-S=list(map(int, input().split()))
-@functools.cache
+from functools import*
+S=*map(int,input().split()),
+@cache
 def c(v,r):
- s=str(v)
- p=10**(len(s)//2)
+ s=len(str(v));p=10**(s//2)
  if r<1:return 1
  if v<1:return c(1,r-1)
- elif len(s)%2<1:return c(v//p,r-1) +  c(v%p,r-1)
+ elif s%2<1:return c(v//p,r-1)+c(v%p,r-1)
  return c(v*2024,r-1)
-for i in 25,75:print(sum(c(v,i) for v in S))
+for i in 25,75:print(sum(c(v,i)for v in S))
