@@ -1,5 +1,5 @@
 from functools import*
-f=cache(lambda x,i:i*(l:=len(str(x)))and sum(f(v,i-1)for v in[divmod(x,10**(l//2)),[x*2024],[1]][(x<1)+l%2])or 1)
+f=cache(lambda x,i:i*(l:=len(str(x)))and sum(f(v,i-1)for v in[divmod(x,10**(l//2)),[x*2024or 1]][l%2])or 1)
 a=b=0
 for v in input().split():a+=f(v:=int(v),25);b+=f(v,75)
 print(a,b)
