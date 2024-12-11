@@ -3,5 +3,5 @@ for i in range(75):
  n={};t=0
  for s in l:
   w=len(str(s))
-  for r in w%2*[s*2024or 1]or divmod(s,10**(w//2)):n[r]=n.get(r,0)+l[s];t+=l[s]
+  for r in~w%2*divmod(s,10**(w//2))or[s*2024or 1]:n[r]=n.get(r,0)+l[s];t+=l[s]
  l=n;i%50==24!=print(t)
