@@ -1,25 +1,4 @@
-def part_1_2 input
-  [25,75].each {
-    s = Hash.new(0)
-    input.split.map(&:to_i).map { |i| s[i] += 1 }
-    _1.times{
-      e = Hash.new(0)
-      s.each do |n, c|
-        if n == 0
-          e[1] += c
-        elsif n.to_s.size.even?
-          h = n.to_s.size / 2
-          l, r = n.to_s[0...h].to_i, n.to_s[h..].to_i
-          e[l] += c
-          e[r] += c
-        else
-          e[n * 2024] += c
-        end
-      end
-      s = e
-    }
-    $* << s.values.sum
-  }
-  $*
-end
-puts part_1_2($<.read) * ?\s
+f=$<.read;[25,75].map{|k|s=Hash.new 0;f.split{s[_1.to_i]+=1}
+k.times{e=Hash.new 0;s.map{|n,c|n==0? e[1]+=c:n.to_s.size.even?? (h=n.to_s.size/2;e[n.to_s[0...h].to_i]+=c;e[n.to_s[h..].to_i]+=c):e[n*2024]+=c};s=e}
+$*<<s.values.sum}
+puts$**?\s
