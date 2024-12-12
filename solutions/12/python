@@ -1,6 +1,5 @@
-e=enumerate
+v={e:=enumerate}
 g={x+y*1j:c for y,l in e(open(0))for x,c in e(l)if" "<c}
-v={e}
 x=y=0
 k=1,-1,1j,-1j
 for z in g:
