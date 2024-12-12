@@ -1,7 +1,6 @@
 from itertools import*
-g=[line.strip()for line in open(0)]
-h,w=len(g),len(g[0])
-p=set(product(range(w),range(h)))
+g=*open(0),
+p=set(product(range(140),range(140)))
 r,d=[],set()
 for x,y in p:
  if(x,y)in d:continue
