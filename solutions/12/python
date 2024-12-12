@@ -1,9 +1,9 @@
 g=open(0).read()
 w=141
-p={*range(len(g))}
+p={*range(19739)}
 r,d=[],set()
 for x in p:
- if x in d or"\n"==g[x]:continue
+ if x in d or'\n'==g[x]:continue
  c=o={x}
  while o:c,o=c|o,{X for x in o for X in{x+1,x-1,x+w,x-w}&p if g[X]==g[x]}-c-o
  d|=c;r+=c,
