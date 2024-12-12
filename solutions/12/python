@@ -2,5 +2,5 @@ g,=v={open(0).read()}
 z=x=y=0
 w=141
 k=0,1,-1,w,-w
-for c in g:m=len;r={z}-v;exec('r={x+d for x in r for d in k if-1<x+d<19739if" "<g[x+d]==c};'*w*m(r));v|=r;x+=m(r)*m(P:={(p,d)for d in k for p in r if{p+d}-r});y+=m(r)*m(P-{(p+(1|w^2//d-d),d)for p,d in P});z+=1
+for c in g:m=len;r={z}-v;exec('r={x+d for x in r for d in k if-1<x+d<19739if" "<g[x+d]==c};'*w*m(r));v|=r;x+=m(r)*m(P:={(p,d)for d in k for p in r if{p+d}-r});y+=m(r)*m(P-{(p+(w^2-d%6-d),d)for p,d in P});z+=1
 print(x,y)
