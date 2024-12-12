@@ -1,8 +1,7 @@
-g=open(0).read()
-v={g}
+v={g:=open(0).read()}
 x=y=0
 w=141
-R=range(len(g))
+R=range(19739)
 k=1,-1,w,-w
 for z in R:
  if g[z]>" ":
