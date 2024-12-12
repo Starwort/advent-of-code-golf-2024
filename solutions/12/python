@@ -1,12 +1,12 @@
-g=open(0).read()
-w=141
-p={*range(19739)}
-r,d=[],set()
-for x in p:
- c=o={x}
- if" ">g[x]or c<d:continue
- while o:={X for x in o for X in{x+1,x-1,x+w,x-w}&p if g[X]==g[x]}-c:c|=o
- d|=c;r+=c,
-j=k=0
-for u in r:a=len(u);exec("e=sorted(x for x in u if x+w not in u);s=1+sum(x+1!=X for x,X in zip(e,e[1:]));u={x//w+w*~(x%w)for x in u};j+=a*len(e);k+=a*s;"*4)
-print(j,k)
+e=enumerate
+g={x+y*1j:c for y,l in e(open(0)) for x,c in e(l)if" "<c}
+v={e}
+x=y=0
+k=0,1,-1,1j,-1j
+for z,c in g.items():
+ a=0;r={z}-v
+ while r!=a:a=r;r={x+d for x in r for d in k if x+d in g if g[x+d]==c}
+ v|=r
+ for _ in" "*4:
+  for z in(r:={z*1j for z in r}):x+=len(r)*(1-(z+1 in r));n=z+1in r;m=z+1j in r;y+=len(r)*((1-n&1-m)|(1-(z+1j+1in r)&n&m))
+print(x,y)
