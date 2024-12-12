@@ -6,7 +6,7 @@ for x,y in p:
  if(x,y)in d:continue
  c,o=set(),{(x,y)}
  while o:c,o=c|o,{(X,Y)for(x,y)in o for(X,Y)in{(x+1,y),(x-1,y),(x,y+1),(x,y-1)}if(X,Y)in p and g[Y][X]==g[y][x]}-(c|o)
- d|=c;r.append(c)
+ d|=c;r+=[c]
 j=k=0
 for u in r:
  a=len(u)
