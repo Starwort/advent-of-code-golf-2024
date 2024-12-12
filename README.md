@@ -40,4 +40,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | JavaScript (Node.js) | Julia | K (ngn/k
 9 | - | - | - | - | - | - | [151 - okras](./solutions/9/k_ngn) | - | [214 - .___uho](./solutions/9/python) | - | - | - | - | -
 10 | - | - | - | - | - | [350 - alemelis](./solutions/10/julia) | [50 - okras](./solutions/10/k_ngn) | - | [172 - .___uho](./solutions/10/python) | - | [626 - orthoplex](./solutions/10/python-orthoplex) | [448 - orthoplex](./solutions/10/python2) | - | -
 11 | - | - | - | - | - | - | [75 - okras](./solutions/11/k_ngn) | - | [191 - biz314](./solutions/11/python) | - | - | - | [228 - abrahamjlr](./solutions/11/ruby) | -
-12 | - | - | - | - | - | - | [81 - okras](./solutions/12/k_ngn) | - | [288 - orthoplex](./solutions/12/python) | [422 - _tessaract](./solutions/12/python-no-ws) | - | - | - | -
+12 | - | - | - | - | - | - | [81 - okras](./solutions/12/k_ngn) | - | [287 - livingboxy](./solutions/12/python) | [422 - _tessaract](./solutions/12/python-no-ws) | - | - | - | -
