@@ -7,6 +7,5 @@ for z,c in g.items():
  a=0;r={z}-v
  while r!=a:a=r;r={x+d for x in r for d in k if x+d in g if g[x+d]==c}
  v|=r
- for _ in" "*4:
-  for z in(r:={z*1j for z in r}):x+=len(r)*(1-(z+1 in r));n=z+1in r;m=z+1j in r;y+=len(r)*((1-n&1-m)|(1-(z+1j+1in r)&n&m))
+ P={(p,d)for d in k[1:] for p in r if 1-(p+d in r)};x+=len(r)*len(P);y+=len(r)*len(P-{(p+d*1j,d)for p,d in P})
 print(x,y)
