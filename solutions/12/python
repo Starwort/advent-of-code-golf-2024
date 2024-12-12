@@ -3,7 +3,7 @@ g,=v={open(0).read()+" "*w}
 z=x=y=0
 k=0,1,-1,w,-w
 for c in g:
- r={z}-v;z+=1
- while(P:=r-r)or(r:={x+d for x in r for d in k if" "<c==g[x+d]or P.add((x,d))})-v:v|=r
+ r={z}-v;z+=1;P=r-r
+ while(r:={x+d for x in r for d in k if" "<c==g[x+d]or P.add((x,d))})-v:v|=r
  for p,d in P:m=len(r);x+=m;y+=d and((p+w/d,d)in P)*m
 print(x,x-y)
