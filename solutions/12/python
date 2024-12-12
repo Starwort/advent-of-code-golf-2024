@@ -1,6 +1,9 @@
-w=141;g,=v={open(0).read()+" "*w};z=x=y=0;k=0,1,-1,w,-w
+w=141
+g,=v={open(0).read()+" "*w}
+z=x=y=0
+k=0,1,-1,w,-w
 for c in g:
  r={z}-v;z+=1
- while(r:={x+d for x in r for d in k if" "<c==g[x+d]})-v:v|=r
- for p,d in(P:={(p,d)for d in k for p in r if{p+d}-r}):m=len(r);x+=m;y+=m*((p+w//d,d)in P)
+ while(P:=r-r)or(r:={x+d for x in r for d in k if" "<c==g[x+d]or P.add((x,d))})-v:v|=r
+ for p,d in P:m=len(r);x+=m;y+=d and((p+w/d,d)in P)*m
 print(x,x-y)
