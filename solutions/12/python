@@ -1,9 +1,9 @@
 g,=v={open(0).read()}
 z=x=y=0
 w=141
-k=1,-1,w,-w
+k=0,1,-1,w,-w
 for a in g:
  m=len;r={z}-v
- while r!=a:a=r;r={x+d for x in r for d in(0,*k)if-1<x+d<19739if" "<g[x+d]==g[z]}
+ while r!=a:a=r;r={x+d for x in r for d in k if-1<x+d<19739if" "<g[x+d]==g[z]}
  v|=r;P={(p,d)for d in k for p in r if{p+d}-r};x+=m(r)*m(P);y+=m(r)*m(P-{(p+(1|w^2//d-d),d)for p,d in P});z+=1
 print(x,y)
