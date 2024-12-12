@@ -1,13 +1,13 @@
-P={*range(len(G:=open(0).read()))}
+g=open(0).read()
 w=141
-r=[]
-d=set()
-for x in P:
- if x in d or"\n"==G[x]:continue
+p={*range(len(g))}
+r,d=[],set()
+for x in p:
+ if x in d or g[x]=="\n":continue
  c,o=set(),{x}
- while o:c,o=c|o,{X for x in o for X in{x+1,x-1,x+w,x-w}if X in P if G[X]==G[x]}-(c|o)
- d|=c
- r+=[c]
+ while o:c,o=c|o,{X for x in o for X in{x+1,x-1,x+w,x-w}if X in p and g[X]==g[x]}-(c|o)
+ d|=c;r+=c,
+
 j=k=0
-for t in r:a=len(t);exec("e=sorted(x for x in t if x+w not in t);s=1+sum(x+1!=X for x,X in zip(e,e[1:]));t=[x//w+(w-x%w-1)*w for x in t];j+=a*len(e);k+=a*s;"*4)
+for u in r:a=len(u);exec("e=sorted(x for x in u if x+w not in u);s=1+sum(x+1!=X for x,X in zip(e,e[1:]));u={x//w+w*~(x%w)for x in u};j+=a*len(e);k+=a*s;"*4)
 print(j,k)
