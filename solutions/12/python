@@ -10,5 +10,5 @@ for x,y in p:
 j=k=0
 for u in r:
  a=len(u)
- for _ in' '*4:e=sorted((x,y)for x,y in u if(x+1,y)not in u);s=1+sum(not(x1==x2 and y1+1==y2)for(x1,y1),(x2,y2)in zip(e,e[1:]));u={(-y,x)for x,y in u};j+=a*len(e);k+=a*s
+ for _ in' '*4:e=sorted((x,y)for x,y in u if(x+1,y)not in u);s=1+sum(not(p==q and r+1==s)for(p,r),(q,s)in zip(e,e[1:]));u={(-y,x)for x,y in u};j+=a*len(e);k+=a*s
 print(j,k)
