@@ -9,12 +9,5 @@ for x in P:
  d|=c
  r+=[c]
 j=k=0
-for t in r:
- a=len(t)
- for _ in" "*4:
-  e=sorted(x for x in t if x+w not in t)
-  s=1+sum(x+1!=X for x,X in zip(e,e[1:]))
-  t=[x//w+(w-x%w-1)*w for x in t]
-  j+=a*len(e)
-  k+=a*s
+for t in r:a=len(t);exec("e=sorted(x for x in t if x+w not in t);s=1+sum(x+1!=X for x,X in zip(e,e[1:]));t=[x//w+(w-x%w-1)*w for x in t];j+=a*len(e);k+=a*s;"*4)
 print(j,k)
