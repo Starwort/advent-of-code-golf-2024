@@ -76,6 +76,8 @@ class LanguageMeta(TypedDict):
     internal_name: str  # custom
     ato_name: str  # custom
     disallowed_regex: str | None  # custom
+    # this is wrong - it sometimes won't be present - but I don't remember how
+    # to do that
     se_class: str | None
     # ignoring the rest of the fields for now
 
@@ -229,7 +231,7 @@ class Runner(commands.Cog):
                 day=day,
                 lang=language,
                 lang_pretty=ato_lang["name"],
-                lang_raw=ato_lang["se_class"] or '',
+                lang_raw=ato_lang.get("se_class") or '',
                 author=author,
                 score=solution_len,
                 solution=solution,
