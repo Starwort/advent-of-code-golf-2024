@@ -1,5 +1,6 @@
 n={int(s):1for s in input().split()}
-for i in range(76):
- l=n;n={};t=i%50==25!=print(t)
+i=76
+while i:
+ i-=1;l=n;n={};t=i%50<1!=print(t)
  for s in l:
   for r in~(w:=len(str(s)))%2*divmod(s,10**(w//2))or[s*2024or 1]:n[r]=n.get(r,0)+l[s];t+=l[s]
