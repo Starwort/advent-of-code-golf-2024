@@ -11,12 +11,12 @@ for x,y in p:
  d|=c
  r.append(c)
 j=k=0
-for reg in r:
- a=len(reg)
- for _ in range(4):
-  e=sorted((x,y)for x,y in reg if(x+1,y)not in reg)
+for u in r:
+ a=len(u)
+ for _ in' '*4:
+  e=sorted((x,y)for x,y in u if(x+1,y)not in u)
   s=1+sum(not(x1==x2 and y1+1==y2)for(x1,y1),(x2,y2)in zip(e,e[1:]))
-  reg={(-y,x)for x,y in reg}
+  u={(-y,x)for x,y in u}
   j+=a*len(e)
   k+=a*s
 print(j,k)
