@@ -1,9 +1,9 @@
-v={e:=enumerate}
-g={x+y*1j:c for y,l in e(open(0))for x,c in e(l)if" "<c}
+v={m:=len}
+g={i//141+(i%141)*1j:c for i,c in enumerate(open(0).read())if" "<c}
 x=y=0
 k=1,-1,1j,-1j
 for z in g:
  a=0;r={z}-v
  while r!=a:a=r;r={x+d for x in r for d in(0,*k)if x+d in g if g[x+d]==g[z]}
- v|=r;m=len;P={(p,d)for d in k for p in r if 1-(p+d in r)};x+=m(r)*m(P);y+=m(r)*m(P-{(p+d*1j,d)for p,d in P})
+ v|=r;P={(p,d)for d in k for p in r if 1-(p+d in r)};x+=m(r)*m(P);y+=m(r)*m(P-{(p+d*1j,d)for p,d in P})
 print(x,y)
