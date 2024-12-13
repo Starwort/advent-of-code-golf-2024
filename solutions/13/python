@@ -1,0 +1,9 @@
+import re
+R=open(0).read()
+for o in 0,10**13:
+ t=0
+ l=list(map(int,re.findall(r"\d+",R)))
+ while l:
+  a,b,c,d,e,f,*l=l;e+=o;f+=o;m=(e*d-f*c)//(a*d-b*c);n=(f-b*m)//d
+  if(a*d-b*c)*m==e*d-f*c and n*d==f-b*m:t+=3*m+n
+ print(t)
