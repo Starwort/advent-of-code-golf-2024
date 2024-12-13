@@ -1,0 +1,1 @@
+I=open(o:=0).read();exec("print(sum(int(x+3*y)for(a,A,b,B,p,P)in(zip(*[map(int,__import__('re').findall('\d+',I))]*6))if(x:=((p+o)*A-(P+o)*a)/(b*A-a*B))%1+(y:=(p+o-b*x)/a)%1==0));o=1e13;"*2)
