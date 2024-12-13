@@ -3,5 +3,5 @@ R=open(0).read()
 for o in 0,10**13:
  t=0
  l=*map(int,re.findall("\d+",R)),
- while l:a,b,c,d,e,f,*l=l;e+=o;f+=o;m=(e*d-f*c)//(a*d-b*c);n=(f-b*m)//d;t+=(3*m+n)*((a*d-b*c)*m==e*d-f*c and n*d==f-b*m)
+ while l:a,b,c,d,e,f,*l=l;e+=o;f+=o;m=(e*d-f*c)//(a*d-b*c);n=(f-b*m)//d;t+=(3*m+n)*((a*d-b*c)*m==e*d-f*c)*(n*d==f-b*m)
  print(t)
