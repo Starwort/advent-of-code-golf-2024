@@ -1,0 +1,4 @@
+M=`dd`.scan(/\d+/).map(&:to_f).each_slice 6
+[0,1e13].map{|j|p M.sum{|a,b,c,d,x,y|x+=j
+l=(x-a*k=(x*d-c*y+=j)/(a*d-c*b))/c
+k%1+l%1>0?0:3*k+l}.to_i}
