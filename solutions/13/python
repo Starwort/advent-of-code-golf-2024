@@ -1,6 +1,6 @@
 import re
 R=open(0).read()
 for o in 0,10**13:
- t=0;l=*map(int,re.findall("\d+",R)),
- while l:a,b,c,d,e,f,*l=l;e+=o;f+=o;m=(e*d-f*c)//(a*d-b*c);n=(f-b*m)//d;t+=(3*m+n)*((a*d-b*c)*m==e*d-f*c)*(n*d==f-b*m)
+ *l,t=*map(int,re.findall("\d+",R)),0
+ while l:a,b,c,d,e,f,*l=l;e+=o;f+=o;q=e*d-f*c;w=a*d-b*c;m=q//w;n=(f-b*m)//d;t+=(3*m+n)*(w*m==e*d-f*c)*(n*d==f-b*m)
  print(t)
