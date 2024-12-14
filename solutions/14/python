@@ -1,6 +1,4 @@
-L=[eval(l[2:].replace('v=',','))for l in open(0)]
-def f(t):
- p=[0]*4
- for x,y,X,Y in L:x=(x+X*t)%101;y=(y+Y*t)%103;p[x//51+y//52*2]+=x+1!=51!=y
- a,b,c,d=p;return a*b*c*d
-print(f(100),min(range(9999),key=f))
+from numpy import*
+x,y,X,Y=r_[[eval(l[2:].replace('v=',','))for l in open(0)]].T
+f=[prod(bincount(((x:=(x+X)%101)//w+(y:=(y+Y)%103)//52*2+1)*(x!=50)*(w!=y))[1:])for w in[51]*9999]
+print(f[99],argmin(f)+1)
