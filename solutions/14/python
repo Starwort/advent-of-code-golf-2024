@@ -1,6 +1,6 @@
-P=[eval(x[2:].replace("v=",","))for x in open(0)]
-i=0
-while len({v[:2]for v in P})-len(P):
- if i==100:o=1;[o:=o*sum(a==x//51+y//52*2for x,y,*_ in P if x+1!=51!=y)for a in range(4)];print(o)
- P=[((x+v)%101,(y+w)%103,v,w)for x,y,v,w in P];i+=1
-print(i)
+L=[]
+for V in open(i:=0):exec(V.replace('v=',','));L+=p,
+while 504-len({*p}):
+ p=[i<101>(k:=p[0]*p[1]*p[2]*p[3])]*4;i+=1
+ for l,m,n,o in L:p+=(x:=(l+n*i)%101,y:=(m+o*i)%103),;p[x//51+y//52*2]+=x+1!=51!=y
+print(k,i)
