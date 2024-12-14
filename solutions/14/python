@@ -2,5 +2,5 @@ L=[eval(l[2:].replace('v=',','))for l in open(0)]
 def f(t):
  p=[0]*4
  for x,y,X,Y in L:x=(x+X*t)%101;y=(y+Y*t)%103;p[x//51+y//52*2]+=x+1!=51!=y
- return p[0]*p[1]*p[2]*p[3]
+ a,b,c,d=p;return a*b*c*d
 print(f(100),min(range(9999),key=f))
