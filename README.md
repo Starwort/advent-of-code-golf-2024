@@ -42,4 +42,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | JavaScript (Node.js) | Julia | K (ngn/k
 11 | - | - | - | - | - | - | [75 - okras](./solutions/11/k_ngn) | - | [191 - biz314](./solutions/11/python) | - | - | - | [228 - abrahamjlr](./solutions/11/ruby) | -
 12 | - | - | - | - | - | - | [81 - okras](./solutions/12/k_ngn) | - | [227 - livingboxy](./solutions/12/python) | [422 - _tessaract](./solutions/12/python-no-ws) | - | - | - | -
 13 | - | - | - | - | - | [436 - alemelis](./solutions/13/julia) | [74 - okras](./solutions/13/k_ngn) | - | [180 - _tessaract](./solutions/13/python) | [190 - _tessaract](./solutions/13/python-no-ws) | - | - | [145 - the.unnamed](./solutions/13/ruby) | -
-14 | - | - | - | - | - | - | - | - | [263 - duckyluuk](./solutions/14/python) | - | - | - | [192 - natt.e](./solutions/14/ruby) | -
+14 | - | - | - | - | - | - | - | - | [263 - duckyluuk](./solutions/14/python) | - | - | - | [169 - natt.e](./solutions/14/ruby) | -
