@@ -1,1 +1,1 @@
-i=`${require("fs").readFileSync(j=c=s=0)}`.split(/\s/).map(e=>++j&1?-e:e).sort();i.slice(++j/2).map((e,j,k)=>s+=Math.abs((j=-i[j])-e)+!k.map(h=>c+=j*(h==j)));console.log(s,c)
+(''+require('fs').readFileSync(j=c=s=0)).split(/\s+/).map(e=>++j&1?-e:e).sort().map((l,i,k,r=-k[i+j/2])=>s+=Math.abs(r-l^k.map(e=>c-=e*!(r^e))));console.log(s,c)
