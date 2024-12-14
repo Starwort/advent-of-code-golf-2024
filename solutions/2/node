@@ -1,4 +1,4 @@
-f=([p,...w])=>w.map(n=>s&=+n<p==d&n!=p&Math.abs(p-(p=n))<4,d=+w[s=1]<p)|s
-for(l of(require("fs").readFileSync(r=R=0)+"").split`
-`)r+=f(w=l.split` `),R+=w.some((_,i)=>f((W=[...w],W.splice(i,1),W)))
+f=([p,...w])=>w.map(n=>s&=+n<p==d&n!=p&(v=p-(p=n))<4&-v<4,d=+w[s=1]<p)|s
+for(l of(require('fs').readFileSync(r=R=0)+'').split`
+`)r+=f(w=l.split` `),R+=w.some((_,i)=>f(w.filter((_,j)=>i^j)))
 console.log(r,R)
