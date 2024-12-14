@@ -1,0 +1,1 @@
+n=__import__('numpy');x,y,X,Y=n.r_[[eval(l[2:].replace('v=',','))for(l)in(open(0))]].T;f=[n.prod(n.bincount(((x:=(x+X)%101)//w+(y:=(y+Y)%103)//52*2)[(x!=50)&(w!=y)]))for(w)in[51]*9999];print(f[99],n.argmin(f)+1)
