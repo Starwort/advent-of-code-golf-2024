@@ -1,6 +1,5 @@
 z=eval('[0]*4,'*9999)
 for l in open(0):
- exec('a,'+l.replace(' ',';c,'))
- for k in z:k[a//51+p//52*2]+=a+1!=51!=p;a=(a+c)%101;p=(p+v)%103
-k=[a*b*c*d for a,b,c,d in z]
-print(k[100],k.index(min(k)))
+ exec('a,'+l.replace(' ',';c,'));r=[]
+ for k in z:k[a//51+p//52*2]+=a+1!=51!=p;a=(a+c)%101;p=(p+v)%103;A,B,C,D=k;r+=A*B*C*D,
+print(r[100],r.index(min(r)))
