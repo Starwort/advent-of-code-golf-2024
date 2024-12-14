@@ -1,6 +1,6 @@
-L=[]
-for V in open(i:=0):exec(V.replace('v=',','));L+=p,
-while 504-len({*p}):
- p=[i<101>(k:=p[0]*p[1]*p[2]*p[3])]*4;i+=1
- for l,m,n,o in L:p+=(x:=(l+n*i)%101,y:=(m+o*i)%103),;p[x//51+y//52*2]+=x+1!=51!=y
-print(k,i)
+L=[eval(l[2:].replace('v=',','))for l in open(0)]
+def f(t):
+ p=[0]*4
+ for x,y,X,Y in L:x=(x+X*t)%101;y=(y+Y*t)%103;p[x//51+y//52*2]+=x+1!=51!=y
+ return p[0]*p[1]*p[2]*p[3]
+print(f(100),min(range(9999),key=f))
