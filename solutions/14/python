@@ -1,4 +1,4 @@
-P=[(*map(int,eval(x[2:].replace("v=",","))),)for x in open(0)]
+P=[eval(x[2:].replace("v=",","))for x in open(0)]
 i=0
 while len({v[:2]for v in P})!=len(P):
  if i==100:
