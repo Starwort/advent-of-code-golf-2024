@@ -1,4 +1,6 @@
-from numpy import*
-x,y,X,Y=r_[[eval(l[2:].replace('v=',','))for l in open(0)]].T
-f=[prod(bincount(((x:=(x+X)%101)//w+(y:=(y+Y)%103)//52*2+1)*(x!=50)*(w!=y))[1:])for w in[51]*9999]
-print(f[99],argmin(f)+1)
+z=eval('[0]*4,'*9999)
+for l in open(0):
+ exec('a,b,c,'+l.replace('v=',','))
+ for v in z:a=(a+c)%101;b=(b+p)%103;v[a//51+b//52*2]+=a+1!=51!=b
+k=[a*b*c*d for a,b,c,d in z]
+print(k[99],k.index(min(k))+1)
