@@ -1,10 +1,6 @@
 P=[eval(x[2:].replace("v=",","))for x in open(0)]
 i=0
-while len({v[:2]for v in P})!=len(P):
- if i==100:
-  o=1;r=[-2,50],[50,105]
-  for a,b in r:
-   for c,d in r:o=o*sum(a<x<b!=c+1<y<d+1for x,y,*_ in P)
-  print(o)
+while len({v[:2]for v in P})-len(P):
+ if i==100:o=1;r=[-2,50],[50,105];[o:=o*sum(a<x<b!=c+1<y<d+1for x,y,*_ in P)for a,b in r for c,d in r];print(o)
  P=[((x+v)%101,(y+w)%103,v,w)for x,y,v,w in P];i+=1
 print(i)
