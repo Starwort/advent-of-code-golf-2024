@@ -1,10 +1,6 @@
-D=open(0).read()
-l=51
+D,M=open(0).read().split('\n\n')
 S=lambda p,d:'O'==G[p:=p+d]and S(p,d)or'['==G[p]and(S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]or exec("G[p],G[p-d]=G[p-d],G[p]")
-for E in D,D.translate({35:'##',46:'..',79:'[]',64:'@.'}):
- G=dict(enumerate(E));p=E.find('@')
- for m in D[2551:]:
-  C=G|G
-  if S(p,d:=(l*(m>'>')or' '<m)*(m in'>v'or-1)):G=C
-  else:p+=d
- print(sum(p%l+p//l*100for p in G if G[p]in'O['));l+=50
+for l in b'3e':
+ G=dict(enumerate(D));p=D.find('@')
+ for m in M:C=G|G;d=[0,1,-l,l,-1][ord(m)%23%5];S(p,d)and(G:=C)or(p:=p+d)
+ print(sum(p%l+p//l*100for p in G if G[p]in'O['));D=D.translate({35:'##',46:'..',79:'[]',64:'@.'})
