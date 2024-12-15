@@ -1,22 +1,21 @@
-L=open(0).read();Q=50
+L=open(0).read()
+u=100
 def s(w,b,p):
  for c in L[2551:]:
-   if c<"":continue
-   d={">":1,"<":-1,"v":100,"^":-100}[c]
-   if p+d in w:continue
+   d={">":1,"<":-1,"v":u,"^":-u,"\n":0}[c]
    m=set();bs={*b.get(p+d,[])}
    while bs:m|=bs;bs={n for p in bs if p+d in b and p+d not in m for n in b[p+d]}
-   if any(b+d in w for b in m):continue
+   if(p+d in w)|any(b+d in w for b in m):continue
    p+=d;c={k:v for k,v in b.items()if k not in m}
    for a in m:c[a+d]={v+d for v in b[a]}
    b=c
  print(sum({min(b[g])for g in b}))
-g={i%51+(i//51)*100:c for i,c in enumerate(L[:2550])}
-w={c for c,v in g.items()if v=='#'}
-b={c:{c}for c,v in g.items()if v>'N'}
-p=[c for c,v in g.items()if v=='@'][0]
+g={i%51+(i//51)*u:c for i,c in enumerate(L[:2550])}
+w={c for c in g if g[c]=='#'}
+b={c:{c}for c in g if g[c]=='O'}
+p=[c for c in g if g[c]=='@'][0]
 s(w,b,p)
-w2={c+c%Q for c in w}|{c+c%Q+1 for c in w}
-b2={c+c%Q:{c+c%Q,c+c%Q+1}for c in b}
-b2|={k+1:v for k,v in b2.items()}
-s(w2,b2,p+p%Q)
+w={c+c%u for c in w}|{c+c%50+1 for c in w}
+b={c+c%u:{c+c%u,c+c%u+1}for c in b}
+b|={k+1:b[k] for k in b}
+s(w,b,p+p%u)
