@@ -12,9 +12,9 @@ for x in g:
   elif"."==c:i+=".",".",
   elif"@"==c:i+="@",".",
  h+=i,
-def f(g,n,m):
+def f(g,m):
  x=y=0
- for i in range(n):
+ for i in range(50):
   for j in range(m):
    if"@"==g[i][j]:x,y=i,j;break
  u=q.replace("\n","")
@@ -30,15 +30,15 @@ def f(g,n,m):
    elif g[nx][ny]=="#":b=1;break
    t+=1
   if b:continue
-  ng=[[g[i][j]for j in range(m)]for i in range(n)]
+  ng=[[g[i][j]for j in range(m)]for i in range(50)]
   for i,j in z:ng[i][j]="."
   for i,j in z:ng[i+dx][j+dy]=g[i][j]
   g=ng;x+=dx;y+=dy
  a=0
- for i in range(n):
+ for i in range(50):
   for j in range(m):
    if g[i][j]not in"[O":continue
    a+=100*i+j
  print(a)
-f(g,50,50)
-f(h,50,100)
+f(g,50)
+f(h,100)
