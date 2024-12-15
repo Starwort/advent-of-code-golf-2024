@@ -1,8 +1,5 @@
 D,M=open(0).read().split('\n\n')
-def S(p,d):
- p+=d
- if'O'==G[p]and(S(p,d))or'['==G[p]and(S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]:return 1
- G[p],G[p-d]=G[p-d],G[p]
+S=lambda p,d:('O'==G[p:=p+d]and(S(p,d))or'['==G[p]and(S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p])or exec("G[p],G[p-d]=G[p-d],G[p]")
 for D in D,D.translate(str.maketrans({'#':'##','.':'..','O':'[]','@':'@.'})):
  G={i+j*1j:c for j,r in enumerate(D.split())for i,c in enumerate(r)};p,=[p for p in G if'@'==G[p]]
  for m in M:
