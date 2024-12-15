@@ -1,7 +1,7 @@
-L=open(0).read()
+L=open(0).read();Q=50
 def s(w,b,p):
  for c in L[2551:]:
-   if c=="\n":continue
+   if c<"":continue
    d={">":1,"<":-1,"v":100,"^":-100}[c]
    if p+d in w:continue
    m=set();bs={*b.get(p+d,[])}
@@ -13,10 +13,10 @@ def s(w,b,p):
  print(sum({min(b[g])for g in b}))
 g={i%51+(i//51)*100:c for i,c in enumerate(L[:2550])}
 w={c for c,v in g.items()if v=='#'}
-b={c:{c}for c,v in g.items()if v=='O'}
+b={c:{c}for c,v in g.items()if v>'N'}
 p=[c for c,v in g.items()if v=='@'][0]
 s(w,b,p)
-w2={c+c%50 for c in w}|{c+c%50+1 for c in w}
-b2={c+c%50:{c+c%50,c+c%50+1}for c in b}
+w2={c+c%Q for c in w}|{c+c%Q+1 for c in w}
+b2={c+c%Q:{c+c%Q,c+c%Q+1}for c in b}
 b2|={k+1:v for k,v in b2.items()}
-s(w2,b2,p+p%50)
+s(w2,b2,p+p%Q)
