@@ -2,8 +2,7 @@ L=open(0).read()
 u=100
 def s(w,b,p):
  for c in L[2551:]:
-   d={">":1,"<":-1,"v":u,"^":-u,"\n":0}[c]
-   m=set();B={*b.get(p+d,[])}
+   m=set();B={*b.get(p+(d:={">":1,"<":-1,"v":u,"^":-u,"\n":0}[c]),[])}
    while B:m|=B;B={n for p in B if p+d in b and p+d not in m for n in b[p+d]}
    if(p+d in w)|any(b+d in w for b in m):continue
    p+=d;c={k:v for k,v in b.items()if k not in m}
