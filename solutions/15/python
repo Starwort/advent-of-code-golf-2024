@@ -1,6 +1,6 @@
 D,M=open(0).read().split('\n\n')
 l=51
-S=lambda p,d:'O'==G[p:=p+d]and(S(p,d))or'['==G[p]and(S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]or exec("G[p],G[p-d]=G[p-d],G[p]")
+S=lambda p,d:'O'==G[p:=p+d]and S(p,d)or'['==G[p]and(S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]or exec("G[p],G[p-d]=G[p-d],G[p]")
 for D in D,D.translate(str.maketrans({'#':'##','.':'..','O':'[]','@':'@.'})):
  i=-1;G={(i:=i+1):c for c in D}
  p=D.find('@')
