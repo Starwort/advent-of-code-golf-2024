@@ -1,15 +1,13 @@
-L=open(0).read()
-u=100
-def s(w,b,p):
- for c in L[2551:]:
-   m=set();B={*b.get(p+(d:={">":1,"<":-1,"v":u,"^":-u,"\n":0}[c]),[])}
-   while B:m|=B;B={n for p in B if p+d in b and 1-(p+d in m)for n in b[p+d]}
-   if(p+d in w)+any(b+d in w for b in m)<1:
-    p+=d;c={k:b[k]for k in b if k not in m}
-    for a in m:c[a+d]={v+d for v in b[a]}
-    b=c
- print(sum({min(b[g])for g in b}))
-g={i%51+(i//51)*u:c for i,c in enumerate(L[:2550])}
-p,=[c for c in g if'@'==g[c]]
-s(w:={c for c in g if'#'==g[c]},b:={c:{c}for c in g if'A'<g[c]},p)
-s({c+c%u+k for c in w for k in[0,1]},{c+c%u+k:{c+c%u,c+c%u+1}for c in b for k in[0,1]},p+p%u)
+D,M=open(0).read().split('\n\n')
+def S(p,d):
+ p+=d
+ if G[p]=='O'and(S(p,d))or'['==G[p]and (S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]:return 1
+ G[p],G[p-d]=G[p-d],G[p]
+for D in D,D.translate(str.maketrans({'#':'##','.':'..','O':'[]','@':'@.'})):
+ G={i+j*1j:c for j, r in enumerate(D.split())for i,c in enumerate(r)}
+ p,=[p for p in G if G[p] == '@']
+ for m in M:
+  C=G.copy()
+  if S(p,d:={'<':-1,'>':1,'^':-1j,'v':1j,'\n':0}[m]):G=C
+  else:p+=d
+ print(int(sum(p.real+100*p.imag for p in G if G[p] in 'O[')))
