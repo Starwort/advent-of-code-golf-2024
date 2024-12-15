@@ -10,7 +10,7 @@ def s(w,b,p):
    p+=d;c={k:v for k,v in b.items()if k not in m}
    for a in m:c[a+d]={v+d for v in b[a]}
    b=c
- print(sum({b//100*100+b%100 for b in{min(b[g])for g in b}}))
+ print(sum({min(b[g])for g in b}))
 g={i%51+(i//51)*100:c for i,c in enumerate(L[:2550])}
 w={c for c,v in g.items()if v=='#'}
 b={c:{c}for c,v in g.items()if v=='O'}
