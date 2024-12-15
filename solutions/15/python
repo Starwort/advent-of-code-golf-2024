@@ -30,7 +30,7 @@ while'!'!=l:
    k.add((v,u));v+=b;u+=a
   else:break
  i=1
-print(sum(x+y*100for y, x in S))
+print(sum(x+y*100for y,x in S))
 g="\n".join(g).translate(str.maketrans({'#':'##','O':'[]','.':'..','@':'@.'})).splitlines()
 W=set()
 S=set()
