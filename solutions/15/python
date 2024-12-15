@@ -1,5 +1,5 @@
 D=open(0).read()
-S=lambda p,d:'O'==G[p:=p+d]and S(p,d)or'['==G[p]and(S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]or exec("G[p],G[p-d]=G[p-d],G[p]")
+S=lambda p,d:'$'>G[p:=p+d]or'@'<G[p]and(G[p]>'O'and S(p+92-ord(G[p]),d)or S(p,d))or exec("G[p],G[p-d]=G[p-d],G[p]")
 for l in b'3e':
  *G,=D;p=D.find('@')
  for m in D[-20019:]:C=G*1;d=[0,1,-l,l,-1][ord(m)%23%5];S(p,d)and(G:=C)or(p:=p+d)
