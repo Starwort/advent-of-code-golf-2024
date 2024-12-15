@@ -2,53 +2,43 @@ import sys
 s=open(0).read().strip()
 a=r=0
 p,q=s.split("\n\n")
-g=[list(x) for x in p.split("\n")]
-n,m=len(g),len(g[0])
+g=[[*x]for x in p.split("\n")]
 h=[]
 for x in g:
  i=[]
  for c in x:
-  if"#"==c:i+=["#","#"]
-  elif"O"==c:i+=["[","]"]
-  elif"."==c:i+=[".","."]
-  elif"@"==c:i+=["@","."]
- h.append(i)
+  if"#"==c:i+="#","#",
+  elif"O"==c:i+="[","]",
+  elif"."==c:i+=".",".",
+  elif"@"==c:i+="@",".",
+ h+=i,
 def f(g,n,m):
  x=y=0
  for i in range(n):
   for j in range(m):
-   if"@"==g[i][j]:
-    x,y=i,j
-    break
+   if"@"==g[i][j]:x,y=i,j;break
  u=q.replace("\n","")
  for k,c in enumerate(u):
-  dx,dy={"^":(-1,0),"v":(1,0),">":(0,1),"<":(0,-1)}[c]
-  z=[(x,y)];t=0;b=0
+  dx,dy={"^":(-1,0),"v":(1,0),">":(0,1),"<":(0,-1)}[c];z=[(x,y)];t=0;b=0
   while t<len(z):
    i,j=z[t]
    nx,ny=i+dx,j+dy
    if g[nx][ny]in"O[]":
     if(nx,ny)not in z:z.append((nx,ny))
-    if g[nx][ny]=="["and(nx,ny+1)not in z:z.append((nx,ny+1))
-    if g[nx][ny]=="]"and(nx,ny-1)not in z:z.append((nx,ny-1))
-   elif g[nx][ny]=="#":
-    b=1
-    break
+    if"["==g[nx][ny]and(nx,ny+1)not in z:z.append((nx,ny+1))
+    if"]"==g[nx][ny]and(nx,ny-1)not in z:z.append((nx,ny-1))
+   elif g[nx][ny]=="#":b=1;break
    t+=1
   if b:continue
   ng=[[g[i][j]for j in range(m)]for i in range(n)]
   for i,j in z:ng[i][j]="."
   for i,j in z:ng[i+dx][j+dy]=g[i][j]
-  g=ng
-  x+=dx
-  y+=dy
+  g=ng;x+=dx;y+=dy
  a=0
  for i in range(n):
   for j in range(m):
    if g[i][j]not in"[O":continue
    a+=100*i+j
  print(a)
-f(g,n,m)
-g=h
-n,m=len(g),len(g[0])
-f(g,n,m)
+f(g,50,50)
+f(h,50,100)
