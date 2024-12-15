@@ -1,6 +1,6 @@
 D=open(0).read()
-S=lambda p,d:36>(w:=ord(G[a:=p+d]))or w>64and(w>79and S(a+92-w,d)or S(a,d))or exec("G[a],G[p]=G[p],G[a]")
+S=lambda p,d:36>(w:=ord(H[a:=p+d]))or w>79and S(a+92-w,d)or w>64and S(a,d)or exec("H[a],H[p]=H[p],H[a]")
 for l in b'3e':
- *G,=D;p=D.find('@')
- for m in D:C=G*1;S(p,d:=[1,-l,l,-1,0]['>^v<'.find(m)])and(G:=C)or(p:=p+d)
+ G=D;p=D.find('@')
+ for m in D:*H,=G;S(p,d:=[1,-l,l,-1,0]['>^v<'.find(m)])or(p:=p+d,G:=H)
  print(sum(p%l+p//l*100for p,v in enumerate(G)if v in'O['));D=D.translate({35:'##',46:'..',79:'[]',64:'@.'})
