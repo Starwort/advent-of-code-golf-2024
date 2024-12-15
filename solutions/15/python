@@ -8,7 +8,7 @@ for b,r in enumerate(g):
   if'@'==c:y,x=b,a
   elif'O'==c:S.add((b,a))
   elif'#'==c:W.add((b,a))
-F=(-1,0),(1,0),(0,-1),(0,1),
+F=(-1,0),(1,0),(0,-1),(0,1)
 f='^v<>'
 it=iter(s);c=None;i=0
 l=1
@@ -25,9 +25,9 @@ while'!'!=l:
   while(v,u)not in W:
    if(v,u)not in S:
     S-=k;y+=b;x+=a
-    for cy,cx in k:S.add((cy+b,cx+a))
+    for Y,X in k:S.add((Y+b,X+a))
     break
-   k.add((v, u));v+=b;u+=a
+   k.add((v,u));v+=b;u+=a
   else:break
  i=1
 print(sum(x+y*100for y, x in S))
@@ -39,18 +39,18 @@ for b,r in enumerate(g):
   if'@'==c:y,x=b,a
   elif'['==c:S.add((b,a))
   elif'#'==c:W.add((b,a))
-it=iter(s);c=None;i=0
+I=iter(s);c=None;i=0
 l=1
-while l != '!':
+while'!'!=l:
  l=c
- for c in it:
+ for c in I:
   if c!=l:break
   i+=1
  if not i:i=1;continue
  b,a=F[f.find(l)]
  for _ in range(i):
-  v,u=y+b,x+a;k = set();p={(v,u)};sc=S|{(y,x)}
-  while all(not{(y-b,x-a),(y-b,x-a-1)}&sc for y,x in p&W):
+  v,u=y+b,x+a;k = set();p={(v,u)};C=S|{(y,x)}
+  while all(not{(y-b,x-a),(y-b,x-a-1)}&C for y,x in p&W):
    P=set()
    for T in p:
     if B:=T in S:k.add(T)
@@ -63,9 +63,9 @@ while l != '!':
     elif'v'==l:P.add((v+1,u));P.add((v+1,u+1))
    if not P:
     S-=k;y+=b;x+=a
-    for cy,cx in k:S.add((cy+b,cx+a))
+    for Y,X in k:S.add((Y+b,X+a))
     break
    p=P
   else:break
  i=1
-print(sum(x+y*100for y, x in S))
+print(sum(x+y*100for y,x in S))
