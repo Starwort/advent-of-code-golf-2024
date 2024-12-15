@@ -1,10 +1,10 @@
 g,s=open(0).read().split('\n\n')
 s="".join(s.splitlines())+'!'
-g=g.splitlines()
 W=set()
 S=set()
-for b,r in enumerate(g):
- for a,c in enumerate(r):
+Q=enumerate
+for b,r in Q(g:=g.splitlines()):
+ for a,c in Q(r):
   if'@'==c:y,x=b,a
   elif'O'==c:S.add((b,a))
   elif'#'==c:W.add((b,a))
@@ -34,8 +34,8 @@ print(sum(x+y*100for y,x in S))
 g="\n".join(g).translate(str.maketrans({'#':'##','O':'[]','.':'..','@':'@.'})).splitlines()
 W=set()
 S=set()
-for b,r in enumerate(g):
- for a,c in enumerate(r):
+for b,r in Q(g):
+ for a,c in Q(r):
   if'@'==c:y,x=b,a
   elif'['==c:S.add((b,a))
   elif'#'==c:W.add((b,a))
