@@ -10,6 +10,7 @@ def s(w,b,p):
    b=c
  print(sum({min(b[g])for g in b}))
 g={i%51+(i//51)*u:c for i,c in enumerate(L[:2550])}
-s(w:={c for c in g if g[c]=='#'},b:={c:{c}for c in g if g[c]=='O'},p:=[c for c in g if g[c]=='@'][0])
+p,=[c for c in g if'@'==g[c]]
+s(w:={c for c in g if'#'==g[c]},b:={c:{c}for c in g if'A'<g[c]},p)
 b={c+c%u:{c+c%u,c+c%u+1}for c in b}
 s({c+c%u for c in w}|{c+c%50+1 for c in w},b|{k+1:b[k] for k in b},p+p%u)
