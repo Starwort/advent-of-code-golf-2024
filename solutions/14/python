@@ -1,5 +1,4 @@
-z=eval('[0]*4,'*9999)
-for l in open(0):
- exec('a,'+l.replace(' ',';*r,c,'))
- for k in z:k[a//51+p//52*2]+=a+1!=51!=p;a=(a+c)%101;p=(p+v)%103;A,B,C,D=k;r+=A*B*C*D,
-print(r[100],r.index(min(r)))
+from numpy import*
+x,X=c_[[[eval(c[2:])for c in l.split()]for l in open(0)]].T.mT.T
+f=[prod(bincount((x:=(x+X)%[*b'eg'])[all(w+~x,1)]//w@[2,1]))for*w,in[b'34']*9999]
+print(f[99],argmin(f)+1)
