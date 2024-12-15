@@ -2,5 +2,5 @@ D=open(0).read()
 S=lambda p,d:36>(w:=ord(G[a:=p+d]))or w>64and(w>79and S(a+92-w,d)or S(a,d))or exec("G[a],G[p]=G[p],G[a]")
 for l in b'3e':
  *G,=D;p=D.find('@')
- for m in D[-20019:]:C=G*1;S(p,d:=[0,1,-l,l,-1][ord(m)%23%5])and(G:=C)or(p:=p+d)
+ for m in D:C=G*1;S(p,d:=[1,-l,l,-1,0]['>^v<'.find(m)])and(G:=C)or(p:=p+d)
  print(sum(p%l+p//l*100for p,v in enumerate(G)if v in'O['));D=D.translate({35:'##',46:'..',79:'[]',64:'@.'})
