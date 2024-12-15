@@ -1,71 +1,54 @@
-g,s=open(0).read().split('\n\n')
-s="".join(s.splitlines())+'!'
-W=set()
-S=set()
-Q=enumerate
-for b,r in Q(g:=g.splitlines()):
- for a,c in Q(r):
-  if'@'==c:y,x=b,a
-  elif'O'==c:S.add((b,a))
-  elif'#'==c:W.add((b,a))
-F=(-1,0),(1,0),(0,-1),(0,1)
-f='^v<>'
-it=iter(s);c=None;i=0
-l=1
-while'!'!=l:
- l=c
- for c in it:
-  if c!=l:break
-  i+=1
- if not i:i=1;continue
- b,a=F[f.find(l)]
- for _ in range(i):
-  v,u=y+b,x+a
-  k=set()
-  while(v,u)not in W:
-   if(v,u)not in S:
-    S-=k;y+=b;x+=a
-    for Y,X in k:S.add((Y+b,X+a))
+import sys
+s=open(0).read().strip()
+a=r=0
+p,q=s.split("\n\n")
+g=[list(x) for x in p.split("\n")]
+n,m=len(g),len(g[0])
+h=[]
+for x in g:
+ i=[]
+ for c in x:
+  if"#"==c:i+=["#","#"]
+  elif"O"==c:i+=["[","]"]
+  elif"."==c:i+=[".","."]
+  elif"@"==c:i+=["@","."]
+ h.append(i)
+def f(g,n,m):
+ x=y=0
+ for i in range(n):
+  for j in range(m):
+   if"@"==g[i][j]:
+    x,y=i,j
     break
-   k.add((v,u));v+=b;u+=a
-  else:break
- i=1
-print(sum(x+y*100for y,x in S))
-g="\n".join(g).translate(str.maketrans({'#':'##','O':'[]','.':'..','@':'@.'})).splitlines()
-W=set()
-S=set()
-for b,r in Q(g):
- for a,c in Q(r):
-  if'@'==c:y,x=b,a
-  elif'['==c:S.add((b,a))
-  elif'#'==c:W.add((b,a))
-I=iter(s);c=None;i=0
-l=1
-while'!'!=l:
- l=c
- for c in I:
-  if c!=l:break
-  i+=1
- if not i:i=1;continue
- b,a=F[f.find(l)]
- for _ in range(i):
-  v,u=y+b,x+a;k = set();p={(v,u)};C=S|{(y,x)}
-  while all(not{(y-b,x-a),(y-b,x-a-1)}&C for y,x in p&W):
-   P=set()
-   for T in p:
-    if B:=T in S:k.add(T)
-    v,u=T
-    if(v,u-1)in S:B=1;u-=1;k.add((v,u))
-    if not B:continue
-    if'<'==l:P.add((v,u-1))
-    elif'>'==l:P.add((v,u+2))
-    elif'^'==l:P.add((v-1,u));P.add((v-1,u+1))
-    elif'v'==l:P.add((v+1,u));P.add((v+1,u+1))
-   if not P:
-    S-=k;y+=b;x+=a
-    for Y,X in k:S.add((Y+b,X+a))
+ u=q.replace("\n","")
+ for k,c in enumerate(u):
+  dx,dy={"^":(-1,0),"v":(1,0),">":(0,1),"<":(0,-1)}[c]
+  z=[(x,y)];t=0;b=0
+  while t<len(z):
+   i,j=z[t]
+   nx,ny=i+dx,j+dy
+   if g[nx][ny]in"O[]":
+    if(nx,ny)not in z:z.append((nx,ny))
+    if g[nx][ny]=="["and(nx,ny+1)not in z:z.append((nx,ny+1))
+    if g[nx][ny]=="]"and(nx,ny-1)not in z:z.append((nx,ny-1))
+   elif g[nx][ny]=="#":
+    b=1
     break
-   p=P
-  else:break
- i=1
-print(sum(x+y*100for y,x in S))
+   t+=1
+  if b:continue
+  ng=[[g[i][j]for j in range(m)]for i in range(n)]
+  for i,j in z:ng[i][j]="."
+  for i,j in z:ng[i+dx][j+dy]=g[i][j]
+  g=ng
+  x+=dx
+  y+=dy
+ a=0
+ for i in range(n):
+  for j in range(m):
+   if g[i][j]not in"[O":continue
+   a+=100*i+j
+ print(a)
+f(g,n,m)
+g=h
+n,m=len(g),len(g[0])
+f(g,n,m)
