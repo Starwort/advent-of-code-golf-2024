@@ -1,44 +1,22 @@
-import sys
-s=open(0).read().strip()
-a=r=0;Q=range
-p,q=s.split("\n\n")
-g=[[*x]for x in p.split("\n")]
-h=[]
-for x in g:
- i=[]
- for c in x:
-  if"#"==c:i+="#","#",
-  elif"O"==c:i+="[","]",
-  elif"."==c:i+=".",".",
-  elif"@"==c:i+="@",".",
- h+=i,
-def f(g,m):
- x=y=0
- for i in Q(50):
-  for j in Q(m):
-   if"@"==g[i][j]:x,y=i,j;break
- u=q.replace("\n","")
- for k,c in enumerate(u):
-  dx,dy={"^":(-1,0),"v":(1,0),">":(0,1),"<":(0,-1)}[c];z=[(x,y)];t=0;b=0
-  while t<len(z):
-   i,j=z[t]
-   X,Y=i+dx,j+dy
-   if g[X][Y]in"O[]":
-    if(X,Y)not in z:z+=(X,Y),
-    if"["==g[X][Y]and(X,Y+1)not in z:z+=(X,Y+1),
-    if"]"==g[X][Y]and(X,Y-1)not in z:z+=(X,Y-1),
-   elif g[X][Y]=="#":b=1;break
-   t+=1
-  if b:continue
-  G=[[g[i][j]for j in Q(m)]for i in Q(50)]
-  for i,j in z:G[i][j]="."
-  for i,j in z:G[i+dx][j+dy]=g[i][j]
-  g=G;x+=dx;y+=dy
- a=0
- for i in Q(50):
-  for j in Q(m):
-   if g[i][j]not in"[O":continue
-   a+=100*i+j
- print(a)
-f(g,50)
-f(h,100)
+L=[*open(0)]
+def s(w,b,p):
+ for c in"".join(L[51:]):
+   if c=="\n":continue
+   d={">":1,"<":-1,"v":1j,"^":-1j}[c]
+   if p+d in w:continue
+   m=set();bs={*b.get(p+d,[])}
+   while bs:m|=bs;bs={n for p in bs if p+d in b and p+d not in m for n in b[p+d]}
+   if any(b+d in w for b in m):continue
+   p+=d;c={k:v for k,v in b.items()if k not in m}
+   for a in m:c[a+d]={v+d for v in b[a]}
+   b=c
+ print(sum(int(b.imag*100+b.real)for b in{min(v,key=lambda k:k.real)for v in b.values()}))
+g={x+y*1j:c for y,l in enumerate(L[:50])for x,c in enumerate(l)}
+w={c for c,v in g.items()if v=='#'}
+b={c:{c}for c,v in g.items()if v=='O'}
+p=[c for c,v in g.items()if v=='@'][0]
+s(w,b,p)
+w2={c+c.real for c in w}|{c+c.real+1 for c in w}
+b2={c+c.real:{c+c.real,c+c.real+1}for c in b}
+b2|={k+1:v for k,v in b2.items()}
+s(w2,b2,p+p.real)
