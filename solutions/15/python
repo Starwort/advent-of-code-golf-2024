@@ -1,10 +1,10 @@
 D,M=open(0).read().split('\n\n')
 def S(p,d):
  p+=d
- if G[p]=='O'and(S(p,d))or'['==G[p]and (S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]:return 1
+ if'O'==G[p]and(S(p,d))or'['==G[p]and(S(p+1,d)or S(p,d))or'['<G[p]and(S(p-1,d)or S(p,d))or'$'>G[p]:return 1
  G[p],G[p-d]=G[p-d],G[p]
 for D in D,D.translate(str.maketrans({'#':'##','.':'..','O':'[]','@':'@.'})):
- G={i+j*1j:c for j, r in enumerate(D.split())for i,c in enumerate(r)};p,=[p for p in G if'@'==G[p]]
+ G={i+j*1j:c for j,r in enumerate(D.split())for i,c in enumerate(r)};p,=[p for p in G if'@'==G[p]]
  for m in M:
   C=G.copy()
   if S(p,d:={'<':-1,'>':1,'^':-1j,'v':1j,'\n':0}[m]):G=C
