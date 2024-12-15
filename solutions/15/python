@@ -4,10 +4,10 @@ def s(w,b,p):
  for c in L[2551:]:
    m=set();B={*b.get(p+(d:={">":1,"<":-1,"v":u,"^":-u,"\n":0}[c]),[])}
    while B:m|=B;B={n for p in B if p+d in b and p+d not in m for n in b[p+d]}
-   if(p+d in w)|any(b+d in w for b in m):continue
-   p+=d;c={k:v for k,v in b.items()if k not in m}
-   for a in m:c[a+d]={v+d for v in b[a]}
-   b=c
+   if(p+d in w)+any(b+d in w for b in m)<1:
+    p+=d;c={k:v for k,v in b.items()if k not in m}
+    for a in m:c[a+d]={v+d for v in b[a]}
+    b=c
  print(sum({min(b[g])for g in b}))
 g={i%51+(i//51)*u:c for i,c in enumerate(L[:2550])}
 p,=[c for c in g if'@'==g[c]]
