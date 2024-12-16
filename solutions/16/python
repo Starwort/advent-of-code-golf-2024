@@ -8,5 +8,5 @@ while q:
  if d.get((p,u),b)>=S:
   d[p,u]=S
   if p==281:b=S;v|={*Q}
-  k=142//u;[heappush(q,((w!=u)*1000-~S,p+w,w,Q+[p+w]))for w in(u,-k,k)if'#'<L[p+w]]
+  for w in-(k:=142//u),u,k:'#'<L[V:=p+w]and heappush(q,((w!=u)*1000-~S,V,w,Q+[V]))
 print(b,len(v))
