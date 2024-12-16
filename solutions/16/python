@@ -5,5 +5,5 @@ while q:
  if-~d.get((p,u),S)>S:
   d[p,u]=S
   if p==281:v=v*(b==S)+Q;b=S
-  for w in-(k:=142//u),u,k:'#'<L[p+w]and q.append(((w!=u)*1000-~S,w,p+w,p,*Q))
+  k=142//u;q+=[((w!=u)*1000-~S,w,p+w,p,*Q)for w in(-k,u,k)if'#'<L[p+w]]
 print(b,len({*v,0}))
