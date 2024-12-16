@@ -1,1 +1,1 @@
-b=*q,d=[0,1,19739,v:=[L:=open(0).read()]],{};exec("while(q):\n\t(S,u,p,Q),*q=q\n\tif-~d.get((p,u),S)>S:p-281or(v:=v*(b==(b:=S))+Q);d[p,u]=S;k=142//u;q+=[((w!=u)*1000-~S,w,p+w,Q+[p])for(w)in(k,u,-k)if'#'<L[p+w]]");print(b,len({*v}))
+*q,d=b=[0,1,19739,v:=[L:=open(0).read()]],{};exec("for(S,u,p,Q)in(q):\n\tif-~d.get((p,u),S)>S:p-281or(v:=v*(b==(b:=S))+Q);d[p,u]=S;k=142//u;q+=[[(w!=u)*1000-~S,w,p+w,Q+[p]]for(w)in(-k,u,k)if'#'<L[p+w]];Q[:]=[]");print(b,len({*v}))
