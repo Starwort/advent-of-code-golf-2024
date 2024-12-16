@@ -4,13 +4,13 @@ q=[(0,0)]
 d={}
 t=[(19739,1,-1)]
 v=set()
-b=0
+b=9**9
 f,l=h.heappush,len
 while q:
  S,i=h.heappop(q);p,u,_=t[i]
- if(p,u)in d and d[(p,u)]<S:continue
+ if d.get((p,u),b)<S:continue
  d[(p,u)]=S
- if p==281and(b<1or S==b):
+ if p==281:
   b,c=S,t[i]
   while c[2]!=-1:v.add(c[0]);c=t[c[2]]
  if L[p+u]!='#':f(q,(S+1,l(t)));t+=[(p+u,u,i)]
