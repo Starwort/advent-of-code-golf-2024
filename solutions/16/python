@@ -10,7 +10,7 @@ while q:
  d[p,u]=S
  if p==281:
   b,A,_,C=S,*t[i]
-  while-1!=C:v|={A};A,_,C=t[C];v|={A}
+  while(v:=v|{A})and-1!=C:A,_,C=t[C]
  if'#'<L[p+u]:f(q,(S+1,l(t)));t+=(p+u,u,i),
  for D in-1,1:f(q,(S+1000,l(t)));t+=(p,D*142//u,i),
 print(b,l(v))
