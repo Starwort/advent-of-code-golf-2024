@@ -1,5 +1,5 @@
 *q,d=b=[0,1,19739,v:=[L:=open(0).read()]],{}
 while q:
  S,u,p,Q=q.pop(0)
- if'.'*S<=d.get((p,u),S)*L[p]:p-281or(v:=v*(b==(b:=S))+Q);d[p,u]=S;k=142//u;q+=[[(w!=u)*1000-~S,w,p+w,Q+[p]]for w in(-k,u,k)]
+ if'.'*S<=d.get((p,k:=142//u),S)*L[p]:p-281or(v:=v*(b==(b:=S))+Q);d[p,k]=S;q+=[[(w!=u)*1000-~S,w,p+w,Q+[p]]for w in(-k,u,k)]
 print(b,len({*v}))
