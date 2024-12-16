@@ -3,7 +3,6 @@ b=L,*v=open(0).read(),
 while q:
  S,u,p,*Q=q.pop(0)
  if-~d.get((p,u),S)>S:
-  d[p,u]=S
   if p==281:v=v*(b==S)+Q;b=S
-  k=142//u;q+=[((w!=u)*1000-~S,w,p+w,p,*Q)for w in(-k,u,k)if'#'<L[p+w]]
+  d[p,u]=S;k=142//u;q+=[((w!=u)*1000-~S,w,p+w,p,*Q)for w in(-k,u,k)if'#'<L[p+w]]
 print(b,len({*v,0}))
