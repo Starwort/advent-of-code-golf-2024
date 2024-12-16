@@ -1,10 +1,9 @@
-from heapq import*
-L,*v=open(0).read(),0
+b=L,*v=open(0).read(),
 *q,d=(0,1,19739),{}
 while q:
- S,u,p,*Q=heappop(q)
+ S,u,p,*Q=q.pop(0)
  if-~d.get((p,u),S)>S:
   d[p,u]=S
-  if p==281:b=S;v+=Q
-  for w in-(k:=142//u),u,k:'#'<L[p+w]and heappush(q,((w!=u)*1000-~S,w,p+w,p,*Q))
-print(b,len({*v}))
+  if p==281:v=v*(b==S)+Q;b=S
+  for w in-(k:=142//u),u,k:'#'<L[p+w]and q.append(((w!=u)*1000-~S,w,p+w,p,*Q))
+print(b,len({*v,0}))
