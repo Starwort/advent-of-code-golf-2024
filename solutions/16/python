@@ -1,10 +1,10 @@
 from heapq import*
 L,*v=open(0).read(),0
-*q,d=(0,19739,1),{}
+*q,d=(0,1,19739),{}
 while q:
- S,p,u,*Q=heappop(q)
+ S,u,p,*Q=heappop(q)
  if-~d.get((p,u),S)>S:
   d[p,u]=S
   if p==281:b=S;v+=Q
-  for w in-(k:=142//u),u,k:'#'<L[V:=p+w]and heappush(q,((w!=u)*1000-~S,V,w,*Q,V))
+  for w in-(k:=142//u),u,k:'#'<L[p+w]and heappush(q,((w!=u)*1000-~S,w,p+w,p,*Q))
 print(b,len({*v}))
