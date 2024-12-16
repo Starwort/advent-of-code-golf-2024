@@ -1,6 +1,6 @@
 from heapq import*
 L=open(0).read()
-*q,d=(0,19739,1,[]),{}
+*q,d=(0,19739,1,[0]),{}
 v=set()
 b=9e9
 f=heappush
@@ -11,4 +11,4 @@ while q:
  if p==281:b=S;v|={*Q}
  if'#'<L[p+u]:f(q,(S+1,p+u,u,Q+[p+u]))
  for D in-1,1:f(q,(S+1000,p,D*142//u,Q))
-print(b,len(v)+1)
+print(b,len(v))
