@@ -1,16 +1,14 @@
 from heapq import*
 L=open(0).read()
-*q,d=(0,0),{}
-v,*t=set(),(19739,1,-1)
+*q,d=(0,19739,1,[]),{}
+v=set()
 b=9e9
-f,l=heappush,len
+f=heappush
 while q:
- S,i=heappop(q);p,u,_=t[i]
+ S,p,u,Q=heappop(q)
  if d.get((p,u),b)<S:continue
  d[p,u]=S
- if p==281:
-  b,A,_,C=S,*t[i]
-  while(v:=v|{A})and-1!=C:A,_,C=t[C]
- if'#'<L[p+u]:f(q,(S+1,l(t)));t+=(p+u,u,i),
- for D in-1,1:f(q,(S+1000,l(t)));t+=(p,D*142//u,i),
-print(b,l(v))
+ if p==281:b=S;v|={*Q}
+ if'#'<L[p+u]:f(q,(S+1,p+u,u,Q+[p+u]))
+ for D in-1,1:f(q,(S+1000,p,D*142//u,Q))
+print(b,len(v)+1)
