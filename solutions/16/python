@@ -3,12 +3,10 @@ L=open(0).read()
 *q,d=(0,19739,1,[0]),{}
 v=set()
 b=9e9
-f=heappush
 while q:
  S,p,u,Q=heappop(q)
  if d.get((p,u),b)<S:continue
  d[p,u]=S
  if p==281:b=S;v|={*Q}
- if'#'<L[p+u]:f(q,(S+1,p+u,u,Q+[p+u]))
- for D in-1,1:f(q,(S+1000,p,D*142//u,Q))
+ k=142//u;[heappush(q,(S+(w==u or 1001),p+w,w,Q+[p+w]))for w in(u,-k,k)if'#'<L[p+w]]
 print(b,len(v))
