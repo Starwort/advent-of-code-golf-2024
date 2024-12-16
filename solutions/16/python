@@ -1,10 +1,8 @@
 import heapq as h
-g={x+y*1j:c for y,r in enumerate(open(0))for x,c in enumerate(r)if c!='#'}
-s,=(p for p,v in g.items()if v=='S')
-e,=(p for p,v in g.items()if v=='E')
+L=open(0).read()
 q=[(0,0)]
 d={}
-t=[(s,1,-1)]
+t=[(19739,1,-1)]
 v=set()
 b=0
 f,l=h.heappush,len
@@ -12,9 +10,9 @@ while q:
  S,i=h.heappop(q);p,u,_=t[i]
  if(p,u)in d and d[(p,u)]<S:continue
  d[(p,u)]=S
- if p==e and(b<1or S==b):
+ if p==281and(b<1or S==b):
   b,c=S,t[i]
   while c[2]!=-1:v.add(c[0]);c=t[c[2]]
- if p+u in g:f(q,(S+1,l(t)));t+=[(p+u,u,i)]
- for D in 1j,-1j:f(q,(S+1000,l(t)));t+=[(p,u*D,i)]
+ if L[p+u]!='#':f(q,(S+1,l(t)));t+=[(p+u,u,i)]
+ for D in 1,-1:f(q,(S+1000,l(t)));t+=[(p,D*142//u,i)]
 print(b,l(v))
