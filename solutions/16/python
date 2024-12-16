@@ -1,0 +1,22 @@
+import heapq as h
+l=[x.rstrip()for x in open(0)]
+g={x+y*1j:c for y,r in enumerate(l)for x,c in enumerate(r)if c!='#'}
+s,=(p for p,v in g.items()if v=='S')
+e,=(p for p,v in g.items()if v=='E')
+q=[(0,0)]
+d={}
+t=[(s,1,-1)]
+v=set()
+b=0
+while q:
+ sc,i=h.heappop(q)
+ p,dn,pr=t[i]
+ if(p,dn)in d and d[(p,dn)]<sc:continue
+ d[(p,dn)]=sc
+ if p==e and(b<1 or sc==b):
+  b=sc
+  c=t[i]
+  while c[2]!=-1:v.add(c[0]);c=t[c[2]]
+ if p+dn in g:h.heappush(q,(sc+1,len(t)));t+=[(p+dn,dn,i)]
+ h.heappush(q,(sc+1000,len(t)));t+=[(p,dn*1j,i)];h.heappush(q,(sc+1000,len(t)));t+=[(p,dn*(-1j),i)]
+print(b,len(v))
