@@ -6,5 +6,5 @@ exec('def o(a):\n b=c=0\n '+'\n '.join([f'a>>={O[o]}',f'b^={o}',f'b={O[o]}&7',''
 *o,A,P=[0],print
 while a:o=[*o,v['o'](a)];a>>=3
 P(*o,sep=',')
-for i in p[::-1]:A=[B for a in range(8)for I in A if v['o'](B:=a+(I<<3))==i]
+for i in p[::-1]:A=[B for a in range(8)for I in A if v['o'](B:=a|I<<3)==i]
 P(min(A))
