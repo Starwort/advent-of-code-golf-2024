@@ -1,9 +1,9 @@
-a,*_,p=open(0)
+a,k,*_,p=open(0)
 a=int(a[12:])
-p=eval(k:=p[9:])
+p=eval(p[9:])
 v,w=[n for c,n in zip(*[iter(p)]*2)if c==1]
 n=lambda a:a^v^w^a>>(a&7^v)
 while a:k+=f",{n(a)&7}";a>>=3
-print(k[32:])
+print(k[15:])
 s=lambda a,i:i>15<print(a)or[s(k,i+1)for x in range(i<1,8)if n(k:=a<<3|x)&7==p[~i]]
 s(0,0)
