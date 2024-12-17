@@ -1,4 +1,4 @@
-*v,b=*q,d=[L:=open(0).read(),0,1,19739],{}
+v,b=*q,d=[L:=open(0).read(),0,1,19739],{}
 while q:
  *Q,S,u,p=q.pop(0)
  if'.'*S<=d.get((p,k:=142//u),S)*L[p]:p-281or(v:=v*(b==(b:=S))+Q);d[p,k]=S;q+=[[*Q,p,1001**(w!=u)+S,w,p+w]for w in(-k,u,k)]
