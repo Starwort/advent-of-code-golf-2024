@@ -1,1 +1,1 @@
-i,*_,l=open(0);a,p=int(i[12:]),eval(l[9:]);v,w=[(n)for(c,n)in(zip(*[iter(p)]*2))if+1==c];exec("n=lambda\ta:w^7&a>>(V:=a&7^v)^V\nwhile\ta:l+=f',{n(a)}';a>>=3\ndef\ts(a,i):i>15<print(l[41:],a);[n(j:=a<<3|x)==p[~i]==s(j,i+1)for(x)in(range(i<1,8))]");s(0,0)
+i,*_,l=open(0);a,p=int(i[12:]),eval(l[9:]);v,w=[(n)for(c,n)in(zip(*[iter(p)]*2))if+1==c];exec("n=lambda\ta:w^7&a>>(V:=a&7^v)^V\nwhile+a:l+=f',{n(a)}';a>>=3\ndef\ts(a,i):i>15<print(l[41:],a);[n(j:=a<<3|x)==p[~i]==s(j,i+1)for(x)in\trange(i<1,8)]");s(0,0)
