@@ -1,9 +1,9 @@
 a,*_,p=open(0)
-*A,a=0,int(a[12:])
-*p,=eval(p[9:])
-*o,O,v='0123abc',{}
-exec('def o(a):\n b=c=0\n '+'\n '.join([f'a>>={O[o]}',f'b^={o}',f'b={O[o]}&7','','b^=c',f'return {O[o]}&7',f'b=a>>{O[o]}',f'c=a>>{O[o]}'][i]for i,o in zip(*[iter(p)]*2)),v)
-while a:o=[*o,v['o'](a)];a>>=3
-print(*o,sep=',')
-for i in p[::-1]:A=[B for a in range(8)for I in A if v['o'](B:=a|I<<3)==i]
-print(min(A))
+a=int(a[12:])
+p=eval(p[9:])
+n=lambda a,b:b^(a>>b)^next(p[i+1]for i in(6,8,10)if p[i]==1)
+k=""
+while a:k+=f",{n(a,a&7^p[3])&7}";a>>=3
+print(k[1:])
+s=lambda a,i:i==len(p)<print(a)or[s(k,i+1)for x in range(8)if n(k:=a<<3|x,x^p[3])&7==p[~i]]
+s(0,0)
