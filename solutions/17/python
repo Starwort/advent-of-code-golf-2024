@@ -2,7 +2,7 @@ a,*_,k,p=open(0)
 a=int(a[12:])
 p=eval(p[9:])
 v,w=[n for c,n in zip(*[iter(p)]*2)if c==1]
-n=lambda a:a^v^w^a>>(a&7^v)
-while a:k+=f",{n(a)&7}";a>>=3
-def s(a,i):i>15<print(k[2:],a);[n(j:=a<<3|x)&7==p[~i]==s(j,i+1)for x in range(i<1,8)]
+n=lambda a:w^7&a>>(V:=a&7^v)^V
+while a:k+=f",{n(a)}";a>>=3
+def s(a,i):i>15<print(k[2:],a);[n(j:=a<<3|x)==p[~i]==s(j,i+1)for x in range(i<1,8)]
 s(0,0)
