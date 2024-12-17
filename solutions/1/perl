@@ -1,0 +1,1 @@
+/ /,push(@%,$'),push@A,$`for<>;@@=sort{$b-$a}@%;$t+=abs$_-pop@@for@A=sort{$a-$b}@A;/$/,map$\+=$`*($_==$`),@%for@A;print"$t "
