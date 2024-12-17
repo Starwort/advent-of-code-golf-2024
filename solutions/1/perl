@@ -1,1 +1,1 @@
-/ /,@%=(@%,$'),push@A,$`for<>;@@=sort{$b-$a}@%;$t+=abs$_-pop@@for@A=sort{$a-$b}@A;/$/,map{$_-$`or$\+=$`}@%for@A;print"$t "
+/ /,@%=(@%,$'),push@A,$`for<>;@@=sort{$b-$a}@%;$t+=abs$_-pop@@for@A=sort{$a-$b}@A;//,$\+=$_*grep$_==$',@%for@A;print"$t "
