@@ -1,0 +1,10 @@
+a,*_,p=open(0)
+a=int(a[12:])
+*p,=map(int,p[9:].split(','))
+O,v='0123abc',{}
+exec('def o(a):\n b=c=0\n '+'\n '.join([f'a>>={O[o]}',f'b^={o}',f'b={O[o]}&7','','b^=c',f'return {O[o]}&7',f'b=a>>{O[o]}',f'c=a>>{O[o]}'][i]for i,o in zip(p[::2],p[1::2])),v)
+*o,A=[0],
+while a:o=[*o,v['o'](a)];a>>=3
+print(*o,sep=',')
+for i in p[::-1]:A=[B for a in range(8)for I in A if v['o'](B:=a+(I<<3))==i]
+print(min(A))
