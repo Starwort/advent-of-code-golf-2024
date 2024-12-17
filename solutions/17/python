@@ -6,5 +6,5 @@ n=lambda a:a^v^w^a>>(a&7^v)
 k=""
 while a:k+=f",{n(a)&7}";a>>=3
 print(k[1:])
-s=lambda a,i:i==len(p)<print(a)or[s(k,i+1)for x in range(8)if n(k:=a<<3|x)&7==p[~i]]
+s=lambda a,i:i>15<print(a)or[s(k,i+1)for x in range(i<1,8)if n(k:=a<<3|x)&7==p[~i]]
 s(0,0)
