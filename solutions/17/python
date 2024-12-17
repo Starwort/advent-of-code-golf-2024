@@ -1,6 +1,6 @@
 a,*_,p=open(0)
 *A,a=0,int(a[12:])
-*p,=map(int,p[9:].split(','))
+*p,=eval(p[9:])
 *o,O,v='0123abc',{}
 exec('def o(a):\n b=c=0\n '+'\n '.join([f'a>>={O[o]}',f'b^={o}',f'b={O[o]}&7','','b^=c',f'return {O[o]}&7',f'b=a>>{O[o]}',f'c=a>>{O[o]}'][i]for i,o in zip(*[iter(p)]*2)),v)
 while a:o=[*o,v['o'](a)];a>>=3
