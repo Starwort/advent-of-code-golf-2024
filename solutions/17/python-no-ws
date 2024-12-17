@@ -1,0 +1,1 @@
+a,*_,k,p=open(0);a,p=int(a[12:]),eval(p[9:]);v,w=[(n)for(c,n)in(zip(*[iter(p)]*2))if(c==1)];exec("n=lambda\ta:w^7&a>>(V:=a&7^v)^V\nwhile\ta:k+=f',{n(a)}';a>>=3\ndef\ts(a,i):i>15<print(k[2:],a);[n(j:=a<<3|x)==p[~i]==s(j,i+1)for(x)in(range(i<1,8))]");s(0,0)
