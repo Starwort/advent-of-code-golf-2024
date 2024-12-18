@@ -1,0 +1,4 @@
+import Data.List
+f x=show(sum$map(abs.foldl1(-))x)++" "++show(sum[a*sum[1|[_,b]<-x,a==b]|a:_<-x])
+t=transpose
+main=interact$f.t.map(sort).t.map(map read.words).lines
