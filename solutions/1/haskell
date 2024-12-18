@@ -1,5 +1,5 @@
 import Data.List
-f x=[[abs$a-b|[a,b]<-x],[a|a:_<-x,[_,b]<-x,a==b]]
+f x=m(show.sum)[[abs$a-b|[a,b]<-x],[a|a:_<-x,[_,b]<-x,a==b]]
 t=transpose
 m=map
-main=interact$unwords.m(show.sum).f.t.m(sort).t.m(m read.words).lines
+main=interact$unwords.f.t.m(sort).t.m(m read.words).lines
