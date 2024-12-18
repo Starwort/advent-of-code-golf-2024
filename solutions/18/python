@@ -1,6 +1,6 @@
 g,*l=([0]*71+[1])*71,
 for r in open(0):
- x,y=eval(r);*q,g[y*72+x]=(0,z:=0),1;v=g[:]
+ x,y=eval(r);*q,g[y*72+x]=(0,z:=0),1;*v,=g
  for x,d in q:
   if x>5109:l+=d,;z=1
   for D in[1,-1,72,-72]:
