@@ -4,4 +4,4 @@ for r in open(0):
  for x,d in q:
   for D in[1,-1,72,-72]:
    if 5112>(N:=x+D)>0==v[N]:v[N]=d+1;q+=(N,d+1),
- l+=v[5110]or print(l[1023],r[:-1])<1,
+ l+=v[5110]or print(l[1023],r)<1,
