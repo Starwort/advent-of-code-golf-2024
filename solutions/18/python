@@ -2,6 +2,6 @@ g,*l=([0]*71+[1])*71,
 for r in open(0):
  x,y=eval(r);*q,g[y*72+x]=(0,0),1;*v,=g
  for x,d in q:
-  for D in 1,-1,72,-72:
+  for D in-1,1,72,-72:
    if 5112>(N:=x+D)>0==v[N]:v[N]=d+1;q+=(N,d+1),
  l+=v[5110]or-print(l[1023],r),
