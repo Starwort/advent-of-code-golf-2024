@@ -1,1 +1,1 @@
-sub S{$z=$e=0;"@F"=~s@\S+ @$d=$'-$&;$z|=$&?$d!~/^-?[123]$/|$d*$e<0:0;$e=$d@ger;!$z}map{$p=@O=@F=glob;$A+=S 1;1while$p--&&((@F=@O),splice@F,$p,1)&&!S 1;$\+=S 1}<>;print"$A "
+sub S{$z=$e=0;"@F"=~s@\S+ @$d=$'-$&;$z|=$&?$d!~/^-?[123]$/|$d*$e<0:0;$e=$d@ger;!$z}map{$p=@O=@F=glob;$A+=S;1while$p--&&((@F=@O),splice@F,$p,1)&&!S;$\+=S}<>;print"$A "
