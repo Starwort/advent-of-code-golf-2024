@@ -1,5 +1,5 @@
 q,m,*t=0,int(('0'+'1'*71)*71,2)
-while v:=1:
- c=1;X,Y=eval(r:=input());m^=1<<X+Y*72
+while 1:
+ v=c=1;X,Y=eval(r:=input());m^=1<<X+Y*72
  while v^(v:=v|(v>>1|v*2|v<<72|v>>72)&m):h=~v>>5110&1;c+=h
  t+=c,;h>0<print(t[1024],r)
