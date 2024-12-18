@@ -4,5 +4,5 @@ for r in open(0):
  for x,d in q:
   if x>5109:l+=d,;z=1
   for D in[1,-1,72,-72]:
-   if 5112>(N:=x+D)>0==g[N]+v[N]:v[N]=1;q+=(N,d+1),
+   if 5112>(N:=x+D)>0==v[N]:v[N]=1;q+=(N,d+1),
  z<1<print(l[1023],r[:-1])
