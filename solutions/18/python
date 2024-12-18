@@ -1,12 +1,9 @@
 g=[0]*5041
 for r in open(j:=0):
-    x,y=eval(r)
-    j+=1
-    *q,g[y*71+x]=(0,0),1
-    v=[1]+[0]*5040
-    for x,d in q:
-        if x>5039:j==1024!=print(d);break
-        for D in[1,-1,71,-71]:
-            N=x+D
-            if(x%71==N%71or x//71==N//71)*5041>N>=0==g[N]+v[N]:v[N]=1;q+=(N,d+1),
-    else:print(r[:-1]);break
+ x,y=eval(r);j+=1;*q,g[y*71+x]=(0,0),1;v=[1]+[0]*5040
+ for x,d in q:
+  if x>5039:j==1024!=print(d);break
+  for D in[1,-1,71,-71]:
+   N=x+D
+   if(x%71==N%71or x//71==N//71)*5041>N>=0==g[N]+v[N]:v[N]=1;q+=(N,d+1),
+ else:1<print(r[:-1])
