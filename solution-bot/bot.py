@@ -10,7 +10,9 @@ from message import Message
 class Bot(commands.Bot):
     def __init__(self, intents: discord.Intents, **kwargs):
         super().__init__(
-            command_prefix=commands.when_mentioned_or("aoc!", "aoc ", "aoc|"),
+            command_prefix=commands.when_mentioned_or(
+                "aoc!", "aoc ", "aoc|", "Aoc!", "Aoc ", "Aoc|"
+            ),
             intents=intents,
             **kwargs,
         )
