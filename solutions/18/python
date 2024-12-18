@@ -4,6 +4,5 @@ for r in open(j:=0):
  for x,d in q:
   if x>5039:z=j==1024==print(d)
   for D in[1,-1,71,-71]:
-   N=x+D
-   if(x%71==N%71or x//71==N//71)*5041>N>=0==g[N]+v[N]:v[N]=1;q+=(N,d+1),
+   if(x%71==(N:=x+D)%71or x//71==N//71)*5041>N>=0==g[N]+v[N]:v[N]=1;q+=(N,d+1),
  z>0<print(r[:-1])
