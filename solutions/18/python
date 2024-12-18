@@ -1,7 +1,5 @@
-g=[*[0]*71,1]*71
-for r in open(0):
- x,y=g[y*72+x]=eval(r);*q,v=(0,0),g+[1]*90
- for x,d in q:
-  for D in-1,1,72,-72:
-   if(N:=x+D)>0==v[N]:v[N]=d+1;q+=(N,d+1),
- g+=v[5110]or-print(g[6135],r),
+q,m,*t=0,int(('0'+'1'*71)*71,2)
+while 1:
+ c=0;n=1;X,Y=eval(r:=input());q|=1<<X+Y*72;v=q
+ while n:v|=n;n=(n>>1|n*2|n<<72|n>>72)&m&~v;h=~v>>5110&1;c+=h
+ t+=h and-print(t[1024],r)or c,
