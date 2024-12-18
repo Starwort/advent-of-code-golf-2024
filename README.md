@@ -46,4 +46,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | Haskell | JavaScript (Node.js) | Julia 
 15 | - | - | - | - | - | - | - | [199 - okras](./solutions/15/k_ngn) | - | [328 - okras](./solutions/15/python) | [344 - _tessaract](./solutions/15/python-no-ws) | - | - | - | -
 16 | - | - | - | - | - | - | - | [97 - okras](./solutions/16/k_ngn) | - | [212 - biz314](./solutions/16/python) | [230 - _tessaract](./solutions/16/python-no-ws) | - | - | - | -
 17 | - | - | - | - | - | - | - | - | - | [237 - _tessaract](./solutions/17/python) | [252 - _tessaract](./solutions/17/python-no-ws) | - | - | - | -
-18 | - | - | - | - | - | - | - | - | - | [197 - starwort](./solutions/18/python) | - | - | - | - | -
+18 | - | - | - | - | - | - | - | - | - | [193 - biz314](./solutions/18/python) | - | - | - | - | -
