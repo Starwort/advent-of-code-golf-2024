@@ -1,1 +1,1 @@
-sub S{my($a,$f,$e)=@_;my$d=$F[$a]-$F[$f];$F[$a]?($d=~/^-?[123]$/)&($d*$e>=0)&S($a+1,$f+1,$d,@F):1}map{@O=@F=glob;$A+=$y=S 1;for($p=0;$F[$p]&&!$y;@F=@O){$F[$p++]="";@F=glob"@F";$y=S 1}$\+=$y}<>;print"$A "
+sub S{my($a,$f,$e)=@_;my$d=$F[$a]-$F[$f];$F[$a]?$d=~/^-?[123]$/&$d*$e>=0&S($a+1,$f+1,$d,@F):1}map{@O=@F=glob;$A+=$y=S 1;for($p=0;$F[$p]&&!$y;@F=@O){$F[$p++]="";@F=glob"@F";$y=S 1}$\+=$y}<>;print"$A "
