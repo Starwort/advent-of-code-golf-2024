@@ -1,8 +1,8 @@
 g,*l=([0]*71+[1])*71,
 for r in open(0):
- x,y=eval(r);*q,g[y*72+x]=(0,0),1;v=[z:=1]+[0]*5111
+ x,y=eval(r);*q,g[y*72+x]=(0,z:=0),1;v=g[:]
  for x,d in q:
-  if x>5109:l+=d,;z=0
+  if x>5109:l+=d,;z=1
   for D in[1,-1,72,-72]:
    if 5112>(N:=x+D)>0==g[N]+v[N]:v[N]=1;q+=(N,d+1),
- z>0<print(l[1023],r[:-1])
+ z<1<print(l[1023],r[:-1])
