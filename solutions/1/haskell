@@ -1,5 +1,5 @@
 import Data.List
-f x=show(sum$m(abs.foldl1(-))x)++" "++show(sum[sum[a|[_,b]<-x,a==b]|a:_<-x])
+f x=show(sum$m(abs.foldl1(-))x)++" "++show(sum[a|a:_<-x,[_,b]<-x,a==b])
 t=transpose
 m=map
 main=interact$f.t.m(sort).t.m(m read.words).lines
