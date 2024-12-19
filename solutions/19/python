@@ -1,5 +1,5 @@
-A=B=0
-a,_,*b=open(0)
+A=B=-1
+a,*b=open(0)
 for d in b:
  n=[1]+[0]*99
  while d:
