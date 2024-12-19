@@ -1,7 +1,4 @@
 a=gets.chop.split", "
-gets
-b=$<.map(&:chop)
-l=b.map{|s|c={}
-f=->s{s[0]?c[s]||=a.sum{_1==s[0,l=_1.size]?f[s[l..]]:0}:1}
-f[s]}
-p (l-[0]).size,l.sum
+c={}
+q=-1
+p$<.count{|s|f=->s{s[0]?c[s]||=a.sum{_1==s[0,l=_1.size]?f[s[l..]]:0}:1};q!=q+=f[s.chop]}-1,q
