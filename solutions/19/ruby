@@ -1,4 +1,5 @@
-a=gets.chop.split", "
+a=gets.scan /\w+/
 c={}
 q=-1
-p$<.count{|s|f=->s{s[0]?c[s]||=a.sum{_1==s[0,l=_1.size]?f[s[l..]]:0}:1};q!=q+=f[s.chop]}-1,q
+f=->s{c[s]||=s[1]?a.sum{_1==s[0,l=_1.size]?f[s[l..]]:0}:1}
+p$<.count{q<q+=f[_1]}-1,q
