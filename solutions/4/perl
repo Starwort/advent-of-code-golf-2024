@@ -16,7 +16,7 @@ sub L{($i,$j)=@_;
     @J=split$",$';
     for $I (split$",$`) {
       $J=shift @J;
-      if (C($I+$i,$J+$j,@A)) {
+      if (C($I+$i,$J+$j)) {
         $B.= substr($A[$I+$i], $J+$j, 1);
       }
     }
@@ -29,12 +29,11 @@ sub K{my($i,$j)=@_;
   @J=(-1,1,-1,1);
   for $I (-1,-1,1,1) {
     $J=shift @J;
-    if (C($I+$i,$J+$j,@A)) {
+    if (C($I+$i,$J+$j)) {
       $B.= substr($A[$I+$i], $J+$j, 1);
     }
   }
   $\+=$B =~/SSMM|MMSS|MSMS|SMSM/;
 }
-chomp(@A=<>);
-map{s/X/L$-,@-/gre;s/A/K$-,@-/gre;$-++}@A;
+map{s/X/L$-,@-/gre;s/A/K$-,@-/gre;$-++}@A=<>;
 print"$t ";
