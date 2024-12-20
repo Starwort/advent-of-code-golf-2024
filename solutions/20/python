@@ -1,15 +1,14 @@
 from itertools import*
-x=enumerate
-G={i+j*1j:c for i,r in x(open(0))for j,c in x(r)if'#'!=c}
-S,=(p for p in G if'R'<G[p])
+l,m=open(0).read(),142
+S=l.find('S')
 D={S:0}
 t=[S]
 for p in t:
- for n in p-1,p+1,p-1j,p+1j:
-  if n in G and n not in D:D[n]=D[p]+1;t+=n,
+ for n in p-1,p+1,p-m,p+m:
+  if'#'!=l[n]and n not in D:D[n]=D[p]+1;t+=n,
 a=b=0
+D={(c%m,c//m):D[c] for c in D}
 for(p,i),(q,j)in combinations(D.items(),2):
- e=p-q;d=abs(e.real)+abs(e.imag)
- if d<3and j-i-d>=100:a+=1
- if d<21and j-i-d>=100:b+=1
+ d=abs(p[0]-q[0])+abs(p[1]-q[1])
+ if j-i-d>99:a+=d<3;b+=d<21
 print(a,b)
