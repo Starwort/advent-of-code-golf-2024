@@ -231,7 +231,7 @@ class Runner(commands.Cog):
                 day=day,
                 lang=language,
                 lang_pretty=ato_lang["name"],
-                lang_raw=ato_lang.get("se_class") or '',
+                lang_raw=ato_lang.get("se_class") or "",
                 author=author,
                 score=solution_len,
                 solution=solution,
@@ -388,10 +388,14 @@ class Runner(commands.Cog):
 
             if cases_dir.exists():
                 for additional_case in cases_dir.iterdir():
-                    input = (additional_case / "input").read_text()
-                    real_answers = ((additional_case / "1.solution").read_text(),)
+                    input = (additional_case / "input").read_text().rstrip("\n")
+                    real_answers = (
+                        (additional_case / "1.solution").read_text().rstrip("\n"),
+                    )
                     if day != 25:
-                        real_answers += ((additional_case / "2.solution").read_text(),)
+                        real_answers += (
+                            (additional_case / "2.solution").read_text().rstrip("\n"),
+                        )
                     answers = await self.execute(
                         ctx,
                         code.content,
