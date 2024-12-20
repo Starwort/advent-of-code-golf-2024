@@ -1,0 +1,20 @@
+%H=(131=>-1,-1=>-131,-131=>1,1=>131);
+$G = join("",<>) . " " x 999;
+sub S {
+    ($c) = @_;
+    @s = (131, index($G, "^"));
+    $d = shift @s;
+    for my $p (@s) {
+        return \@s if "#" gt substr($G, $p=$p-$d, 1) || @s[9998..$#s];
+        if ("." gt substr($G, $p, 1)|| $p == $c) {
+            $p += $d;
+            $d = $H{$d};
+        }
+        push @s, $p;
+    }
+}
+
+%p = map{$_=>1}@{S(-1)};
+@p=keys%p;
+
+print 0+@p, " ", 0+grep ( @{S($_)} > 9997 , @p)
