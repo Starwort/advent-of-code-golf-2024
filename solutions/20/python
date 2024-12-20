@@ -1,12 +1,12 @@
 from itertools import*
 x=enumerate
 G={i+j*1j:c for i,r in x(open(0))for j,c in x(r)if'#'!=c}
-S,=(p for p in G if'S'==G[p])
+S,=(p for p in G if'R'<G[p])
 D={S:0}
 t=[S]
 for p in t:
  for n in p-1,p+1,p-1j,p+1j:
-  if n in G and n not in D:D[n]=D[p]+1;t+=[n]
+  if n in G and n not in D:D[n]=D[p]+1;t+=n,
 a=b=0
 for(p,i),(q,j)in combinations(D.items(),2):
  e=p-q;d=abs(e.real)+abs(e.imag)
