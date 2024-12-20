@@ -7,8 +7,7 @@ for p in t:
  for n in p-1,p+1,p-m,p+m:
   if'#'!=l[n]and n not in D:D[n]=D[p]+1;t+=n,
 a=b=0
-D={(c%m,c//m):D[c] for c in D}
-for(p,i),(q,j)in combinations(D.items(),2):
- d=abs(p[0]-q[0])+abs(p[1]-q[1])
+for(x,y,i),(X,Y,j)in combinations(((c%m,c//m,D[c])for c in D),2):
+ d=abs(x-X)+abs(y-Y)
  if j-i-d>99:a+=d<3;b+=d<21
 print(a,b)
