@@ -1,0 +1,11 @@
+chomp(@r=<>);
+for $i(1,0) {
+  $a=0;
+  for $l (@r) {
+    ($x,$s,@y)=split'\D+',$l;
+    @s=$s;
+    map {$y=$_;@s=map {("$_$y",$_+$y,$_*$y)[$i..2]} @s} @y;
+    grep($x==$_,@s)and$a+=$x
+  }
+  print "$a "
+}
