@@ -4,11 +4,7 @@ def s(G,j,i=1):
  p,y=G["A"];a,b=G[" "];r=Counter()
  for c in j:X,Y=G[c];r[X-p,Y-y,(X==a and y==b)or(Y==b and p==a)]+=i;p,y=X,Y
  return r
-def g(n):
+for n in 3,26:
  r=0
- for c in q.split():
-  R=s({e:(i%3,i//3)for i,e in w("789456123 0A")},c)
-  for _ in range(n+1):R=sum((s({e:(i%3,i//3)for i,e in w(" ^A<v>")},("<"*-x+"v"*y+"^"*-y+">"*x)[::-f|1]+"A",R[(x,y,f)])for x,y,f in R),Counter())
-  r+=R.total()*int(c[:3])
- return r
-print(g(2),g(25))
+ for c in q.split():R=s({e:(i%3,i//3)for i,e in w("789456123 0A")},c);exec('R=sum((s({e:(i%3,i//3)for i,e in w(" ^A<v>")},("<"*-x+"v"*y+"^"*-y+">"*x)[::-f|1]+"A",R[(x,y,f)])for x,y,f in R),Counter());'*n);r+=R.total()*int(c[:3])
+ print(r)
