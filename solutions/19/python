@@ -1,3 +1,9 @@
-from functools import*
-a,_,*b=open(0)
-for h in any,sum:print(sum(map(f:=cache(lambda d:d<' 'or h(f(d[len(t):])for t in a[:-1].split(', ')if t<=d<t+'{')),b)))
+A=B=-1
+a,*b=open(0)
+for*d,in b:
+ x,n=1,[0]*99
+ while['!']<d:
+  for*t,_ in a.split(' '):l=len(t);n[l-1]+=(d[:l]==t)*x
+  x,*n=n;_,*d=d
+ A+=0<x;B+=x
+print(A,B)
