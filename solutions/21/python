@@ -1,0 +1,13 @@
+from itertools import *
+from functools import *
+D={">":1,"<":-1,"v":1j,"^":-1j}
+L=[*open(0)]
+@cache
+def f(s,k):
+ if not k:return len(s)
+ x,m=2+3j,"789456123_0A"
+ if k[0]:x,m=2,"_^A<v>"
+ M={v:i%3+(i//3)*1j for i,v in enumerate(m)};t=0
+ for c in s:n=M[c];m="".join(q*int(((n-x)/D[q]).real)for q in D);o=[q for q in permutations(m)if M["_"]-x not in accumulate(D[v]for v in q)];x=n;t+=min(f("".join(q)+"A",k[1:])for q in o)
+ return t
+print(*(sum(int(l.rstrip()[:-1])*f(l.rstrip(),(0,)+(1,)*n)for l in L)for n in(2, 25)))
