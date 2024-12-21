@@ -1,11 +1,4 @@
-from itertools import*
 l,m=open(0).read(),142
-t=[S:=l.find('S')]
-D={S:0}
-for p in t:
- for n in p-1,p+1,p-m,p+m:
-  if'#'!=l[n]and n not in D:D[n]=D[p]+1;t+=n,
-a=b=0
-for(x,y,i),(X,Y,j)in combinations(((c%m,c//m,D[c])for c in D),2):
- if(d:=abs(x-X)+abs(y-Y))<j-i-99:a+=d<3;b+=d<21
-print(a,b)
+t=[l.find('S')]
+for p in t:t+={p+n for n in(-1,1,-m,m)if'#'<l[p+n]}-{*t}
+for k in 3,21:print(sum(k>abs(t[i]//m-t[j]//m)+abs(t[i]%m-t[j]%m)<j-i-99for j in range(len(t))for i in range(j)))
