@@ -1,8 +1,7 @@
 from itertools import*
 l,m=open(0).read(),142
-S=l.find('S')
+t=[S:=l.find('S')]
 D={S:0}
-t=[S]
 for p in t:
  for n in p-1,p+1,p-m,p+m:
   if'#'!=l[n]and n not in D:D[n]=D[p]+1;t+=n,
