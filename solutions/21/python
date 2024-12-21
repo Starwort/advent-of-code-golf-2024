@@ -1,7 +1,5 @@
 from collections import*
 q=open(0).read();w=enumerate
-k={c:(i%3,i//3)for i,c in w("789456123 0A")}
-d={c:(i%3,i//3)for i,c in w(" ^A<v>")}
 def s(G,s,i=1):
  p,y=G["A"];a,b=G[" "];r=Counter()
  for c in s:X,Y=G[c];f=(X==a and y==b)or(Y==b and p==a);r[(X-p,Y-y,f)]+=i;p,y=X,Y
@@ -9,8 +7,8 @@ def s(G,s,i=1):
 def g(n):
  r=0
  for c in q.split("\n"):
-  R=s(k,c)
-  for _ in range(n+1):R=sum((s(d,("<"*-x+"v"*y+"^"* -y+">"*x)[:: -1 if f else 1]+"A",R[(x,y,f)])for x,y,f in R),Counter())
+  R=s({e:(i%3,i//3)for i,e in w("789456123 0A")},c)
+  for _ in range(n+1):R=sum((s({e:(i%3,i//3)for i,e in w(" ^A<v>")},("<"*-x+"v"*y+"^"* -y+">"*x)[:: -1 if f else 1]+"A",R[(x,y,f)])for x,y,f in R),Counter())
   r+=R.total()*int(c[:3])
  return r
 print(g(2),g(25))
