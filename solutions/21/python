@@ -1,5 +1,5 @@
 from collections import*
-q=open(0).read();w=enumerate;g='s({e:(i%3,i//3)for i,e in w("'
+q=open(0).read();g='s({e:(i%3,i//3)for i,e in enumerate("'
 def s(G,j,i):
  p,y=G["A"];a,b=G[" "];r=Counter()
  for c in j:X,Y=G[c];r[X-p,Y-y,(X==a and y==b)or(Y==b and p==a)]+=i;p,y=X,Y
