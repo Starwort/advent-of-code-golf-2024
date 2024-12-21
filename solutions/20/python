@@ -1,4 +1,4 @@
-l,m=open(0).read(),142
-t=[l.find('S')]
+l=open(0).read()
+m,*t=142,l.find('S')
 for p in t:t+={p+n for n in(-1,1,-m,m)if'#'<l[p+n]}-{*t}
 for k in 3,21:print(sum(k>abs(t[i]//m-T//m)+abs(t[i]%m-T%m)<j-i-99for j,T in enumerate(t)for i in range(j)))
