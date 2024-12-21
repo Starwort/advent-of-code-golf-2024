@@ -1,13 +1,16 @@
-from itertools import *
-from functools import *
-D={">":1,"<":-1,"v":1j,"^":-1j}
-L=[*open(0)]
-@cache
-def f(s,k):
- if not k:return len(s)
- x,m=2+3j,"789456123_0A"
- if k[0]:x,m=2,"_^A<v>"
- M={v:i%3+(i//3)*1j for i,v in enumerate(m)};t=0
- for c in s:n=M[c];m="".join(q*int(((n-x)/D[q]).real)for q in D);o=[q for q in permutations(m)if M["_"]-x not in accumulate(D[v]for v in q)];x=n;t+=min(f("".join(q)+"A",k[1:])for q in o)
- return t
-print(*(sum(int(l.rstrip()[:-1])*f(l.rstrip(),(0,)+(1,)*n)for l in L)for n in(2, 25)))
+from collections import*
+q=open(0).read();w=enumerate
+k={c:(i%3,i//3)for i,c in w("789456123 0A")}
+d={c:(i%3,i//3)for i,c in w(" ^A<v>")}
+def s(G,s,i=1):
+ p,y=G["A"];a,b=G[" "];r=Counter()
+ for c in s:X,Y=G[c];f=(X==a and y==b)or(Y==b and p==a);r[(X-p,Y-y,f)]+=i;p,y=X,Y
+ return r
+def g(n):
+ r=0
+ for c in q.split("\n"):
+  R=s(k,c)
+  for _ in range(n+1):R=sum((s(d,("<"*-x+"v"*y+"^"* -y+">"*x)[:: -1 if f else 1]+"A",R[(x,y,f)])for x,y,f in R),Counter())
+  r+=R.total()*int(c[:3])
+ return r
+print(g(2),g(25))
