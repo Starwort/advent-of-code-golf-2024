@@ -47,6 +47,6 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | Haskell | JavaScript (Node.js) | Julia 
 16 | - | - | - | - | - | - | - | [97 - okras](./solutions/16/k_ngn) | - | [212 - biz314](./solutions/16/python) | [230 - _tessaract](./solutions/16/python-no-ws) | - | - | - | -
 17 | - | - | - | - | - | - | - | - | - | [237 - _tessaract](./solutions/17/python) | [252 - _tessaract](./solutions/17/python-no-ws) | - | - | - | -
 18 | - | - | - | - | - | - | - | - | - | [165 - biz314](./solutions/18/python) | - | - | - | - | -
-19 | - | - | - | - | - | - | - | [66 - okras](./solutions/19/k_ngn) | - | [156 - .___uho](./solutions/19/python) | - | - | - | [98 - cefqrn](./solutions/19/ruby) | -
+19 | - | - | - | - | - | - | - | [66 - okras](./solutions/19/k_ngn) | - | [155 - taesungh](./solutions/19/python) | - | - | - | [98 - cefqrn](./solutions/19/ruby) | -
 20 | - | - | - | - | - | - | - | [135 - okras](./solutions/20/k_ngn) | - | [288 - _tessaract](./solutions/20/python) | - | - | - | - | -
 21 | - | - | - | - | - | - | - | - | - | [376 - _tessaract](./solutions/21/python) | - | - | - | - | -

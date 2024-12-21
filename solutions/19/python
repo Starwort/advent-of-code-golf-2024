@@ -1,8 +1,8 @@
-A=B=-1
-a,*b=open(0)
+A=B=0
+a,T,*b=open(0)
 for*d,in b:
  x,n=1,[0]*99
- while['!']<d:
+ while[T]<d:
   for*t,_ in a.split(' '):l=len(t);n[l-1]+=(d[:l]==t)*x
   x,*n=n;_,*d=d
  A+=0<x;B+=x
