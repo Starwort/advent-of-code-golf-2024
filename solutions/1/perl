@@ -1,1 +1,1 @@
-@@=sort{$a-$b}map/ /*$',@A=<>;map{$t+=abs$_-$@[$#r+=/$/];$_-$`or$\+=$`for@@}sort{$a-$b}@A;print"$t "
+map{$t+=abs$_-$A[$#r+=/$/];$_-$`or$\+=$`for@A}sort{$a-$b}map/ /*$',@A=sort{$a-$b}<>;print"$t "
