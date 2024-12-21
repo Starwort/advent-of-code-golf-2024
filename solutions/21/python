@@ -1,10 +1,12 @@
-from collections import*
-k=Counter;q=open(0).read();g='s({e:(i%3,i//3)for i,e in enumerate("'
-def s(G,j,i):
- p,y=G["A"];a,b=G[" "];r=k()
- for c in j:X,Y=G[c];r[X-p,Y-y,(X==a)*(y==b)+(Y==b)*(p==a)]+=i;p,y=X,Y
- return r
-for n in 3,26:
- r=0
- for c in q.split():exec('R='+g+'789456123 0A")},c,1);'+f'R=sum(({g} ^A<v>")}},("<"*-x+"v"*y+"^"*-y+">"*x)[::-f|1]+"A",R[x,y,f])for x,y,f in R),k());'*n);r+=R.total()*int(c[:3])
- print(r)
+from itertools import *
+from functools import *
+L=[*open(0)]
+@cache
+def F(s,k,r):
+ if k==r:return len(s)
+ x,y,m=2,3,"789456123_0A"
+ if k:x,y,m=2,0,"_^A<v>"
+ M={v:(i%3,i//3)for i,v in enumerate(m)};t=0;A,B=M["_"]
+ for c in s:X,Y=M[c];a,b=X-x,Y-y;f=(X==A)*(y==B)+(Y==B)*(x==A);m=("<"*-a+"v"*b+"^"*-b+">"*a)[::-f|1];x,y=M[c];t+=F(m+"A",k+1,r)
+ return t
+print(*(sum(int((k:=l.strip())[:-1])*F(k,0,n)for l in L)for n in(3,26)))
