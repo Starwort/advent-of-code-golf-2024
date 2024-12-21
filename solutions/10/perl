@@ -1,0 +1,38 @@
+chomp(@A=<>);
+map{s/0/push(@P,"$- @-")/ger;$-++}@A;
+sub DFS {
+
+  my($I,$J, $c)=@_;
+  $H{"$I $J"}=1 if $c;
+  my$curr=substr$A[$I],$J,1;
+  if ($curr =~/\D/) {
+    return 0;
+  }
+  if ($curr == 9) {
+    return 1;
+  }
+  for ("-1 0", "1 0", "0 -1", "0 1") {
+    / /;
+    my($i,$j)=($`,$');
+    if ($I+$i>=0 && $J+$j >=0 && $I+$i<@A && $J+$j<length($A[0])) {
+
+      if (substr($A[$i+$I], $J+$j, 1)-1 ==$curr && (!$c || $H{($I+$i)." ".($J+$j)} == 0)) {
+        if (DFS($I+$i, $J+$j,$c)) {
+          $c?$t++:$T++;
+        }
+      }
+    }
+  }
+  return 0;
+}
+
+for (@P) {
+  %H=();
+  / /;
+  $i=$`;
+  $j=$';
+  
+  DFS($i, $j, 1);
+  DFS($i, $j, 0);
+}
+print "$t $T";
