@@ -8,6 +8,5 @@ for p in t:
   if'#'!=l[n]and n not in D:D[n]=D[p]+1;t+=n,
 a=b=0
 for(x,y,i),(X,Y,j)in combinations(((c%m,c//m,D[c])for c in D),2):
- d=abs(x-X)+abs(y-Y)
- if j-i-d>99:a+=d<3;b+=d<21
+ if(d:=abs(x-X)+abs(y-Y))<j-i-99:a+=d<3;b+=d<21
 print(a,b)
