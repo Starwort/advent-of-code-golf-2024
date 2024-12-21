@@ -1,5 +1,5 @@
-from functools import *
-L=[*open(0)]
+from functools import*
+L=*open(0),
 @cache
 def F(s,k,r):
  if k>r:return len(s)
