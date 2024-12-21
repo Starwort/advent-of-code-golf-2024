@@ -2,7 +2,7 @@ from collections import*
 q=open(0).read();w=enumerate
 def s(G,j,i=1):
  p,y=G["A"];a,b=G[" "];r=Counter()
- for c in j:X,Y=G[c];f=(X==a and y==b)or(Y==b and p==a);r[(X-p,Y-y,f)]+=i;p,y=X,Y
+ for c in j:X,Y=G[c];r[(X-p,Y-y,(X==a and y==b)or(Y==b and p==a))]+=i;p,y=X,Y
  return r
 def g(n):
  r=0
