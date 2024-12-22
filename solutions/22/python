@@ -2,6 +2,6 @@ S={}
 q=1<<24
 for l in open(T:=0):
  n,c,s=int(l),(),{0};p=n%10
- for i in range(2000):n=(n^n*64)%q;n^=n>>5;n=(n^n<<11)%q;k=n%10;c+=(d:=k-p,);S[c]=S.get(c:=c[-4:],0)+((i>2)^({c}<s))*k;s|={c};p=k
+ for i in range(2000):n^=n<<6&~-q;n^=n>>5;n^=n<<11&~-q;k=n%10;c+=(d:=k-p,);S[c]=S.get(c:=c[-4:],0)+((i>2)^({c}<s))*k;s|={c};p=k
  T+=n
 print(T,max(S.values()))
