@@ -1,7 +1,7 @@
 S={}
 q=0xffffff
 for l in open(T:=0):
- n,c,s=int(l),(),{0};p=n%10
+ n,s=int(l),{c:=()};p=n%10
  for i in range(2000):n^=n<<6&q;n^=n>>5;n^=n<<11&q;c+=(d:=n%10-p,);p=n%10;S[c]=S.get(c:=c[-4:],0)+((i>2)^({c}<s))*p;s|={c}
  T+=n
 print(T,max(S.values()))
