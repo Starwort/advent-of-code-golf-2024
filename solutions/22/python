@@ -1,4 +1,4 @@
-B={}
 M=8**8-1
-exec("for l in open(T:=0):n,*c=int(l),;s={};p=n%10;"+2000*"n^=n<<6&M;n^=n>>5;n^=n<<11&M;c=p-(p:=n%10),*c[:3];s[c]=B[c]=B.get(c,0)+p-p*(c in s);"+"T+=n")
-print(T,max(B.values()))
+B=[0]*M
+exec("for l in open(T:=0):n,c=int(l),0;s={};p=n%10;"+2000*"n^=n<<6&M;n^=n>>5;n^=n<<11&M;c=9+p-(p:=n%10)<<15|c>>5;s[c]=B[c]=B[c]+p-p*(c in s);"+"T+=n")
+print(T,max(B))
