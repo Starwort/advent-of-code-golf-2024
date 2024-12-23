@@ -2,4 +2,4 @@ C={}
 for l in open(0):a,b=sorted([l[:2],l[3:5]]);C|={a:C.get(a,{b})|{b},b:C.get(b,{0})}
 G=lambda S:S|{n+","+k for n in S for k in G(S&C[n])}
 H=G({*C})
-print(sum(("t"in c[::3])*len(c)==8for c in H),max(H,key=len))
+print(sum((",t"in","+c)*8==len(c)for c in H),max(H,key=len))
