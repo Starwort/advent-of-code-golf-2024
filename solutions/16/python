@@ -1,0 +1,5 @@
+from numpy import*
+M=r_[[*open(a:=0).read()]];Q=min
+o=r_[1,142]
+for*x,in'S???','E'*4:d=(c_[x]!=M)*9**9;[d:=Q((9**9*(M<_)+1+[*map(roll,d,r_[o,-o])],d,0*d+Q(d,0)+1000),0)for _ in'$'*900];o=-o;a+=d
+print(m:=Q(q:=Q(a,0)),sum(m==q))
