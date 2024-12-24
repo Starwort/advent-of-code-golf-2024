@@ -8,6 +8,6 @@ for l in open(0):
 for c in C:
  x,a,b=s(C[c])
  if'X'<x:
-  if O(c)or'x'>b<'y'<'z'>c:Q+=c,
+  if O(c)or'x'>b>c:Q+=c,
  elif'z'<c<'z4'or-~-O(c)and'x00'<a:Q+=c,
 print(sum(eval(f"z{i:02}()<<{i}")for i in range(46)),','.join(s(Q)))
