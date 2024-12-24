@@ -6,8 +6,7 @@ for l in open(0):
  except:exec(l.replace(':',e))
 def F(a,X,b=0):
  for c in C:
-  g=C[c]
-  if g in((a,X,b),(b,X,a)):return c
+  if(g:=C[c])in((a,X,b),(b,X,a)):return c
   elif X==g[1]:
    if a==g[0]:return c,g[2]
    elif a==g[2]:return c,g[0]
