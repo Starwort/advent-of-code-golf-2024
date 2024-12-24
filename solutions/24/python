@@ -6,7 +6,8 @@ for l in open(0):
  except:exec(l.replace(':',e))
 def F(a,X,b=0):
  for c in C:
-  if{g:=C[c]}<{(a,X,b),(b,X,a)}:return c
+  g=C[c]
+  if{*g}=={a,X,b}:return c
   if(X==g[1])*((v:=a==g[0])+(a==g[2])):return c,g[2*v]
 def S(a,b,W):C[a],C[b]=C[b],C[a];W|={a,b}
 W=set()
