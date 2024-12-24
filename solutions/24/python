@@ -1,55 +1,24 @@
-import re
-from functools import*
-from itertools import*
-i,g=open(0).read().split("\n\n")
-f={}
-for l in i.split("\n"):m=re.search(r"([xy]\d\d): ([10])",l);x,v=m.groups();v=int(v);f[x]=v
-o=set()
-O=[]
-for l in g.split("\n"):
- m=re.search(r"([a-z0-9]{3}) ([XORAND]+) ([a-z0-9]{3}) -> ([a-z0-9]{3})",l)
- x1,op,x2,r=m.groups()
- o.add((x1,x2,r,op))
- O.append((x1,x2,r,op))
-p={}
-q={}
-for x1,x2,r,op in o:p[r]=(x1,x2);q[r]=op
-@cache
-def d(r):
- if r in f:return 0
- x1,x2=p[r];return max(d(x1),d(x2))+1
-v=[(r,d(r)) for _,_,r,_ in o]
-v.sort(key=lambda x:x[1])
-for r,_ in v:
- x1,x2=p[r]
- v1,v2=f[x1],f[x2]
- op=q[r]
- val={"XOR":lambda a,b:a^b,"OR":lambda a,b:a|b,"AND":lambda a,b:a&b,}[op](v1,v2)
- f[r]=val
-rgs=list(f.items())
-rgs.sort(key=lambda x:x[0])
-n_out=int(str(rgs[-1][0])[-2:])+1
-def fm(O):
- o=c={};p=C=set()
- for x1,x2,r,op in O:o[(frozenset([x1,x2]),op)]=r
- def get_res(x1,x2,op):return o.get((frozenset([x1,x2]),op),None)
- for i in range(45):
-  x=f"0{i}"if i<10 else str(i);pd=get_res(f"x{x}",f"y{x}","XOR");pc1=get_res(f"x{x}",f"y{x}","AND")
-  if i==0:c[i]=pc1;continue
-  d=get_res(c[i-1],pd,"XOR")
-  if d!=f"z{x}":return i-1,C
-  C.add(c[i-1]);C.add(pd)
-  for w in p:C.add(w)
-  pc2=get_res(c[i-1],pd,"AND");co=get_res(pc1,pc2,"OR");c[i]=co;p={pc1,pc2}
- return 45,C
-s=set()
-b,B=fm(O)
-for _ in range(4):
- for i,j in combinations(range(len(O)),2):
-  x1_i,x2_i,r_i,op_i=O[i];x1_j,x2_j,r_j,op_j=O[j]
-  if"z00" in(r_i,r_j):continue
-  if r_i in B or r_j in B:continue
-  O[i]=x1_i,x2_i,r_j,op_i;O[j]=x1_j,x2_j,r_i,op_j;a,A=fm(O)
-  if a>b:s.add((r_i,r_j));b,B=a,A;break
-  O[i]=x1_i,x2_i,r_i,op_i;O[j]=x1_j,x2_j,r_j,op_j
-print(int("".join(str(val)for _,val in rgs[-n_out:])[::-1],2),",".join(sorted(sum(s,start=tuple()))))
+from operator import xor as XOR, or_ as OR, and_ as AND
+t=open(0)
+C={}
+for l in t:
+ try:a,x,b,_,c=l.split();C[c]=a,x,b;exec(f'{c}=lambda:{x}({a}(),{b}())')
+ except: exec(l.replace(':', '=lambda:'))
+def F(a,X,b=0):
+ if b:
+  for c in C:
+   if C[c]in((a,X,b),(b,X,a)):return c
+ else:
+  for c in C:
+   if X==C[c][1]:
+    if a==C[c][0]:return c,C[c][2]
+    elif a==C[c][2]:return c,C[c][0]
+def S(a,b):C[a],C[b]=C[b],C[a];W.update({a, b})
+W=set()
+a=F(f"x00","AND",f"y00")
+for i in range(1, 45):
+ z=f"z{i:02}";D=F(x:=f"x{i:02}","XOR",y:=f"y{i:02}");Z,d=F(a,"XOR")
+ if z!=Z:S(z,Z)
+ if d!=D:S(d,D)
+ a=F(F(x,"AND",y),"OR",F(d,"AND",a))
+print(sum(eval(f"z{i:02}()<<{i}") for i in range(46)),','.join(sorted(W)))
