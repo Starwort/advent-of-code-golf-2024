@@ -1,6 +1,6 @@
 C={}
 for l in open(A:=0):a,b=sorted([l[:2],l[3:5]]);C|={a:C.get(a,{b})|{b},b:C.get(b,{0})}
-q=[(B:="",{*C})]
+q=[("",{*C})]
 for k,S in q:
  for n in S:A+=len(B:=k+n)^8<(",t"in","+B);q+=(B+",",S&C[n]),
 print(A,B)
