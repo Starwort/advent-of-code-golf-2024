@@ -52,4 +52,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | Haskell | JavaScript (Node.js) | Julia 
 21 | - | - | - | - | - | - | - | - | - | [286 - .___uho](./solutions/21/python) | - | - | - | - | -
 22 | - | - | - | - | - | - | - | - | - | [174 - taesungh](./solutions/22/python) | [179 - _tessaract](./solutions/22/python-no-ws) | - | - | - | -
 23 | - | - | - | - | - | - | - | - | - | [175 - biz314](./solutions/23/python) | - | - | - | - | -
-24 | - | - | - | - | - | - | - | - | - | [604 - _justconfused](./solutions/24/python) | - | - | - | - | -
+24 | - | - | - | - | - | - | - | - | - | [602 - _justconfused](./solutions/24/python) | - | - | - | - | -

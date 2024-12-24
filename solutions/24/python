@@ -7,7 +7,7 @@ for l in open(0):
 def F(a,X,b=0):
  for c in C:
   if(g:=C[c])in((a,X,b),(b,X,a)):return c
-  elif(X==g[1])*((v:=a==g[0])+(a==g[2])):return c,g[2*v]
+  if(X==g[1])*((v:=a==g[0])+(a==g[2])):return c,g[2*v]
 def S(a,b,W):C[a],C[b]=C[b],C[a];W|={a,b}
 W=set()
 a=F("x00",f:="AND","y00")
