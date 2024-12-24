@@ -12,5 +12,5 @@ def F(a,X,b=0):
 def S(a,b,W):C[a],C[b]=C[b],C[a];W|={a,b}
 W=set()
 a=F("x00",f:="AND","y00")
-while i<44:i+=1;z=f"z{i:02}";D=F(x:=f"x{i:02}","XOR",y:=f"y{i:02}");Z,d=F(a,"XOR");z!=Z==S(z,Z,W);d!=D==S(d,D,W);a=F(F(x,f,y),"OR",F(d,f,a))
+while i<44:i+=1;s=f"%c{i:02}";z=s%122;D=F(x:=s%120,"XOR",y:=s%121);Z,d=F(a,"XOR");z!=Z==S(z,Z,W);d!=D==S(d,D,W);a=F(F(x,f,y),"OR",F(d,f,a))
 print(sum(eval(f"z{i:02}()<<{i}")for i in range(46)),','.join(sorted(W)))
