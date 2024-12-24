@@ -1,5 +1,4 @@
 C={}
-for l in open(A:=0):a,b=sorted([l[:2],l[3:5]]);C|={a:C.get(a,{b})|{b},b:C.get(b,{0})}
-q=[("",{*C})]
+for l in open(A:=0):a,b=sorted([l[:2],l[3:5]]);C,*q={a:{0},b:{0}}|C,("",{*C});C[a]|={b}
 for B,S in q:A+=len(B)^9<(",t"in B);q+=[(B+","+n,S&C[n])for n in S]
 print(A,B[1:])
