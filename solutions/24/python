@@ -3,5 +3,5 @@ C={}
 for l in open(0):
  if'-'in l:a,x,b,_,c=l.split();C[c]=a,x,b;l=f"{c}:{a}().__{x.lower()}__({b}())"
  exec(l.replace(':','=lambda:'))
-for c in C:x,a,b=s(C[c]);O=any(x=='OR'and{c}<{a,b}for a,x,b in C.values());Q+=[c]*['z'<c<'z4'or~O&('x00'<a),O|(b<'x'>c)]['X'<x]
+for c in C:x,a,b=s(C[c]);O=all(x[2:]or{c}-{a,b}for a,x,b in C.values());Q+=[c]*['z'<c<'z4'or('x00'<a)&O,1-O|(b<'x'>c)]['X'<x]
 print(sum(eval(f"z{i:02}()")<<i for i in range(46)),','.join(s(Q)))
