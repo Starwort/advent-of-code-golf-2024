@@ -9,5 +9,5 @@ for c in C:
  x,a,b=sorted(C[c])
  if'X'<x:
   if O(c)or'x'>a<b<'y'<'z'>c:Q+=c,
- elif'z'<c<'z4'or-~-O(c)and x<'x00'<a:Q+=c,
+ elif'z'<c<'z4'or-~-O(c)and'x00'<a:Q+=c,
 print(sum(eval(f"z{i:02}()<<{i}")for i in range(46)),','.join(sorted(Q)))
