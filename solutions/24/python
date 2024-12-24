@@ -6,10 +6,11 @@ for l in open(0):
  except:exec(l.replace(':',e))
 def F(a,X,b=0):
  for c in C:
-  if C[c]in((a,X,b),(b,X,a))and b:return c
-  elif X==C[c][1]:
-   if a==C[c][0]:return c,C[c][2]
-   elif a==C[c][2]:return c,C[c][0]
+  g=C[c]
+  if g in((a,X,b),(b,X,a)):return c
+  elif X==g[1]:
+   if a==g[0]:return c,g[2]
+   elif a==g[2]:return c,g[0]
 def S(a,b,W):C[a],C[b]=C[b],C[a];W|={a,b}
 W=set()
 a=F("x00","AND","y00")
