@@ -1,0 +1,1 @@
+I=open(0).read().split("\n\n");print(sum(not(*"##",)in(zip(a,b))for(a)in(I)for(b)in(I))//2)
