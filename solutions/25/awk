@@ -1,0 +1,1 @@
+BEGIN{RS=A}END{print A}{for(k in K)A+=k$0!~/#.{40}#/}K[$0]
