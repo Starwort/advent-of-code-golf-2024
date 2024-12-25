@@ -1,6 +1,2 @@
-L,K=[],[]
-for i in open(0).read().split('\n\n'):
- s=tuple(c.count('#')for c in zip(*i.splitlines()))
- if'.'>i[0]:L+=s,
- else:K+=s,
-print(sum(all(a+b<8for a,b in zip(l,k))for l in L for k in K))
+I=open(0).read().split("\n\n")
+print(sum(1-any(x==y=="#"for x,y in zip(a,b))for a in I for b in I)//2)
