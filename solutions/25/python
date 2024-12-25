@@ -1,2 +1,2 @@
 I=open(0).read().split("\n\n")
-print(sum(all({*k}-{'#'}for k in zip(a,b))for a in I for b in I)//2)
+print(sum(1-(2*("#",)in zip(a,b))for a in I for b in I)//2)
