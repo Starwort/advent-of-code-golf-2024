@@ -48,7 +48,7 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | Haskell | JavaScript (Node.js) | Julia 
 17 | - | - | - | - | - | - | - | - | - | [237 - _tessaract](./solutions/17/python) | [252 - _tessaract](./solutions/17/python-no-ws) | - | - | - | -
 18 | - | - | - | - | - | - | - | - | - | [165 - biz314](./solutions/18/python) | - | - | - | - | -
 19 | - | - | - | - | - | - | - | [66 - okras](./solutions/19/k_ngn) | - | [155 - taesungh](./solutions/19/python) | - | - | - | [98 - cefqrn](./solutions/19/ruby) | -
-20 | - | - | - | - | - | - | - | [135 - okras](./solutions/20/k_ngn) | - | [203 - biz314](./solutions/20/python) | - | - | - | - | -
+20 | - | - | - | - | - | - | - | [131 - bstr.at](./solutions/20/k_ngn) | - | [203 - biz314](./solutions/20/python) | - | - | - | - | -
 21 | - | - | - | - | - | - | - | - | - | [286 - .___uho](./solutions/21/python) | - | - | - | - | -
 22 | - | - | - | - | - | - | - | - | - | [174 - taesungh](./solutions/22/python) | [179 - _tessaract](./solutions/22/python-no-ws) | - | - | - | -
 23 | - | - | - | - | - | - | - | [113 - okras](./solutions/23/k_ngn) | - | [175 - biz314](./solutions/23/python) | - | - | - | - | -
