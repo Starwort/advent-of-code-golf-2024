@@ -53,4 +53,4 @@ Day | AWK | Bash | C (GCC) | C++ (GCC) | Haskell | JavaScript (Node.js) | Julia 
 22 | - | - | - | - | - | - | - | - | - | [174 - taesungh](./solutions/22/python) | [179 - _tessaract](./solutions/22/python-no-ws) | - | - | - | -
 23 | - | - | - | - | - | - | - | [113 - okras](./solutions/23/k_ngn) | - | [175 - biz314](./solutions/23/python) | - | - | - | - | -
 24 | - | - | - | - | - | - | - | - | - | [328 - .___uho](./solutions/24/python) | - | - | - | - | -
-25 | [58 - .___uho](./solutions/25/awk) | - | - | - | - | - | - | [27 - twobular](./solutions/25/k_ngn) | - | [89 - starwort](./solutions/25/python) | [91 - _tessaract](./solutions/25/python-no-ws) | - | - | - | -
+25 | [58 - .___uho](./solutions/25/awk) | - | - | - | - | - | - | [27 - twobular](./solutions/25/k_ngn) | - | [89 - starwort](./solutions/25/python) | [91 - _tessaract](./solutions/25/python-no-ws) | - | - | [58 - the.unnamed](./solutions/25/ruby) | -

@@ -1,0 +1,2 @@
+#!ruby -00
+p [*$<].combination(2).count{_1*''!~/#.{42}#/m}
